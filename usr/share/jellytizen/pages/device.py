@@ -1,5 +1,6 @@
 # pages/device.py
 import gi
+import socket
 gi.require_version('Gtk', '4.0')
 gi.require_version('Adw', '1')
 
@@ -10,7 +11,7 @@ from utils.i18n import _
 from utils.ui_helpers import ErrorNotification
 
 class DevicePage(Gtk.ScrolledWindow):
-    """Device discovery and connection page with fixed scroll."""
+    """Device discovery and connection page with improved UX flow."""
 
     def __init__(self, window):
         super().__init__()
@@ -30,7 +31,7 @@ class DevicePage(Gtk.ScrolledWindow):
         self._setup_ui()
         
     def _setup_ui(self):
-        """Setup the device page UI."""
+        """Setup the device page UI with inline developer mode instructions."""
         # Use clamp for better layout
         clamp = Adw.Clamp()
         clamp.set_maximum_size(800)
@@ -41,7 +42,7 @@ class DevicePage(Gtk.ScrolledWindow):
         clamp.set_margin_end(24)
         self.set_child(clamp)
         
-        main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=32)
+        main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=24)
         clamp.set_child(main_box)
         
         # Header
@@ -50,7 +51,107 @@ class DevicePage(Gtk.ScrolledWindow):
         header_group.set_description(_("Connect to your Samsung Tizen TV or projector"))
         main_box.append(header_group)
 
-        # Discovery section
+        # ============================================
+        # DEVELOPER MODE INSTRUCTIONS (INLINE - MANDATORY STEP)
+        # ============================================
+        self.dev_instructions_group = Adw.PreferencesGroup()
+        self.dev_instructions_group.set_title(_("⚠️ Required Step: Enable Developer Mode"))
+        self.dev_instructions_group.set_description(_("You must complete these steps on your Samsung TV before connecting"))
+        main_box.append(self.dev_instructions_group)
+
+        # Step 1
+        step1 = Adw.ActionRow()
+        step1.set_title(_("1. Open Smart Hub"))
+        step1.set_subtitle(_("On the TV, open the 'Smart Hub'"))
+        step1_icon = Gtk.Image.new_from_icon_name("tv-symbolic")
+        step1.add_prefix(step1_icon)
+        self.dev_instructions_group.add(step1)
+
+        # Step 2
+        step2 = Adw.ActionRow()
+        step2.set_title(_("2. Go to Apps Panel"))
+        step2.set_subtitle(_("Select the 'Apps' panel in Smart Hub"))
+        step2_icon = Gtk.Image.new_from_icon_name("view-app-grid-symbolic")
+        step2.add_prefix(step2_icon)
+        self.dev_instructions_group.add(step2)
+
+        # Step 3
+        step3 = Adw.ActionRow()
+        step3.set_title(_("3. Enter Secret Code"))
+        step3.set_subtitle(_("Press '123' button (or long press Home) then type '12345' with on-screen keyboard"))
+        step3_icon = Gtk.Image.new_from_icon_name("input-keyboard-symbolic")
+        step3.add_prefix(step3_icon)
+        self.dev_instructions_group.add(step3)
+
+        # Step 4
+        step4 = Adw.ActionRow()
+        step4.set_title(_("4. Toggle Developer Mode"))
+        step4.set_subtitle(_("Toggle the 'Developer' button to 'On'"))
+        step4_icon = Gtk.Image.new_from_icon_name("preferences-other-symbolic")
+        step4.add_prefix(step4_icon)
+        self.dev_instructions_group.add(step4)
+
+        # Step 5 - With IP address
+        local_ip = self._get_local_ip()
+        step5 = Adw.ActionRow()
+        step5.set_title(_("5. Enter Host PC IP"))
+        step5.set_subtitle(_("Enter your computer's IP address: {ip}").format(ip=local_ip))
+        step5_icon = Gtk.Image.new_from_icon_name("network-wired-symbolic")
+        step5.add_prefix(step5_icon)
+        
+        # Copy IP button inline
+        copy_button = Gtk.Button.new_with_label(_("Copy IP"))
+        copy_button.set_valign(Gtk.Align.CENTER)
+        copy_button.add_css_class("suggested-action")
+        copy_button.connect("clicked", self._copy_ip_to_clipboard)
+        step5.add_suffix(copy_button)
+        self.dev_instructions_group.add(step5)
+
+        # Important notes group
+        notes_group = Adw.PreferencesGroup()
+        notes_group.set_title(_("Important Notes"))
+        main_box.append(notes_group)
+
+        # Note about languages
+        note1 = Adw.ActionRow()
+        note1.set_title(_("Right-to-Left Languages"))
+        note1.set_subtitle(_("If TV uses Arabic/Hebrew, enter the IP address backwards"))
+        note1_icon = Gtk.Image.new_from_icon_name("dialog-information-symbolic")
+        note1.add_prefix(note1_icon)
+        notes_group.add(note1)
+
+        # Note about network
+        note2 = Adw.ActionRow()
+        note2.set_title(_("Network Connection"))
+        note2.set_subtitle(_("Ensure TV and computer are on the same network"))
+        note2_icon = Gtk.Image.new_from_icon_name("network-wireless-symbolic")
+        note2.add_prefix(note2_icon)
+        notes_group.add(note2)
+
+        # ============================================
+        # DEVELOPER MODE CONFIRMATION (MANDATORY)
+        # ============================================
+        self.confirm_group = Adw.PreferencesGroup()
+        self.confirm_group.set_title(_("Confirmation"))
+        main_box.append(self.confirm_group)
+
+        # Developer mode confirmation toggle
+        self.dev_mode_row = Adw.ActionRow()
+        self.dev_mode_row.set_title(_("Developer Mode Enabled"))
+        self.dev_mode_row.set_subtitle(_("I confirm I have completed the steps above on my TV"))
+
+        # Developer mode switch
+        self.dev_mode_switch = Gtk.Switch()
+        self.dev_mode_switch.set_valign(Gtk.Align.CENTER)
+        self.dev_mode_switch.set_active(self.window.config_manager.get('device.developer_mode', False))
+        self.dev_mode_switch.connect("notify::active", self._on_dev_mode_changed)
+        self.dev_mode_row.add_suffix(self.dev_mode_switch)
+        
+        self.confirm_group.add(self.dev_mode_row)
+
+        # ============================================
+        # DISCOVERY SECTION
+        # ============================================
         self.discovery_group = Adw.PreferencesGroup()
         self.discovery_group.set_title(_("Device Discovery"))
         main_box.append(self.discovery_group)
@@ -74,7 +175,9 @@ class DevicePage(Gtk.ScrolledWindow):
         self.devices_group.set_description(_("Select your target device"))
         main_box.append(self.devices_group)
 
-        # Manual connection section
+        # ============================================
+        # MANUAL CONNECTION SECTION
+        # ============================================
         self.manual_group = Adw.PreferencesGroup()
         self.manual_group.set_title(_("Manual Connection"))
         self.manual_group.set_description(_("Enter device details manually"))
@@ -86,35 +189,14 @@ class DevicePage(Gtk.ScrolledWindow):
         self.ip_row.set_text(self.window.config_manager.get('device.ip', ''))
         self.ip_row.connect("changed", self._on_ip_changed)
         self.manual_group.add(self.ip_row)
-        
-        # Developer mode switch with help button
-        self.dev_mode_row = Adw.ActionRow()
-        self.dev_mode_row.set_title(_("Developer Mode"))
-        self.dev_mode_row.set_subtitle(_("Enable if your TV is in developer mode"))
 
-        # Developer mode switch
-        self.dev_mode_switch = Gtk.Switch()
-        self.dev_mode_switch.set_valign(Gtk.Align.CENTER)
-        self.dev_mode_switch.set_active(self.window.config_manager.get('device.developer_mode', False))
-        self.dev_mode_switch.connect("notify::active", self._on_dev_mode_changed)
-        self.dev_mode_row.add_suffix(self.dev_mode_switch)
-
-        # Help button for developer mode
-        help_button = Gtk.Button()
-        help_button.set_icon_name("help-about-symbolic")
-        help_button.set_valign(Gtk.Align.CENTER)
-        help_button.add_css_class("flat")
-        help_button.set_tooltip_text(_("How to enable Developer Mode on Samsung TV"))
-        help_button.connect("clicked", self._show_developer_mode_help)
-        self.dev_mode_row.add_suffix(help_button)
-        
-        self.manual_group.add(self.dev_mode_row)
-        
-        # Actions
+        # ============================================
+        # ACTIONS
+        # ============================================
         self.actions_group = Adw.PreferencesGroup()
         main_box.append(self.actions_group)
 
-        # Connect button
+        # Connect button - DISABLED until developer mode is confirmed
         self.connect_row = Adw.ActionRow()
         self.connect_row.set_title(_("Connect to Device"))
         self.connect_row.set_subtitle(_("Establish connection with your TV"))
@@ -122,6 +204,8 @@ class DevicePage(Gtk.ScrolledWindow):
         self.connect_button = Gtk.Button.new_with_label(_("Connect"))
         self.connect_button.set_valign(Gtk.Align.CENTER)
         self.connect_button.add_css_class("suggested-action")
+        # Initially disabled - only enabled when developer mode is confirmed
+        self.connect_button.set_sensitive(self.dev_mode_switch.get_active())
         self.connect_button.connect("clicked", self._on_connect_device)
         self.connect_row.add_suffix(self.connect_button)
 
@@ -140,11 +224,27 @@ class DevicePage(Gtk.ScrolledWindow):
         self.continue_row.add_suffix(self.continue_button)
         
         self.actions_group.add(self.continue_row)
-        
-    def _show_developer_mode_help(self, button):
-        """Show developer mode instructions dialog."""
-        help_dialog = DeveloperModeHelpDialog(self.window)
-        help_dialog.present(self.window)
+
+    def _get_local_ip(self):
+        """Get local IP address."""
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.settimeout(1)
+            s.connect(("8.8.8.8", 80))
+            local_ip = s.getsockname()[0]
+            s.close()
+            return local_ip
+        except Exception:
+            return _("Unable to determine IP")
+
+    def _copy_ip_to_clipboard(self, button):
+        """Copy IP to clipboard."""
+        ip = self._get_local_ip()
+        clipboard = self.window.get_clipboard()
+        clipboard.set(ip)
+        original_label = button.get_label()
+        button.set_label(_("Copied!"))
+        GLib.timeout_add(2000, lambda: button.set_label(original_label))
         
     def _on_scan_network(self, button):
         """Scan network for Samsung devices."""
@@ -221,8 +321,11 @@ class DevicePage(Gtk.ScrolledWindow):
             entry.remove_css_class("error")
             
     def _on_dev_mode_changed(self, switch, param):
-        """Handle developer mode toggle."""
-        self.window.config_manager.set('device.developer_mode', switch.get_active())
+        """Handle developer mode toggle - enables/disables connect button."""
+        is_active = switch.get_active()
+        self.window.config_manager.set('device.developer_mode', is_active)
+        # Enable connect button only when developer mode is confirmed
+        self.connect_button.set_sensitive(is_active)
         
     def _on_connect_device(self, button):
         """Connect to the device."""
@@ -272,159 +375,3 @@ class DevicePage(Gtk.ScrolledWindow):
         """Show success toast."""
         self.window.logger.info(message)
         ErrorNotification.show_toast(self.window, message, timeout=3)
-
-class DeveloperModeHelpDialog(Adw.Dialog):
-    """Dialog with instructions for enabling Samsung TV Developer Mode."""
-
-    def __init__(self, window):
-        super().__init__()
-
-        self.window = window
-        self.set_title(_("Samsung TV Developer Mode Setup"))
-        self.set_content_width(700)
-        self.set_content_height(600)
-        
-        self._setup_ui()
-        
-    def _setup_ui(self):
-        """Setup the help dialog UI."""
-        # Main toolbar view
-        toolbar_view = Adw.ToolbarView()
-        self.set_child(toolbar_view)
-        
-        # Header bar
-        header = Adw.HeaderBar()
-        header.set_show_end_title_buttons(True)
-        toolbar_view.add_top_bar(header)
-        
-        # Scrolled content
-        scrolled = Gtk.ScrolledWindow()
-        scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
-        toolbar_view.set_content(scrolled)
-        
-        # Main content box
-        content_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=24)
-        content_box.set_margin_top(24)
-        content_box.set_margin_bottom(24)
-        content_box.set_margin_start(24)
-        content_box.set_margin_end(24)
-        scrolled.set_child(content_box)
-        
-        # Header
-        status_page = Adw.StatusPage()
-        status_page.set_icon_name("preferences-system-symbolic")
-        status_page.set_title(_("Enable Developer Mode"))
-        status_page.set_description(_("Follow these steps to enable Developer Mode on your Samsung TV"))
-        content_box.append(status_page)
-
-        # Instructions
-        instructions_group = Adw.PreferencesGroup()
-        instructions_group.set_title(_("Step-by-Step Instructions"))
-        instructions_group.set_description(_("These steps must be performed directly on your Samsung TV"))
-        content_box.append(instructions_group)
-
-        # Step 1
-        step1 = Adw.ActionRow()
-        step1.set_title(_("1. Open Smart Hub"))
-        step1.set_subtitle(_("On the TV, open the 'Smart Hub'"))
-        step1_icon = Gtk.Image.new_from_icon_name("tv-symbolic")
-        step1.add_prefix(step1_icon)
-        instructions_group.add(step1)
-
-        # Step 2
-        step2 = Adw.ActionRow()
-        step2.set_title(_("2. Go to Apps Panel"))
-        step2.set_subtitle(_("Select the 'Apps' panel in Smart Hub"))
-        step2_icon = Gtk.Image.new_from_icon_name("view-app-grid-symbolic")
-        step2.add_prefix(step2_icon)
-        instructions_group.add(step2)
-
-        # Step 3
-        step3 = Adw.ActionRow()
-        step3.set_title(_("3. Enter Secret Code"))
-        step3.set_subtitle(_("Press '123' button (or long press Home button) before typing '12345' with on-screen keyboard"))
-        step3_icon = Gtk.Image.new_from_icon_name("input-keyboard-symbolic")
-        step3.add_prefix(step3_icon)
-        instructions_group.add(step3)
-
-        # Step 4
-        step4 = Adw.ActionRow()
-        step4.set_title(_("4. Toggle Developer Mode"))
-        step4.set_subtitle(_("Toggle the 'Developer' button to 'On'"))
-        step4_icon = Gtk.Image.new_from_icon_name("preferences-other-symbolic")
-        step4.add_prefix(step4_icon)
-        instructions_group.add(step4)
-
-        # Step 5
-        step5 = Adw.ActionRow()
-        step5.set_title(_("5. Enter Host PC IP"))
-        step5.set_subtitle(_("Enter your computer's IP address: {ip}").format(ip=self._get_local_ip()))
-        step5_icon = Gtk.Image.new_from_icon_name("network-wired-symbolic")
-        step5.add_prefix(step5_icon)
-        instructions_group.add(step5)
-
-        # Important notes
-        notes_group = Adw.PreferencesGroup()
-        notes_group.set_title(_("Important Notes"))
-        content_box.append(notes_group)
-
-        # Note about languages
-        note1 = Adw.ActionRow()
-        note1.set_title(_("Right-to-Left Languages"))
-        note1.set_subtitle(_("If TV uses Arabic/Hebrew, enter the IP address backwards"))
-        note1_icon = Gtk.Image.new_from_icon_name("dialog-information-symbolic")
-        note1.add_prefix(note1_icon)
-        notes_group.add(note1)
-
-        # Note about virtual keyboard
-        note2 = Adw.ActionRow()
-        note2.set_title(_("Virtual Keyboard Issues"))
-        note2.set_subtitle(_("If on-screen keyboard doesn't work, use Samsung SmartThings app or external Bluetooth keyboard"))
-        note2_icon = Gtk.Image.new_from_icon_name("dialog-warning-symbolic")
-        note2.add_prefix(note2_icon)
-        notes_group.add(note2)
-
-        # Note about network
-        note3 = Adw.ActionRow()
-        note3.set_title(_("Network Connection"))
-        note3.set_subtitle(_("Ensure TV and computer are on the same network"))
-        note3_icon = Gtk.Image.new_from_icon_name("network-wireless-symbolic")
-        note3.add_prefix(note3_icon)
-        notes_group.add(note3)
-
-        # Action buttons
-        actions_group = Adw.PreferencesGroup()
-        content_box.append(actions_group)
-
-        copy_ip_row = Adw.ActionRow()
-        copy_ip_row.set_title(_("Copy Your Computer's IP"))
-        copy_ip_row.set_subtitle(_("Click to copy: {ip}").format(ip=self._get_local_ip()))
-
-        copy_button = Gtk.Button.new_with_label(_("Copy IP"))
-        copy_button.set_valign(Gtk.Align.CENTER)
-        copy_button.add_css_class("suggested-action")
-        copy_button.connect("clicked", self._copy_ip_to_clipboard)
-        copy_ip_row.add_suffix(copy_button)
-        
-        actions_group.add(copy_ip_row)
-        
-    def _get_local_ip(self):
-        """Get local IP address."""
-        try:
-            import socket
-            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-            s.settimeout(1)
-            s.connect(("8.8.8.8", 80))
-            local_ip = s.getsockname()[0]
-            s.close()
-            return local_ip
-        except Exception:
-            return _("Unable to determine IP")
-
-    def _copy_ip_to_clipboard(self, button):
-        """Copy IP to clipboard."""
-        ip = self._get_local_ip()
-        clipboard = self.window.get_clipboard()
-        clipboard.set(ip)
-        button.set_label(_("Copied!"))
-        GLib.timeout_add(2000, lambda: button.set_label(_("Copy IP")))
