@@ -134,7 +134,7 @@ class JellyTizenWindow(Adw.ApplicationWindow):
         """Show about dialog."""
         about = Adw.AboutDialog(
             application_name=APP_NAME,
-            application_icon=APP_ID,
+            application_icon="jellytizen",
             version=APP_VERSION,
             developer_name=_("JellyTizen Team"),
             license_type=Gtk.License.GPL_3_0,

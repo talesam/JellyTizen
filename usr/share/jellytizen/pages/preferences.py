@@ -65,7 +65,7 @@ class PreferencesPage(Adw.PreferencesDialog):
         # Port range - Fixed: ActionRow instead of EntryRow for subtitle
         port_range_row = Adw.ActionRow()
         port_range_row.set_title(_("Port Range"))
-        port_range_row.set_subtitle(_("Port range for device scanning (e.g., 8000-8080)"))
+        port_range_row.set_subtitle(_("Scan port range (e.g., 8000-8080)"))
         
         port_range_entry = Gtk.Entry()
         port_range_entry.set_text(self.window.config_manager.get('network.port_range', '8000-8080'))
