@@ -2,7 +2,7 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the JellyTizen package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
+# 
 msgid ""
 msgstr ""
 "Project-Id-Version: JellyTizen\n"
@@ -13,1111 +13,1104 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#
+"X-Generator: attranslate\n"
+# 
 # File: usr/share/jellytizen/utils/ui_helpers.py, line: 94
 # File: usr/share/jellytizen/utils/ui_helpers.py, line: 137
+#: NEEDS WORK
 msgid "OK"
-msgstr "OK"
-
-#
+msgstr "Aceptar"
+# 
 # File: usr/share/jellytizen/utils/ui_helpers.py, line: 170
+#: NEEDS WORK
 msgid "Confirm"
-msgstr "Confirm"
-
-#
+msgstr "Confirmar"
+# 
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
-#
+# 
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
-#
+# 
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
-#
+# 
 # File: usr/share/jellytizen/utils/ui_helpers.py, line: 172
 # File: usr/share/jellytizen/pages/preferences.py, line: 171
 # File: usr/share/jellytizen/pages/install.py, line: 110
 # File: usr/share/jellytizen/pages/welcome.py, line: 198
+#: NEEDS WORK
 msgid "Cancel"
-msgstr "Cancel"
-
-#
+msgstr "Cancelar"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 31
+#: NEEDS WORK
 msgid "Developer Certificates"
-msgstr "Developer Certificates"
-
-#
+msgstr "Certificados de Desarrollador"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 32
+#: NEEDS WORK
 msgid "Configure Samsung developer certificates for app installation"
-msgstr "Configure Samsung developer certificates for app installation"
-
-#
+msgstr "Configurar certificados de desarrollador de Samsung para la instalación de aplicaciones"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 37
+#: NEEDS WORK
 msgid "Certificate Files"
-msgstr "Certificate Files"
-
-#
+msgstr "Archivos de Certificado"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 38
+#: NEEDS WORK
 msgid "Upload your Samsung developer certificate files"
-msgstr "Upload your Samsung developer certificate files"
-
-#
+msgstr "Sube tus archivos de certificado de desarrollador de Samsung"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 43
+#: NEEDS WORK
 msgid "Author Certificate"
-msgstr "Author Certificate"
-
-#
+msgstr "Certificado de Autor"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 44
+#: NEEDS WORK
 msgid "author.p12 - Your developer certificate"
-msgstr "author.p12 - Your developer certificate"
-
-#
+msgstr "author.p12 - Su certificado de desarrollador"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 46
 # File: usr/share/jellytizen/pages/certificates.py, line: 58
+#: NEEDS WORK
 msgid "Browse"
-msgstr "Browse"
-
-#
+msgstr "Navegar"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 55
+#: NEEDS WORK
 msgid "Distributor Certificate"
-msgstr "Distributor Certificate"
-
-#
+msgstr "Certificado de Distribuidor"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 56
+#: NEEDS WORK
 msgid "distributor.p12 - Samsung's distributor certificate"
-msgstr "distributor.p12 - Samsung's distributor certificate"
-
-#
+msgstr "distribuidor.p12 - certificado de distribuidor de Samsung"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 67
 # File: usr/share/jellytizen/pages/certificates.py, line: 73
+#: NEEDS WORK
 msgid "Certificate Password"
-msgstr "Certificate Password"
-
-#
+msgstr "Contraseña del certificado"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 68
+#: NEEDS WORK
 msgid "Enter the password for your author certificate"
-msgstr "Enter the password for your author certificate"
-
-#
+msgstr "Ingrese la contraseña de su certificado de autor"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 80
+#: NEEDS WORK
 msgid "Developer Profile"
-msgstr "Developer Profile"
-
-#
+msgstr "Perfil del desarrollador"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 81
+#: NEEDS WORK
 msgid "Configure your developer profile information"
-msgstr "Configure your developer profile information"
-
-#
+msgstr "Configura la información de tu perfil de desarrollador"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 86
+#: NEEDS WORK
 msgid "Profile Name"
-msgstr "Profile Name"
-
-#
+msgstr "Nombre del perfil"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 93
+#: NEEDS WORK
 msgid "Certificate Validation"
-msgstr "Certificate Validation"
-
-#
+msgstr "Validación de Certificado"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 98
+#: NEEDS WORK
 msgid "Validate Certificates"
-msgstr "Validate Certificates"
-
-#
+msgstr "Validar Certificados"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 99
+#: NEEDS WORK
 msgid "Check if certificates are valid and properly configured"
-msgstr "Check if certificates are valid and properly configured"
-
-#
+msgstr "Verifique si los certificados son válidos y están configurados correctamente."
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 101
+#: NEEDS WORK
 msgid "Validate"
-msgstr "Validate"
-
-#
+msgstr "Validar"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 114
+#: NEEDS WORK
 msgid "Continue to Installation"
-msgstr "Continue to Installation"
-
-#
+msgstr "Continuar con la instalación"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 115
+#: NEEDS WORK
 msgid "Start the Jellyfin installation process"
-msgstr "Start the Jellyfin installation process"
-
-#
+msgstr "Iniciar el proceso de instalación de Jellyfin"
+# 
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
-#
+# 
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
-#
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 117
 # File: usr/share/jellytizen/pages/device.py, line: 135
 # File: usr/share/jellytizen/pages/welcome.py, line: 105
+#: NEEDS WORK
 msgid "Continue"
-msgstr "Continue"
-
-#
+msgstr "Continuar"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 132
+#: NEEDS WORK
 #, python-brace-format
 msgid "Select {cert_type} certificate"
-msgstr "Select {cert_type} certificate"
-
-#
+msgstr "Seleccionar certificado {cert_type}"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 136
+#: NEEDS WORK
 msgid "P12 Certificate Files"
-msgstr "P12 Certificate Files"
-
-#
+msgstr "Archivos de certificado P12"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 162
 # File: usr/share/jellytizen/pages/certificates.py, line: 165
 # File: usr/share/jellytizen/pages/certificates.py, line: 184
 # File: usr/share/jellytizen/pages/certificates.py, line: 190
+#: NEEDS WORK
 #, python-brace-format
 msgid "Selected: {path}"
-msgstr "Selected: {path}"
-
-#
+msgstr "Seleccionado: {path}"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 163
 # File: usr/share/jellytizen/pages/certificates.py, line: 166
 # File: usr/share/jellytizen/pages/certificates.py, line: 185
 # File: usr/share/jellytizen/pages/certificates.py, line: 191
+#: NEEDS WORK
 msgid "Change"
-msgstr "Change"
-
-#
+msgstr "Cambiar"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 217
+#: NEEDS WORK
 msgid "Certificates validated successfully!"
-msgstr "Certificates validated successfully!"
-
-#
+msgstr "¡Certificados validados con éxito!"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 219
+#: NEEDS WORK
 #, python-brace-format
 msgid "Certificate validation failed: {message}"
-msgstr "Certificate validation failed: {message}"
-
-#
+msgstr "La validación del certificado ha fallado: {message}"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 231
+#: NEEDS WORK
 msgid "Installation"
-msgstr "Installation"
-
-#
+msgstr "Instalación"
+# 
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
-#
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 16
 # File: usr/share/jellytizen/app.py, line: 112
+#: NEEDS WORK
 msgid "Preferences"
-msgstr "Preferences"
-
-#
+msgstr "Preferencias"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 24
+#: NEEDS WORK
 msgid "General"
 msgstr "General"
-
-#
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 30
+#: NEEDS WORK
 msgid "Docker Settings"
-msgstr "Docker Settings"
-
-#
+msgstr "Configuración de Docker"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 31
+#: NEEDS WORK
 msgid "Configure Docker behavior and settings"
-msgstr "Configure Docker behavior and settings"
-
-#
+msgstr "Configurar el comportamiento y la configuración de Docker"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 36
+#: NEEDS WORK
 msgid "Docker Image"
-msgstr "Docker Image"
-
-#
+msgstr "Imagen de Docker"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 43
+#: NEEDS WORK
 msgid "Auto-pull Updates"
-msgstr "Auto-pull Updates"
-
-#
+msgstr "Actualizaciones de auto-descarga"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 44
+#: NEEDS WORK
 msgid "Automatically pull the latest Docker image"
-msgstr "Automatically pull the latest Docker image"
-
-#
+msgstr "Extraer automáticamente la última imagen de Docker"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 51
+#: NEEDS WORK
 msgid "Network Settings"
-msgstr "Network Settings"
-
-#
+msgstr "Configuración de red"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 52
+#: NEEDS WORK
 msgid "Configure network scanning and timeouts"
-msgstr "Configure network scanning and timeouts"
-
-#
+msgstr "Configurar el escaneo de red y los tiempos de espera"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 57
+#: NEEDS WORK
 msgid "Scan Timeout"
-msgstr "Scan Timeout"
-
-#
+msgstr "Tiempo de espera de escaneo"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 58
+#: NEEDS WORK
 msgid "Timeout for network device scanning (seconds)"
-msgstr "Timeout for network device scanning (seconds)"
-
-#
+msgstr "Tiempo de espera para el escaneo de dispositivos de red (segundos)"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 67
+#: NEEDS WORK
 msgid "Port Range"
-msgstr "Port Range"
-
-#
+msgstr "Rango de puertos"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 68
+#: NEEDS WORK
 msgid "Port range for device scanning (e.g., 8000-8080)"
-msgstr "Port range for device scanning (e.g., 8000-8080)"
-
-#
+msgstr "Rango de puertos para el escaneo de dispositivos (p. ej., 8000-8080)"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 80
+#: NEEDS WORK
 msgid "Logging"
-msgstr "Logging"
-
-#
+msgstr "Registro"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 81
+#: NEEDS WORK
 msgid "Configure application logging"
-msgstr "Configure application logging"
-
-#
+msgstr "Configurar el registro de la aplicación"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 86
+#: NEEDS WORK
 msgid "Log Level"
-msgstr "Log Level"
-
-#
+msgstr "Nivel de registro"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 87
+#: NEEDS WORK
 msgid "Verbosity of application logs"
-msgstr "Verbosity of application logs"
-
-#
+msgstr "Verbosidad de los registros de la aplicación"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 104
+#: NEEDS WORK
 msgid "Save Logs to File"
-msgstr "Save Logs to File"
-
-#
+msgstr "Guardar registros en archivo"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 105
+#: NEEDS WORK
 msgid "Save application logs to ~/.local/share/jellytizen/logs"
-msgstr "Save application logs to ~/.local/share/jellytizen/logs"
-
-#
+msgstr "Guardar los registros de la aplicación en ~/.local/share/jellytizen/logs"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 112
+#: NEEDS WORK
 msgid "Advanced"
-msgstr "Advanced"
-
-#
+msgstr "Avanzado"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 118
+#: NEEDS WORK
 msgid "Developer Options"
-msgstr "Developer Options"
-
-#
+msgstr "Opciones de desarrollador"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 119
+#: NEEDS WORK
 msgid "Advanced settings for developers"
-msgstr "Advanced settings for developers"
-
-#
+msgstr "Configuraciones avanzadas para desarrolladores"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 124
+#: NEEDS WORK
 msgid "Debug Mode"
-msgstr "Debug Mode"
-
-#
+msgstr "Modo de depuración"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 125
+#: NEEDS WORK
 msgid "Enable debug mode for development"
-msgstr "Enable debug mode for development"
-
-#
+msgstr "Habilitar modo de depuración para desarrollo"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 132
+#: NEEDS WORK
 msgid "Allow Custom Scripts"
-msgstr "Allow Custom Scripts"
-
-#
+msgstr "Permitir Scripts Personalizados"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 133
+#: NEEDS WORK
 msgid "Allow execution of custom installation scripts"
-msgstr "Allow execution of custom installation scripts"
-
-#
+msgstr "Permitir la ejecución de scripts de instalación personalizados"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 140
 # File: usr/share/jellytizen/pages/preferences.py, line: 148
 # File: usr/share/jellytizen/pages/preferences.py, line: 172
+#: NEEDS WORK
 msgid "Reset"
-msgstr "Reset"
-
-#
+msgstr "Restablecer"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 141
+#: NEEDS WORK
 msgid "Reset application settings"
-msgstr "Reset application settings"
-
-#
+msgstr "Restablecer la configuración de la aplicación"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 145
+#: NEEDS WORK
 msgid "Reset All Settings"
-msgstr "Reset All Settings"
-
-#
+msgstr "Restablecer todas las configuraciones"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 146
+#: NEEDS WORK
 msgid "Reset all preferences to default values"
-msgstr "Reset all preferences to default values"
-
-#
+msgstr "Restablecer todas las preferencias a los valores predeterminados"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 168
+#: NEEDS WORK
 msgid "Reset All Settings?"
-msgstr "Reset All Settings?"
-
-#
+msgstr "¿Restablecer todas las configuraciones?"
+# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 169
-msgid ""
-"This will reset all preferences to their default values. This action cannot "
-"be undone."
+#: NEEDS WORK
+msgid "This will reset all preferences to their default values. This action cannot be undone."
 msgstr ""
-"This will reset all preferences to their default values. This action cannot "
-"be undone."
-
-#
+"Esto restablecerá todas las preferencias a sus valores predeterminados. Esta acción no se puede "
+"deshacer."
+# 
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
-#
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 49
 # File: usr/share/jellytizen/pages/welcome.py, line: 185
+#: NEEDS WORK
 msgid "Device Setup"
-msgstr "Device Setup"
-
-#
+msgstr "Configuración del dispositivo"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 50
+#: NEEDS WORK
 msgid "Connect to your Samsung Tizen TV or projector"
-msgstr "Connect to your Samsung Tizen TV or projector"
-
-#
+msgstr "Conéctate a tu televisor o proyector Samsung Tizen."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 55
+#: NEEDS WORK
 msgid "Device Discovery"
-msgstr "Device Discovery"
-
-#
+msgstr "Descubrimiento de dispositivos"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 60
+#: NEEDS WORK
 msgid "Scan Network"
-msgstr "Scan Network"
-
-#
+msgstr "Escanear red"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 61
+#: NEEDS WORK
 msgid "Automatically discover Samsung devices on your network"
-msgstr "Automatically discover Samsung devices on your network"
-
-#
+msgstr "Descubre automáticamente los dispositivos Samsung en tu red."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 63
 # File: usr/share/jellytizen/pages/device.py, line: 163
+#: NEEDS WORK
 msgid "Scan"
-msgstr "Scan"
-
-#
+msgstr "Escanear"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 73
+#: NEEDS WORK
 msgid "Discovered Devices"
-msgstr "Discovered Devices"
-
-#
+msgstr "Dispositivos Descubiertos"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 74
+#: NEEDS WORK
 msgid "Select your target device"
-msgstr "Select your target device"
-
-#
+msgstr "Selecciona tu dispositivo objetivo"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 79
+#: NEEDS WORK
 msgid "Manual Connection"
-msgstr "Manual Connection"
-
-#
+msgstr "Conexión Manual"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 80
+#: NEEDS WORK
 msgid "Enter device details manually"
-msgstr "Enter device details manually"
-
-#
+msgstr "Ingrese los detalles del dispositivo manualmente"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 85
+#: NEEDS WORK
 msgid "Device IP Address"
-msgstr "Device IP Address"
-
-#
+msgstr "Dirección IP del dispositivo"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 92
+#: NEEDS WORK
 msgid "Developer Mode"
-msgstr "Developer Mode"
-
-#
+msgstr "Modo de desarrollador"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 93
+#: NEEDS WORK
 msgid "Enable if your TV is in developer mode"
-msgstr "Enable if your TV is in developer mode"
-
-#
+msgstr "Habilitar si tu televisor está en modo de desarrollador"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 107
+#: NEEDS WORK
 msgid "How to enable Developer Mode on Samsung TV"
-msgstr "How to enable Developer Mode on Samsung TV"
-
-#
+msgstr "Cómo habilitar el Modo Desarrollador en el televisor Samsung"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 119
+#: NEEDS WORK
 msgid "Connect to Device"
-msgstr "Connect to Device"
-
-#
+msgstr "Conectar al dispositivo"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 120
+#: NEEDS WORK
 msgid "Establish connection with your TV"
-msgstr "Establish connection with your TV"
-
-#
+msgstr "Establecer conexión con tu televisor"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 122
 # File: usr/share/jellytizen/pages/device.py, line: 250
+#: NEEDS WORK
 msgid "Connect"
-msgstr "Connect"
-
-#
+msgstr "Conectar"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 132
+#: NEEDS WORK
 msgid "Continue to Certificates"
-msgstr "Continue to Certificates"
-
-#
+msgstr "Continuar a Certificados"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 133
+#: NEEDS WORK
 msgid "Setup developer certificates"
-msgstr "Setup developer certificates"
-
-#
+msgstr "Configurar certificados de desarrollador"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 153
+#: NEEDS WORK
 msgid "Scanning..."
-msgstr "Scanning..."
-
-#
+msgstr "Escaneando..."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 178
+#: NEEDS WORK
 msgid "No devices found"
-msgstr "No devices found"
-
-#
+msgstr "No se encontraron dispositivos"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 179
+#: NEEDS WORK
 msgid "Try manual connection or check network"
-msgstr "Try manual connection or check network"
-
-#
+msgstr "Intenta la conexión manual o verifica la red"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 186
+#: NEEDS WORK
 msgid "Unknown Device"
-msgstr "Unknown Device"
-
-#
+msgstr "Dispositivo desconocido"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 187
+#: NEEDS WORK
 #, python-brace-format
 msgid "IP: {ip} | Model: {model}"
-msgstr "IP: {ip} | Model: {model}"
-
-#
+msgstr "IP: {ip} | Modelo: {model}"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 187
+#: NEEDS WORK
 msgid "Unknown"
-msgstr "Unknown"
-
-#
+msgstr "Desconocido"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 189
+#: NEEDS WORK
 msgid "Select"
-msgstr "Select"
-
-#
+msgstr "Seleccionar"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 200
+#: NEEDS WORK
 msgid "Found 1 device - Select your target device"
-msgstr "Found 1 device - Select your target device"
-
-#
+msgstr "Se encontró 1 dispositivo - Selecciona tu dispositivo objetivo"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 202
+#: NEEDS WORK
 #, python-brace-format
 msgid "Found {count} devices - Select your target device"
-msgstr "Found {count} devices - Select your target device"
-
-#
+msgstr "Se encontraron {count} dispositivos - Selecciona tu dispositivo objetivo"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 209
+#: NEEDS WORK
 #, python-brace-format
 msgid "Device selected: {ip}"
-msgstr "Device selected: {ip}"
-
-#
+msgstr "Dispositivo seleccionado: {ip}"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 232
+#: NEEDS WORK
 msgid "Please enter a device IP address"
-msgstr "Please enter a device IP address"
-
-#
+msgstr "Por favor, introduzca una dirección IP del dispositivo"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 236
+#: NEEDS WORK
 msgid "Please enter a valid IP address"
-msgstr "Please enter a valid IP address"
-
-#
+msgstr "Por favor, introduzca una dirección IP válida"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 241
+#: NEEDS WORK
 msgid "Connecting..."
-msgstr "Connecting..."
-
-#
+msgstr "Conectando..."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 255
+#: NEEDS WORK
 msgid "Connected successfully!"
-msgstr "Connected successfully!"
-
-#
+msgstr "¡Conectado con éxito!"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 257
+#: NEEDS WORK
 #, python-brace-format
 msgid "Connection failed: {message}"
-msgstr "Connection failed: {message}"
-
-#
+msgstr "Conexión fallida: {message}"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 264
+#: NEEDS WORK
 msgid "Certificates"
-msgstr "Certificates"
-
-#
+msgstr "Certificados"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 283
+#: NEEDS WORK
 msgid "Samsung TV Developer Mode Setup"
-msgstr "Samsung TV Developer Mode Setup"
-
-#
+msgstr "Configuración del Modo Desarrollador de Samsung TV"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 316
+#: NEEDS WORK
 msgid "Enable Developer Mode"
-msgstr "Enable Developer Mode"
-
-#
+msgstr "Habilitar Modo Desarrollador"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 317
+#: NEEDS WORK
 msgid "Follow these steps to enable Developer Mode on your Samsung TV"
-msgstr "Follow these steps to enable Developer Mode on your Samsung TV"
-
-#
+msgstr "Sigue estos pasos para habilitar el Modo Desarrollador en tu televisor Samsung."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 322
+#: NEEDS WORK
 msgid "Step-by-Step Instructions"
-msgstr "Step-by-Step Instructions"
-
-#
+msgstr "Instrucciones paso a paso"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 323
+#: NEEDS WORK
 msgid "These steps must be performed directly on your Samsung TV"
-msgstr "These steps must be performed directly on your Samsung TV"
-
-#
+msgstr "Estos pasos deben realizarse directamente en tu televisor Samsung."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 328
+#: NEEDS WORK
 msgid "1. Open Smart Hub"
-msgstr "1. Open Smart Hub"
-
-#
+msgstr "1. Abrir Smart Hub"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 329
+#: NEEDS WORK
 msgid "On the TV, open the 'Smart Hub'"
-msgstr "On the TV, open the 'Smart Hub'"
-
-#
+msgstr "En la TV, abre el 'Smart Hub'"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 336
+#: NEEDS WORK
 msgid "2. Go to Apps Panel"
-msgstr "2. Go to Apps Panel"
-
-#
+msgstr "2. Ve a Panel de Aplicaciones"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 337
+#: NEEDS WORK
 msgid "Select the 'Apps' panel in Smart Hub"
-msgstr "Select the 'Apps' panel in Smart Hub"
-
-#
+msgstr "Selecciona el panel de 'Aplicaciones' en Smart Hub"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 344
+#: NEEDS WORK
 msgid "3. Enter Secret Code"
-msgstr "3. Enter Secret Code"
-
-#
+msgstr "3. Introduzca el código secreto"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 345
-msgid ""
-"Press '123' button (or long press Home button) before typing '12345' with on-"
-"screen keyboard"
+#: NEEDS WORK
+msgid "Press '123' button (or long press Home button) before typing '12345' with on-screen keyboard"
 msgstr ""
-"Press '123' button (or long press Home button) before typing '12345' with on-"
-"screen keyboard"
-
-#
+"Presiona el botón '123' (o mantén presionado el botón de Inicio) antes de escribir '12345' con el "
+"teclado en pantalla."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 352
+#: NEEDS WORK
 msgid "4. Toggle Developer Mode"
-msgstr "4. Toggle Developer Mode"
-
-#
+msgstr "4. Alternar Modo Desarrollador"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 353
+#: NEEDS WORK
 msgid "Toggle the 'Developer' button to 'On'"
-msgstr "Toggle the 'Developer' button to 'On'"
-
-#
+msgstr "Activa el botón 'Desarrollador' a 'On'"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 360
+#: NEEDS WORK
 msgid "5. Enter Host PC IP"
-msgstr "5. Enter Host PC IP"
-
-#
+msgstr "5. Introduzca la IP del PC host"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 361
+#: NEEDS WORK
 #, python-brace-format
 msgid "Enter your computer's IP address: {ip}"
-msgstr "Enter your computer's IP address: {ip}"
-
-#
+msgstr "Introduce la dirección IP de tu computadora: {ip}"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 368
+#: NEEDS WORK
 msgid "Important Notes"
-msgstr "Important Notes"
-
-#
+msgstr "Notas Importantes"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 373
+#: NEEDS WORK
 msgid "Right-to-Left Languages"
-msgstr "Right-to-Left Languages"
-
-#
+msgstr "Idiomas de derecha a izquierda"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 374
+#: NEEDS WORK
 msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
-msgstr "If TV uses Arabic/Hebrew, enter the IP address backwards"
-
-#
+msgstr "Si el televisor utiliza árabe/hebreo, ingrese la dirección IP al revés."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 381
+#: NEEDS WORK
 msgid "Virtual Keyboard Issues"
-msgstr "Virtual Keyboard Issues"
-
-#
+msgstr "Problemas con el teclado virtual"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 382
-msgid ""
-"If on-screen keyboard doesn't work, use Samsung SmartThings app or external "
-"Bluetooth keyboard"
+#: NEEDS WORK
+msgid "If on-screen keyboard doesn't work, use Samsung SmartThings app or external Bluetooth keyboard"
 msgstr ""
-"If on-screen keyboard doesn't work, use Samsung SmartThings app or external "
-"Bluetooth keyboard"
-
-#
+"Si el teclado en pantalla no funciona, utiliza la aplicación Samsung SmartThings o un teclado "
+"Bluetooth externo."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 389
+#: NEEDS WORK
 msgid "Network Connection"
-msgstr "Network Connection"
-
-#
+msgstr "Conexión de red"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 390
+#: NEEDS WORK
 msgid "Ensure TV and computer are on the same network"
-msgstr "Ensure TV and computer are on the same network"
-
-#
+msgstr "Asegúrate de que la TV y el ordenador estén en la misma red."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 400
+#: NEEDS WORK
 msgid "Copy Your Computer's IP"
-msgstr "Copy Your Computer's IP"
-
-#
+msgstr "Copia la IP de tu computadora"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 401
+#: NEEDS WORK
 #, python-brace-format
 msgid "Click to copy: {ip}"
-msgstr "Click to copy: {ip}"
-
-#
+msgstr "Haga clic para copiar: {ip}"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 403
 # File: usr/share/jellytizen/pages/device.py, line: 430
+#: NEEDS WORK
 msgid "Copy IP"
-msgstr "Copy IP"
-
-#
+msgstr "Copiar IP"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 422
+#: NEEDS WORK
 msgid "Unable to determine IP"
-msgstr "Unable to determine IP"
-
-#
+msgstr "No se puede determinar la IP"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 429
+#: NEEDS WORK
 msgid "Copied!"
-msgstr "Copied!"
-
-#
+msgstr "¡Copiado!"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 37
+#: NEEDS WORK
 msgid "Jellyfin Installation"
-msgstr "Jellyfin Installation"
-
-#
+msgstr "Instalación de Jellyfin"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 38
+#: NEEDS WORK
 msgid "Installing Jellyfin on your Samsung Tizen device"
-msgstr "Installing Jellyfin on your Samsung Tizen device"
-
-#
+msgstr "Instalando Jellyfin en tu dispositivo Samsung Tizen"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 43
+#: NEEDS WORK
 msgid "Installation Progress"
-msgstr "Installation Progress"
-
-#
+msgstr "Progreso de instalación"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 48
+#: NEEDS WORK
 msgid "Overall Progress"
-msgstr "Overall Progress"
-
-#
+msgstr "Progreso general"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 49
+#: NEEDS WORK
 msgid "Ready to start installation"
-msgstr "Ready to start installation"
-
-#
+msgstr "Listo para comenzar la instalación"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 61
+#: NEEDS WORK
 msgid "Current Step"
-msgstr "Current Step"
-
-#
+msgstr "Paso Actual"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 62
+#: NEEDS WORK
 msgid "Waiting to start..."
-msgstr "Waiting to start..."
-
-#
+msgstr "Esperando para comenzar..."
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 67
+#: NEEDS WORK
 msgid "Installation Log"
-msgstr "Installation Log"
-
-#
+msgstr "Registro de instalación"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 68
+#: NEEDS WORK
 msgid "Detailed output from the installation process"
-msgstr "Detailed output from the installation process"
-
-#
+msgstr "Salida detallada del proceso de instalación"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 94
 # File: usr/share/jellytizen/pages/install.py, line: 97
 # File: usr/share/jellytizen/pages/install.py, line: 336
+#: NEEDS WORK
 msgid "Start Installation"
-msgstr "Start Installation"
-
-#
+msgstr "Iniciar instalación"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 95
+#: NEEDS WORK
 msgid "Begin the Jellyfin installation process"
-msgstr "Begin the Jellyfin installation process"
-
-#
+msgstr "Iniciar el proceso de instalación de Jellyfin"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 107
+#: NEEDS WORK
 msgid "Cancel Installation"
-msgstr "Cancel Installation"
-
-#
+msgstr "Cancelar instalación"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 108
+#: NEEDS WORK
 msgid "Stop the current installation process"
-msgstr "Stop the current installation process"
-
-#
+msgstr "Detener el proceso de instalación actual"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 121
+#: NEEDS WORK
 msgid "Installation Complete"
-msgstr "Installation Complete"
-
-#
+msgstr "Instalación completa"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 126
+#: NEEDS WORK
 msgid "Installation Successful!"
-msgstr "Installation Successful!"
-
-#
+msgstr "¡Instalación exitosa!"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 127
+#: NEEDS WORK
 msgid "Jellyfin has been installed on your device"
-msgstr "Jellyfin has been installed on your device"
-
-#
+msgstr "Jellyfin se ha instalado en tu dispositivo"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 129
+#: NEEDS WORK
 msgid "Finish"
-msgstr "Finish"
-
-#
+msgstr "Finalizar"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 159
+#: NEEDS WORK
 msgid "Preparing Docker environment"
-msgstr "Preparing Docker environment"
-
-#
+msgstr "Preparando el entorno de Docker"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 160
+#: NEEDS WORK
 msgid "Downloading Tizen SDK"
-msgstr "Downloading Tizen SDK"
-
-#
+msgstr "Descargando Tizen SDK"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 161
+#: NEEDS WORK
 msgid "Setting up certificates"
-msgstr "Setting up certificates"
-
-#
+msgstr "Configurando certificados"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 162
+#: NEEDS WORK
 msgid "Building Jellyfin app"
-msgstr "Building Jellyfin app"
-
-#
+msgstr "Construyendo la aplicación Jellyfin"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 163
+#: NEEDS WORK
 msgid "Connecting to device"
-msgstr "Connecting to device"
-
-#
+msgstr "Conectando al dispositivo"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 164
+#: NEEDS WORK
 msgid "Installing application"
-msgstr "Installing application"
-
-#
+msgstr "Instalando aplicación"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 196
+#: NEEDS WORK
 #, python-brace-format
 msgid "Step {current} of {total}"
-msgstr "Step {current} of {total}"
-
-#
+msgstr "Paso {current} de {total}"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 204
+#: NEEDS WORK
 msgid "Checking Docker status..."
-msgstr "Checking Docker status..."
-
-#
+msgstr "Comprobando el estado de Docker..."
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 208
+#: NEEDS WORK
 msgid "Docker environment ready"
-msgstr "Docker environment ready"
-
-#
+msgstr "Entorno de Docker listo"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 210
+#: NEEDS WORK
 #, python-brace-format
 msgid "Docker error: {message}"
-msgstr "Docker error: {message}"
-
-#
+msgstr "Error de Docker: {message}"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 217
+#: NEEDS WORK
 msgid "Downloading Tizen SDK..."
-msgstr "Downloading Tizen SDK..."
-
-#
+msgstr "Descargando Tizen SDK..."
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 221
+#: NEEDS WORK
 msgid "Tizen SDK ready"
-msgstr "Tizen SDK ready"
-
-#
+msgstr "Tizen SDK listo"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 223
+#: NEEDS WORK
 #, python-brace-format
 msgid "SDK error: {message}"
-msgstr "SDK error: {message}"
-
-#
+msgstr "Error de SDK: {message}"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 230
+#: NEEDS WORK
 msgid "Setting up certificates..."
-msgstr "Setting up certificates..."
-
-#
+msgstr "Configurando certificados..."
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 238
+#: NEEDS WORK
 msgid "Certificates configured"
-msgstr "Certificates configured"
-
-#
+msgstr "Certificados configurados"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 240
+#: NEEDS WORK
 #, python-brace-format
 msgid "Certificate error: {message}"
-msgstr "Certificate error: {message}"
-
-#
+msgstr "Error de certificado: {message}"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 249
+#: NEEDS WORK
 msgid "Building Jellyfin application..."
-msgstr "Building Jellyfin application..."
-
-#
+msgstr "Construyendo la aplicación Jellyfin..."
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 253
+#: NEEDS WORK
 msgid "Application built successfully"
-msgstr "Application built successfully"
-
-#
+msgstr "Aplicación construida con éxito"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 255
+#: NEEDS WORK
 #, python-brace-format
 msgid "Build error: {message}"
-msgstr "Build error: {message}"
-
-#
+msgstr "Error de compilación: {message}"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 262
+#: NEEDS WORK
 msgid "Connecting to device..."
-msgstr "Connecting to device..."
-
-#
+msgstr "Conectando al dispositivo..."
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 269
+#: NEEDS WORK
 msgid "Device connected successfully"
-msgstr "Device connected successfully"
-
-#
+msgstr "Dispositivo conectado con éxito"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 271
+#: NEEDS WORK
 #, python-brace-format
 msgid "Connection error: {message}"
-msgstr "Connection error: {message}"
-
-#
+msgstr "Error de conexión: {message}"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 278
+#: NEEDS WORK
 msgid "Installing Jellyfin on device..."
-msgstr "Installing Jellyfin on device..."
-
-#
+msgstr "Instalando Jellyfin en el dispositivo..."
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 282
+#: NEEDS WORK
 msgid "Installation completed successfully!"
-msgstr "Installation completed successfully!"
-
-#
+msgstr "¡Instalación completada con éxito!"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 284
+#: NEEDS WORK
 #, python-brace-format
 msgid "Installation error: {message}"
-msgstr "Installation error: {message}"
-
-#
+msgstr "Error de instalación: {message}"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 298
+#: NEEDS WORK
 msgid "Complete"
-msgstr "Complete"
-
-#
+msgstr "Completo"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 299
+#: NEEDS WORK
 msgid "Installation completed successfully"
-msgstr "Installation completed successfully"
-
-#
+msgstr "La instalación se completó con éxito."
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 300
+#: NEEDS WORK
 msgid "All steps completed"
-msgstr "All steps completed"
-
-#
+msgstr "Todos los pasos completados"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 302
+#: NEEDS WORK
 msgid "Install Again"
-msgstr "Install Again"
-
-#
+msgstr "Instalar de nuevo"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 307
+#: NEEDS WORK
 msgid "Installation Complete!"
-msgstr "Installation Complete!"
-
-#
+msgstr "¡Instalación completa!"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 308
+#: NEEDS WORK
 msgid "Jellyfin has been successfully installed on your device."
-msgstr "Jellyfin has been successfully installed on your device."
-
-#
+msgstr "Jellyfin se ha instalado correctamente en su dispositivo."
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 309
+#: NEEDS WORK
 msgid "You can now launch Jellyfin from your TV's app menu."
-msgstr "You can now launch Jellyfin from your TV's app menu."
-
-#
+msgstr "Ahora puedes iniciar Jellyfin desde el menú de aplicaciones de tu televisor."
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 315
+#: NEEDS WORK
 msgid "Installation failed"
-msgstr "Installation failed"
-
-#
+msgstr "La instalación falló"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 316
 # File: usr/share/jellytizen/pages/install.py, line: 323
+#: NEEDS WORK
 #, python-brace-format
 msgid "Error: {message}"
-msgstr "Error: {message}"
-
-#
+msgstr "Error: {mensaje}"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 318
+#: NEEDS WORK
 msgid "Retry Installation"
-msgstr "Retry Installation"
-
-#
+msgstr "Reintentar instalación"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 322
+#: NEEDS WORK
 msgid "Installation Failed"
-msgstr "Installation Failed"
-
-#
+msgstr "Instalación fallida"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 333
+#: NEEDS WORK
 msgid "Installation cancelled"
-msgstr "Installation cancelled"
-
-#
+msgstr "Instalación cancelada"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 334
+#: NEEDS WORK
 msgid "Cancelled by user"
-msgstr "Cancelled by user"
-
-#
+msgstr "Cancelado por el usuario"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 340
+#: NEEDS WORK
 msgid "Installation Cancelled"
-msgstr "Installation Cancelled"
-
-#
+msgstr "Instalación Cancelada"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 60
+#: NEEDS WORK
 msgid "JellyTizen Installer"
-msgstr "JellyTizen Installer"
-
-#
+msgstr "Instalador de JellyTizen"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 61
+#: NEEDS WORK
 msgid ""
-"This application will help you install Jellyfin media server on your Samsung "
-"Smart TV or projector running Tizen OS."
+"This application will help you install Jellyfin media server on your Samsung Smart TV or projector "
+"running Tizen OS."
 msgstr ""
-"This application will help you install Jellyfin media server on your Samsung "
-"Smart TV or projector running Tizen OS."
-
-#
+"Esta aplicación te ayudará a instalar el servidor de medios Jellyfin en tu televisor inteligente "
+"Samsung o proyector que ejecute Tizen OS."
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 68
+#: NEEDS WORK
 msgid "System Requirements"
-msgstr "System Requirements"
-
-#
+msgstr "Requisitos del sistema"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 69
+#: NEEDS WORK
 msgid "Checking required dependencies..."
-msgstr "Checking required dependencies..."
-
-#
+msgstr "Comprobando dependencias requeridas..."
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 74
+#: NEEDS WORK
 msgid "Docker Engine"
-msgstr "Docker Engine"
-
-#
+msgstr "Motor de Docker"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 75
+#: NEEDS WORK
 msgid "Required for building Tizen applications"
-msgstr "Required for building Tizen applications"
-
-#
+msgstr "Requerido para construir aplicaciones Tizen"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 85
 # File: usr/share/jellytizen/pages/welcome.py, line: 88
 # File: usr/share/jellytizen/pages/welcome.py, line: 194
+#: NEEDS WORK
 msgid "Install Docker"
-msgstr "Install Docker"
-
-#
+msgstr "Instalar Docker"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 86
+#: NEEDS WORK
 msgid "Docker is required but not installed"
-msgstr "Docker is required but not installed"
-
-#
+msgstr "Docker es necesario pero no está instalado."
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 97
+#: NEEDS WORK
 msgid "Get Started"
-msgstr "Get Started"
-
-#
+msgstr "Comenzar"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 102
+#: NEEDS WORK
 msgid "Continue to Device Setup"
-msgstr "Continue to Device Setup"
-
-#
+msgstr "Continuar con la configuración del dispositivo"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 103
+#: NEEDS WORK
 msgid "Connect to your Samsung TV"
-msgstr "Connect to your Samsung TV"
-
-#
+msgstr "Conectar a tu televisor Samsung"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 132
+#: NEEDS WORK
 msgid "Docker is installed and running"
-msgstr "Docker is installed and running"
-
-#
+msgstr "Docker está instalado y en ejecución"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 141
+#: NEEDS WORK
 msgid "Docker is installed but not running"
-msgstr "Docker is installed but not running"
-
-#
+msgstr "Docker está instalado pero no se está ejecutando"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 144
+#: NEEDS WORK
 msgid "Start Docker"
-msgstr "Start Docker"
-
-#
+msgstr "Iniciar Docker"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 154
+#: NEEDS WORK
 msgid "Docker is not installed"
-msgstr "Docker is not installed"
-
-#
+msgstr "Docker no está instalado"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 195
-msgid ""
-"Docker is required for building Tizen applications. Please install Docker "
-"for your distribution:"
+#: NEEDS WORK
+msgid "Docker is required for building Tizen applications. Please install Docker for your distribution:"
 msgstr ""
-"Docker is required for building Tizen applications. Please install Docker "
-"for your distribution:"
-
-#
+"Docker es necesario para construir aplicaciones Tizen. Por favor, instala Docker para tu "
+"distribución:"
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 199
+#: NEEDS WORK
 msgid "Arch/Manjaro"
 msgstr "Arch/Manjaro"
-
-#
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 200
+#: NEEDS WORK
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
-
-#
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 201
+#: NEEDS WORK
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
-
-#
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 216
+#: NEEDS WORK
 msgid "Error"
 msgstr "Error"
-
-#
+# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 216
+#: NEEDS WORK
 #, python-brace-format
 msgid "Failed to install Docker: {error}"
-msgstr "Failed to install Docker: {error}"
-
-#
+msgstr "Error al instalar Docker: {error}"
+# 
 # File: usr/share/jellytizen/app.py, line: 106
+#: NEEDS WORK
 msgid "Welcome"
-msgstr "Welcome"
-
-#
+msgstr "Bienvenido"
+# 
 # File: usr/share/jellytizen/app.py, line: 113
+#: NEEDS WORK
 msgid "About"
-msgstr "About"
-
-#
+msgstr "Acerca de"
+# 
 # File: usr/share/jellytizen/app.py, line: 139
+#: NEEDS WORK
 msgid "JellyTizen Team"
-msgstr "JellyTizen Team"
-
-#
+msgstr "Equipo JellyTizen"
+# 
 # File: usr/share/jellytizen/app.py, line: 145
+#: NEEDS WORK
 msgid "JellyTizen Contributors"
-msgstr "JellyTizen Contributors"
+msgstr "Contribuyentes de JellyTizen"
