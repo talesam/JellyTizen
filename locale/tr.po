@@ -262,8 +262,8 @@ msgstr "Port Aralığı"
 # 
 # File: usr/share/jellytizen/pages/preferences.py, line: 68
 #: NEEDS WORK
-msgid "Port range for device scanning (e.g., 8000-8080)"
-msgstr "Cihaz taraması için port aralığı (örn. 8000-8080)"
+msgid "Scan port range (e.g., 8000-8080)"
+msgstr "Port aralığını tara (örn., 8000-8080)"
 # 
 # File: usr/share/jellytizen/pages/preferences.py, line: 80
 #: NEEDS WORK

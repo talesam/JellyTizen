@@ -262,8 +262,8 @@ msgstr "Діапазон портів"
 # 
 # File: usr/share/jellytizen/pages/preferences.py, line: 68
 #: NEEDS WORK
-msgid "Port range for device scanning (e.g., 8000-8080)"
-msgstr "Портовий діапазон для сканування пристроїв (наприклад, 8000-8080)"
+msgid "Scan port range (e.g., 8000-8080)"
+msgstr "Сканувати діапазон портів (наприклад, 8000-8080)"
 # 
 # File: usr/share/jellytizen/pages/preferences.py, line: 80
 #: NEEDS WORK

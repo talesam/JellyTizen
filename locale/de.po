@@ -262,8 +262,8 @@ msgstr "Portbereich"
 # 
 # File: usr/share/jellytizen/pages/preferences.py, line: 68
 #: NEEDS WORK
-msgid "Port range for device scanning (e.g., 8000-8080)"
-msgstr "Portbereich für die Gerätesuche (z. B. 8000-8080)"
+msgid "Scan port range (e.g., 8000-8080)"
+msgstr "Scannen Sie den Portbereich (z. B. 8000-8080)"
 # 
 # File: usr/share/jellytizen/pages/preferences.py, line: 80
 #: NEEDS WORK
