@@ -276,7 +276,7 @@ class DevicePage(Gtk.ScrolledWindow):
 
             select_button = Gtk.Button.new_with_label(_("Select"))
             select_button.set_valign(Gtk.Align.CENTER)
-            select_button.connect("clicked", lambda b, ip=device['ip']: self._select_device(ip))
+            select_button.connect("clicked", lambda b, d=device: self._select_device(d))
             device_row.add_suffix(select_button)
             
             self.devices_group.add(device_row)
@@ -289,12 +289,19 @@ class DevicePage(Gtk.ScrolledWindow):
         else:
             self.devices_group.set_description(_("Found {count} devices - Select your target device").format(count=device_count))
             
-    def _select_device(self, ip):
+    def _select_device(self, device):
         """Select a discovered device."""
+        ip = device['ip']
+        name = device.get('name', '')
+        model = device.get('model', '')
+        
         self.ip_row.set_text(ip)
         self.window.config_manager.set('device.ip', ip)
-        self.window.logger.info(f"Selected device: {ip}")
-        self._show_success(_("Device selected: {ip}").format(ip=ip))
+        self.window.config_manager.set('device.name', name)
+        self.window.config_manager.set('device.model', model)
+        
+        self.window.logger.info(f"Selected device: {name} ({ip})")
+        self._show_success(_("Device selected: {name}").format(name=name or ip))
         
     def _on_ip_changed(self, entry):
         """Handle IP address changes."""

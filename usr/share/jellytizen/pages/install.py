@@ -191,9 +191,22 @@ class InstallPage(Gtk.Box):
     def _update_tv_info(self):
         """Update TV info display."""
         tv_ip = self.window.config_manager.get('device.ip')
+        tv_name = self.window.config_manager.get('device.name', '')
+        tv_model = self.window.config_manager.get('device.model', '')
+        
         if tv_ip:
-            self.tv_info_row.set_subtitle(tv_ip)
+            # Show device name as title, IP and model as subtitle
+            if tv_name:
+                self.tv_info_row.set_title(tv_name)
+                subtitle = f"IP: {tv_ip}"
+                if tv_model:
+                    subtitle += f" | {tv_model}"
+                self.tv_info_row.set_subtitle(subtitle)
+            else:
+                self.tv_info_row.set_title(_("Target Device"))
+                self.tv_info_row.set_subtitle(tv_ip)
         else:
+            self.tv_info_row.set_title(_("Target Device"))
             self.tv_info_row.set_subtitle(_("No device selected - please go back"))
         
     def _on_start_installation(self, button):
