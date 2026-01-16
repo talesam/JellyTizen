@@ -627,11 +627,11 @@ msgstr "Hittade 1 enhet - Välj din målenhet"
 msgid "Found {count} devices - Select your target device"
 msgstr "Hittade {count} enheter - Välj din målenhet"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 209
+# File: usr/share/jellytizen/pages/device.py, line: 304
 #: NEEDS WORK
 #, python-brace-format
-msgid "Device selected: {ip}"
-msgstr "Enhet vald: {ip}"
+msgid "Device selected: {name}"
+msgstr "Enhet vald: {name}"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 232
 #: NEEDS WORK

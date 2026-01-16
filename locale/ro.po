@@ -625,11 +625,11 @@ msgstr "Am găsit 1 dispozitiv - Selectați dispozitivul țintă"
 msgid "Found {count} devices - Select your target device"
 msgstr "Am găsit {count} dispozitive - Selectați dispozitivul țintă"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 209
+# File: usr/share/jellytizen/pages/device.py, line: 304
 #: NEEDS WORK
 #, python-brace-format
-msgid "Device selected: {ip}"
-msgstr "Dispozitiv selectat: {ip}"
+msgid "Device selected: {name}"
+msgstr "Dispozitiv selectat: {name}"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 232
 #: NEEDS WORK

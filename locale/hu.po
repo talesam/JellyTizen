@@ -627,11 +627,11 @@ msgstr "1 eszköz található - Válaszd ki a cél eszközt"
 msgid "Found {count} devices - Select your target device"
 msgstr "Talált {count} eszközt - Válaszd ki a cél eszközödet"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 209
+# File: usr/share/jellytizen/pages/device.py, line: 304
 #: NEEDS WORK
 #, python-brace-format
-msgid "Device selected: {ip}"
-msgstr "Kiválasztott eszköz: {ip}"
+msgid "Device selected: {name}"
+msgstr "Kiválasztott eszköz: {name}"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 232
 #: NEEDS WORK

@@ -557,7 +557,7 @@ msgstr "Establish connection with your TV"
 
 #
 # File: usr/share/jellytizen/pages/device.py, line: 192
-# File: usr/share/jellytizen/pages/device.py, line: 341
+# File: usr/share/jellytizen/pages/device.py, line: 348
 msgid "Connect"
 msgstr "Connect"
 
@@ -629,46 +629,46 @@ msgid "Found {count} devices - Select your target device"
 msgstr "Found {count} devices - Select your target device"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 297
+# File: usr/share/jellytizen/pages/device.py, line: 304
 #, python-brace-format
-msgid "Device selected: {ip}"
-msgstr "Device selected: {ip}"
+msgid "Device selected: {name}"
+msgstr "Device selected: {name}"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 323
+# File: usr/share/jellytizen/pages/device.py, line: 330
 msgid "Please enter a device IP address"
 msgstr "Please enter a device IP address"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 327
+# File: usr/share/jellytizen/pages/device.py, line: 334
 msgid "Please enter a valid IP address"
 msgstr "Please enter a valid IP address"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 332
+# File: usr/share/jellytizen/pages/device.py, line: 339
 msgid "Connecting..."
 msgstr "Connecting..."
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 346
+# File: usr/share/jellytizen/pages/device.py, line: 353
 msgid "Connected successfully!"
 msgstr "Connected successfully!"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 348
+# File: usr/share/jellytizen/pages/device.py, line: 355
 #, python-brace-format
 msgid "Connection failed: {message}"
 msgstr "Connection failed: {message}"
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 355
+# File: usr/share/jellytizen/pages/device.py, line: 362
 msgid "Certificates"
 msgstr "Certificates"
 
 #
 # File: usr/share/jellytizen/pages/install.py, line: 53
 # File: usr/share/jellytizen/pages/install.py, line: 116
-# File: usr/share/jellytizen/pages/install.py, line: 385
+# File: usr/share/jellytizen/pages/install.py, line: 398
 msgid "Install Jellyfin"
 msgstr "Install Jellyfin"
 
@@ -679,6 +679,8 @@ msgstr "One-click installation to your Samsung TV"
 
 #
 # File: usr/share/jellytizen/pages/install.py, line: 59
+# File: usr/share/jellytizen/pages/install.py, line: 206
+# File: usr/share/jellytizen/pages/install.py, line: 209
 msgid "Target Device"
 msgstr "Target Device"
 
@@ -719,8 +721,8 @@ msgstr "Click to view detailed output"
 
 #
 # File: usr/share/jellytizen/pages/install.py, line: 169
-# File: usr/share/jellytizen/pages/install.py, line: 338
-# File: usr/share/jellytizen/pages/install.py, line: 347
+# File: usr/share/jellytizen/pages/install.py, line: 351
+# File: usr/share/jellytizen/pages/install.py, line: 360
 msgid "Installation Complete!"
 msgstr "Installation Complete!"
 
@@ -740,122 +742,122 @@ msgid "Done"
 msgstr "Done"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 197
+# File: usr/share/jellytizen/pages/install.py, line: 210
 msgid "No device selected - please go back"
 msgstr "No device selected - please go back"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 206
+# File: usr/share/jellytizen/pages/install.py, line: 219
 msgid "No TV configured. Please go back and select a device."
 msgstr "No TV configured. Please go back and select a device."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 231
+# File: usr/share/jellytizen/pages/install.py, line: 244
 msgid "Starting Installation"
 msgstr "Starting Installation"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 236
+# File: usr/share/jellytizen/pages/install.py, line: 249
 msgid "Downloading container..."
 msgstr "Downloading container..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 237
+# File: usr/share/jellytizen/pages/install.py, line: 250
 msgid "Pulling Docker image..."
 msgstr "Pulling Docker image..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 250
+# File: usr/share/jellytizen/pages/install.py, line: 263
 msgid "Container ready!"
 msgstr "Container ready!"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 254
+# File: usr/share/jellytizen/pages/install.py, line: 267
 msgid "Installing to TV..."
 msgstr "Installing to TV..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 255
+# File: usr/share/jellytizen/pages/install.py, line: 268
 msgid "Connecting and installing..."
 msgstr "Connecting and installing..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 256
+# File: usr/share/jellytizen/pages/install.py, line: 269
 msgid "This may take a few minutes..."
 msgstr "This may take a few minutes..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 275
+# File: usr/share/jellytizen/pages/install.py, line: 288
 msgid "Installing..."
 msgstr "Installing..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 277
+# File: usr/share/jellytizen/pages/install.py, line: 290
 msgid "Downloading app..."
 msgstr "Downloading app..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 279
+# File: usr/share/jellytizen/pages/install.py, line: 292
 msgid "Transferring..."
 msgstr "Transferring..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 281
+# File: usr/share/jellytizen/pages/install.py, line: 294
 msgid "Connecting to TV..."
 msgstr "Connecting to TV..."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 283
+# File: usr/share/jellytizen/pages/install.py, line: 296
 msgid "Finishing..."
 msgstr "Finishing..."
 
 #
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
 #
-# File: usr/share/jellytizen/pages/install.py, line: 322
+# File: usr/share/jellytizen/pages/install.py, line: 335
 # File: usr/share/jellytizen/pages/welcome.py, line: 212
 msgid "Error"
 msgstr "Error"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 339
+# File: usr/share/jellytizen/pages/install.py, line: 352
 msgid "Jellyfin is now on your TV"
 msgstr "Jellyfin is now on your TV"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 341
+# File: usr/share/jellytizen/pages/install.py, line: 354
 msgid "Reinstall"
 msgstr "Reinstall"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 348
+# File: usr/share/jellytizen/pages/install.py, line: 361
 msgid "Find Jellyfin in your TV's app list."
 msgstr "Find Jellyfin in your TV's app list."
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 359
-# File: usr/share/jellytizen/pages/install.py, line: 367
+# File: usr/share/jellytizen/pages/install.py, line: 372
+# File: usr/share/jellytizen/pages/install.py, line: 380
 msgid "Installation Failed"
 msgstr "Installation Failed"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 362
+# File: usr/share/jellytizen/pages/install.py, line: 375
 msgid "Retry"
 msgstr "Retry"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 379
-# File: usr/share/jellytizen/pages/install.py, line: 383
+# File: usr/share/jellytizen/pages/install.py, line: 392
+# File: usr/share/jellytizen/pages/install.py, line: 396
 msgid "Cancelled"
 msgstr "Cancelled"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 380
+# File: usr/share/jellytizen/pages/install.py, line: 393
 msgid "Installation was cancelled"
 msgstr "Installation was cancelled"
 
 #
-# File: usr/share/jellytizen/pages/install.py, line: 389
+# File: usr/share/jellytizen/pages/install.py, line: 402
 msgid "Installation cancelled"
 msgstr "Installation cancelled"
 

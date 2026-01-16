@@ -623,11 +623,11 @@ msgstr "找到 1 个设备 - 选择您的目标设备"
 msgid "Found {count} devices - Select your target device"
 msgstr "找到 {count} 个设备 - 选择您的目标设备"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 209
+# File: usr/share/jellytizen/pages/device.py, line: 304
 #: NEEDS WORK
 #, python-brace-format
-msgid "Device selected: {ip}"
-msgstr "已选择设备：{ip}"
+msgid "Device selected: {name}"
+msgstr "已选择设备：{name}"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 232
 #: NEEDS WORK

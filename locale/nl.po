@@ -627,11 +627,11 @@ msgstr "Gevonden 1 apparaat - Selecteer uw doelaanpassing"
 msgid "Found {count} devices - Select your target device"
 msgstr "Gevonden {count} apparaten - Selecteer uw doelaaparaat"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 209
+# File: usr/share/jellytizen/pages/device.py, line: 304
 #: NEEDS WORK
 #, python-brace-format
-msgid "Device selected: {ip}"
-msgstr "Apparaat geselecteerd: {ip}"
+msgid "Device selected: {name}"
+msgstr "Apparaat geselecteerd: {name}"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 232
 #: NEEDS WORK

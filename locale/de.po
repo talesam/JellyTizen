@@ -627,11 +627,11 @@ msgstr "1 Gerät gefunden - Wählen Sie Ihr Zielgerät aus"
 msgid "Found {count} devices - Select your target device"
 msgstr "Gefunden {count} Geräte - Wählen Sie Ihr Zielgerät aus"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 209
+# File: usr/share/jellytizen/pages/device.py, line: 304
 #: NEEDS WORK
 #, python-brace-format
-msgid "Device selected: {ip}"
-msgstr "Gerät ausgewählt: {ip}"
+msgid "Device selected: {name}"
+msgstr "Gerät ausgewählt: {name}"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 232
 #: NEEDS WORK
