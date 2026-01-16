@@ -89,7 +89,7 @@ TERMINAL_SCROLLBACK_LINES = 1000
 
 # Application Metadata
 APP_ID = "org.talesam.jellytizen"
-APP_VERSION = "1.0.9"
+APP_VERSION = "1.0.10"
 APP_NAME = "JellyTizen"
 APP_GITHUB_URL = "https://github.com/talesam/jellytizen"
 APP_ISSUE_URL = "https://github.com/talesam/jellytizen/issues"
