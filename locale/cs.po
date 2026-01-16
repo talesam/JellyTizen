@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the JellyTizen package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: JellyTizen\n"
@@ -45,30 +46,135 @@ msgstr "Zrušit"
 msgid "Developer Certificates"
 msgstr "Certifikáty vývojáře"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 32
+# File: usr/share/jellytizen/pages/certificates.py, line: 48
 #: NEEDS WORK
-msgid "Configure Samsung developer certificates for app installation"
-msgstr "Konfigurujte certifikáty vývojáře Samsung pro instalaci aplikace"
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "Certifikáty jsou vyžadovány k instalaci aplikací na televizorech Samsung."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 37
+# File: usr/share/jellytizen/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Certificate Files"
-msgstr "Soubory certifikátů"
+msgid "📋 What are Developer Certificates?"
+msgstr "📋 Co jsou certifikáty vývojáře?"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 38
+# File: usr/share/jellytizen/pages/certificates.py, line: 56
 #: NEEDS WORK
-msgid "Upload your Samsung developer certificate files"
-msgstr "Nahrajte soubory certifikátu vývojáře Samsung"
+msgid "Samsung requires signed apps. You need certificates from Tizen Studio."
+msgstr "Samsung vyžaduje podepsané aplikace. Potřebujete certifikáty z Tizen Studia."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 61
+#: NEEDS WORK
+msgid "Author Certificate (author.p12)"
+msgstr "Certifikát autora (author.p12)"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 62
+#: NEEDS WORK
+msgid "Your personal certificate that identifies you as the app developer"
+msgstr "Váš osobní certifikát, který vás identifikuje jako vývojáře aplikace"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 69
+#: NEEDS WORK
+msgid "Distributor Certificate (distributor.p12)"
+msgstr "Certifikát distributora (distributor.p12)"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 70
+#: NEEDS WORK
+msgid "Samsung's certificate that allows app installation on devices"
+msgstr "Certifikát Samsung, který umožňuje instalaci aplikací na zařízeních"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 79
+#: NEEDS WORK
+msgid "🔧 How to Get Certificates"
+msgstr "🔧 Jak získat certifikáty"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 80
+#: NEEDS WORK
+msgid "Follow these steps to create your certificates"
+msgstr "Postupujte podle těchto kroků pro vytvoření svých certifikátů."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 85
+#: NEEDS WORK
+msgid "1. Install Tizen Studio"
+msgstr "1. Nainstalovat Tizen Studio"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 86
+#: NEEDS WORK
+msgid "Download from Samsung Developer website"
+msgstr "Stáhnout z webu Samsung Developer"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 90
+#: NEEDS WORK
+msgid "Download"
+msgstr "Stáhnout"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 99
+#: NEEDS WORK
+msgid "2. Open Certificate Manager"
+msgstr "2. Otevřít správce certifikátů"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 100
+#: NEEDS WORK
+msgid "In Tizen Studio: Tools → Certificate Manager"
+msgstr "V Tizen Studiu: Nástroje → Správce certifikátů"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 107
+#: NEEDS WORK
+msgid "3. Create Samsung Certificate"
+msgstr "3. Vytvořit certifikát Samsung"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 108
+#: NEEDS WORK
+msgid "Click '+' → Samsung Certificate → TV → Create new profile"
+msgstr "Klikněte na '+' → Certifikát Samsung → TV → Vytvořit nový profil"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 115
+#: NEEDS WORK
+msgid "4. Sign in with Samsung Account"
+msgstr "4. Přihlásit se pomocí účtu Samsung"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 116
+#: NEEDS WORK
+msgid "Use the same account registered on your TV"
+msgstr "Použijte stejný účet registrovaný na vaší TV"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 123
+#: NEEDS WORK
+msgid "5. Add Your TV's DUID"
+msgstr "5. Přidejte DUID vaší TV"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 124
+#: NEEDS WORK
+msgid "The DUID is shown in the TV's Developer Mode settings"
+msgstr "DUID je zobrazen v nastavení režimu vývojáře televizoru."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 131
+#: NEEDS WORK
+msgid "6. Export Certificates"
+msgstr "6. Exportovat certifikáty"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 132
+#: NEEDS WORK
+msgid "Certificates are saved in ~/SamsungCertificate/<profile_name>/"
+msgstr "Certifikáty jsou uloženy v ~/SamsungCertificate/<profile_name>/"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 141
+#: NEEDS WORK
+msgid "📁 Upload Your Certificates"
+msgstr "📁 Nahrajte své certifikáty"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 142
+#: NEEDS WORK
+msgid "Select the .p12 certificate files from your computer"
+msgstr "Vyberte soubory certifikátu .p12 z vašeho počítače"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 43
 #: NEEDS WORK
 msgid "Author Certificate"
 msgstr "Certifikát autora"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 44
+# File: usr/share/jellytizen/pages/certificates.py, line: 148
 #: NEEDS WORK
-msgid "author.p12 - Your developer certificate"
-msgstr "author.p12 - Váš certifikát vývojáře"
+msgid "Select author.p12 file"
+msgstr "Vyberte soubor author.p12"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 46
 # File: usr/share/jellytizen/pages/certificates.py, line: 58
@@ -81,51 +187,55 @@ msgstr "Procházet"
 msgid "Distributor Certificate"
 msgstr "Certifikát distributora"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 56
+# File: usr/share/jellytizen/pages/certificates.py, line: 162
 #: NEEDS WORK
-msgid "distributor.p12 - Samsung's distributor certificate"
-msgstr "distributor.p12 - Certifikát distributora Samsung"
+msgid "Select distributor.p12 file"
+msgstr "Vyberte soubor distributor.p12"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 67
-# File: usr/share/jellytizen/pages/certificates.py, line: 73
+# File: usr/share/jellytizen/pages/certificates.py, line: 177
 #: NEEDS WORK
-msgid "Certificate Password"
-msgstr "Heslo certifikátu"
+msgid "🔐 Certificate Password"
+msgstr "🔐 Heslo certifikátu"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 68
+# File: usr/share/jellytizen/pages/certificates.py, line: 178
 #: NEEDS WORK
-msgid "Enter the password for your author certificate"
-msgstr "Zadejte heslo pro váš autorizační certifikát"
+msgid "Enter the password you chose when creating the certificates"
+msgstr "Zadejte heslo, které jste zvolili při vytváření certifikátů."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 80
+# File: usr/share/jellytizen/pages/certificates.py, line: 183
 #: NEEDS WORK
-msgid "Developer Profile"
-msgstr "Profil vývojáře"
+msgid "Password"
+msgstr "Heslo"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 81
+# File: usr/share/jellytizen/pages/certificates.py, line: 192
 #: NEEDS WORK
-msgid "Configure your developer profile information"
-msgstr "Nastavte informace o svém vývojářském profilu"
+msgid "👤 Developer Profile"
+msgstr "👤 Profil vývojáře"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 193
+#: NEEDS WORK
+msgid "A name to identify this certificate configuration"
+msgstr "Název pro identifikaci této konfigurace certifikátu"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 86
 #: NEEDS WORK
 msgid "Profile Name"
 msgstr "Název profilu"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 93
+# File: usr/share/jellytizen/pages/certificates.py, line: 208
 #: NEEDS WORK
-msgid "Certificate Validation"
-msgstr "Ověření certifikátu"
+msgid "✅ Validate and Continue"
+msgstr "✅ Ověřit a pokračovat"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 98
 #: NEEDS WORK
 msgid "Validate Certificates"
 msgstr "Ověřit certifikáty"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 99
+# File: usr/share/jellytizen/pages/certificates.py, line: 214
 #: NEEDS WORK
-msgid "Check if certificates are valid and properly configured"
-msgstr "Zkontrolujte, zda jsou certifikáty platné a správně nakonfigurované."
+msgid "Check if certificates are valid before continuing"
+msgstr "Zkontrolujte, zda jsou certifikáty platné, než budete pokračovat."
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 101
 #: NEEDS WORK
@@ -137,10 +247,10 @@ msgstr "Ověřit"
 msgid "Continue to Installation"
 msgstr "Pokračovat k instalaci"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
+# File: usr/share/jellytizen/pages/certificates.py, line: 226
 #: NEEDS WORK
-msgid "Start the Jellyfin installation process"
-msgstr "Spusťte proces instalace Jellyfin"
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "Pokračujte v instalaci Jellyfin na svém televizoru"
 # 
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
 # 
@@ -164,14 +274,14 @@ msgstr "Vyberte certifikát {cert_type}"
 msgid "P12 Certificate Files"
 msgstr "Soubory certifikátů P12"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 162
-# File: usr/share/jellytizen/pages/certificates.py, line: 165
-# File: usr/share/jellytizen/pages/certificates.py, line: 184
-# File: usr/share/jellytizen/pages/certificates.py, line: 190
+# File: usr/share/jellytizen/pages/certificates.py, line: 276
+# File: usr/share/jellytizen/pages/certificates.py, line: 279
+# File: usr/share/jellytizen/pages/certificates.py, line: 299
+# File: usr/share/jellytizen/pages/certificates.py, line: 306
 #: NEEDS WORK
 #, python-brace-format
-msgid "Selected: {path}"
-msgstr "Vybráno: {path}"
+msgid "✅ Selected: {filename}"
+msgstr "✅ Vybráno: {filename}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 163
 # File: usr/share/jellytizen/pages/certificates.py, line: 166
@@ -181,10 +291,47 @@ msgstr "Vybráno: {path}"
 msgid "Change"
 msgstr "Změnit"
 # 
+# File: usr/share/jellytizen/pages/certificates.py, line: 322
+#: NEEDS WORK
+msgid "All fields filled - click to validate"
+msgstr "Všechna pole vyplněna - klikněte pro potvrzení"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 326
+#: NEEDS WORK
+msgid "author certificate"
+msgstr "certifikát autora"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 328
+#: NEEDS WORK
+msgid "distributor certificate"
+msgstr "certifikát distributora"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "heslo"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "Chybí: {items}"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 346
+#: NEEDS WORK
+msgid "✅ Certificates are valid!"
+msgstr "✅ Certifikáty jsou platné!"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 217
 #: NEEDS WORK
 msgid "Certificates validated successfully!"
 msgstr "Certifikáty byly úspěšně ověřeny!"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 349
+#: NEEDS WORK
+#, python-brace-format
+msgid "❌ Validation failed: {message}"
+msgstr "❌ Ověření selhalo: {message}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 219
 #: NEEDS WORK
@@ -375,6 +522,133 @@ msgstr "Nastavení zařízení"
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "Připojte se k vaší Samsung Tizen TV nebo projektoru"
 # 
+# File: usr/share/jellytizen/pages/device.py, line: 63
+#: NEEDS WORK
+msgid "Required Step: Enable Developer Mode"
+msgstr "Požadovaný krok: Aktivujte režim vývojáře"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 70
+#: NEEDS WORK
+msgid "You must complete these steps on your Samsung TV before connecting"
+msgstr "Před připojením musíte na svém televizoru Samsung dokončit tyto kroky."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 75
+#: NEEDS WORK
+msgid "1. Open Apps"
+msgstr "1. Otevřít aplikace"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 76
+#: NEEDS WORK
+msgid "On the TV, go to the 'Apps' section"
+msgstr "Na televizoru přejděte do sekce 'Aplikace'"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 83
+#: NEEDS WORK
+msgid "2. Go to App Settings"
+msgstr "2. Přejděte na Nastavení aplikace"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 84
+#: NEEDS WORK
+msgid "Scroll to the end of the Apps list and select 'App Settings'"
+msgstr "Přejděte na konec seznamu aplikací a vyberte 'Nastavení aplikace'"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 91
+#: NEEDS WORK
+msgid "3. Press '123' Button"
+msgstr "3. Stiskněte tlačítko '123'"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 92
+#: NEEDS WORK
+msgid "Inside App Settings, press the '123' button on your remote control"
+msgstr "V nastavení aplikace stiskněte tlačítko '123' na dálkovém ovladači."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 99
+#: NEEDS WORK
+msgid "4. Enter Secret Code"
+msgstr "4. Zadejte tajný kód"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 100
+#: NEEDS WORK
+msgid "Type '12345' using the remote - Developer Mode menu will appear"
+msgstr "Zadejte '12345' pomocí dálkového ovladače - Zobrazí se nabídka vývojářského režimu"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 107
+#: NEEDS WORK
+msgid "5. Enable Developer Mode"
+msgstr "5. Povolit režim vývojáře"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 108
+#: NEEDS WORK
+msgid "Toggle 'Developer Mode' to 'On' in the menu"
+msgstr "Přepnout 'Vývojářský režim' na 'Zapnuto' v nabídce"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 116
+#: NEEDS WORK
+msgid "6. Enter Host PC IP"
+msgstr "6. Zadejte IP adresu hostitelského počítače"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 361
+#: NEEDS WORK
+#, python-brace-format
+msgid "Enter your computer's IP address: {ip}"
+msgstr "Zadejte IP adresu vašeho počítače: {ip}"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 403
+# File: usr/share/jellytizen/pages/device.py, line: 430
+#: NEEDS WORK
+msgid "Copy IP"
+msgstr "Kopírovat IP"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 131
+#: NEEDS WORK
+msgid "7. Restart TV"
+msgstr "7. Restartovat TV"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 132
+#: NEEDS WORK
+msgid "Turn off and on your TV to apply Developer Mode settings"
+msgstr "Vypněte a znovu zapněte svůj televizor, abyste použili nastavení vývojářského režimu."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 368
+#: NEEDS WORK
+msgid "Important Notes"
+msgstr "Důležité poznámky"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 373
+#: NEEDS WORK
+msgid "Right-to-Left Languages"
+msgstr "Jazyky zprava doleva"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 374
+#: NEEDS WORK
+msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
+msgstr "Pokud TV používá arabštinu/hebrejštinu, zadejte IP adresu pozpátku."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 389
+#: NEEDS WORK
+msgid "Network Connection"
+msgstr "Síťové připojení"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 390
+#: NEEDS WORK
+msgid "Ensure TV and computer are on the same network"
+msgstr "Ujistěte se, že TV a počítač jsou ve stejné síti."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 162
+#: NEEDS WORK
+msgid "Confirmation"
+msgstr "Potvrzení"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 167
+#: NEEDS WORK
+msgid "Developer Mode Enabled"
+msgstr "Režim vývojáře povolen"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 168
+#: NEEDS WORK
+msgid "I confirm I have completed the steps above on my TV"
+msgstr "Potvrzuji, že jsem dokončil výše uvedené kroky na svém televizoru."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 55
 #: NEEDS WORK
 msgid "Device Discovery"
@@ -421,21 +695,6 @@ msgstr "Zadejte podrobnosti o zařízení ručně"
 msgid "Device IP Address"
 msgstr "IP adresa zařízení"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 92
-#: NEEDS WORK
-msgid "Developer Mode"
-msgstr "Režim vývojáře"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 93
-#: NEEDS WORK
-msgid "Enable if your TV is in developer mode"
-msgstr "Povolit, pokud je váš televizor v režimu vývojáře"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 107
-#: NEEDS WORK
-msgid "How to enable Developer Mode on Samsung TV"
-msgstr "Jak povolit režim vývojáře na televizoru Samsung"
-# 
 # File: usr/share/jellytizen/pages/device.py, line: 119
 #: NEEDS WORK
 msgid "Connect to Device"
@@ -461,6 +720,16 @@ msgstr "Pokračovat k certifikátům"
 #: NEEDS WORK
 msgid "Setup developer certificates"
 msgstr "Nastavení vývojářských certifikátů"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 422
+#: NEEDS WORK
+msgid "Unable to determine IP"
+msgstr "Nelze určit IP"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 429
+#: NEEDS WORK
+msgid "Copied!"
+msgstr "Zkopírováno!"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 153
 #: NEEDS WORK
@@ -545,148 +814,6 @@ msgstr "Připojení se nezdařilo: {message}"
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Certifikáty"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 283
-#: NEEDS WORK
-msgid "Samsung TV Developer Mode Setup"
-msgstr "Nastavení vývojářského režimu Samsung TV"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 316
-#: NEEDS WORK
-msgid "Enable Developer Mode"
-msgstr "Povolit režim vývojáře"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 317
-#: NEEDS WORK
-msgid "Follow these steps to enable Developer Mode on your Samsung TV"
-msgstr "Postupujte podle těchto kroků, abyste povolili režim vývojáře na vašem televizoru Samsung."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 322
-#: NEEDS WORK
-msgid "Step-by-Step Instructions"
-msgstr "Krok za krokem pokyny"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 323
-#: NEEDS WORK
-msgid "These steps must be performed directly on your Samsung TV"
-msgstr "Tyto kroky musí být provedeny přímo na vašem televizoru Samsung."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 328
-#: NEEDS WORK
-msgid "1. Open Smart Hub"
-msgstr "1. Otevřít Smart Hub"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 329
-#: NEEDS WORK
-msgid "On the TV, open the 'Smart Hub'"
-msgstr "Na televizi otevřete 'Smart Hub'"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 336
-#: NEEDS WORK
-msgid "2. Go to Apps Panel"
-msgstr "2. Přejděte na panel aplikací"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 337
-#: NEEDS WORK
-msgid "Select the 'Apps' panel in Smart Hub"
-msgstr "Vyberte panel 'Aplikace' v Smart Hubu"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 344
-#: NEEDS WORK
-msgid "3. Enter Secret Code"
-msgstr "3. Zadejte tajný kód"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 345
-#: NEEDS WORK
-msgid "Press '123' button (or long press Home button) before typing '12345' with on-screen keyboard"
-msgstr ""
-"Stiskněte tlačítko '123' (nebo dlouze stiskněte tlačítko Domů) před zadáním '12345' na obrazovkové "
-"klávesnici."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 352
-#: NEEDS WORK
-msgid "4. Toggle Developer Mode"
-msgstr "4. Přepnout režim vývojáře"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 353
-#: NEEDS WORK
-msgid "Toggle the 'Developer' button to 'On'"
-msgstr "Přepněte tlačítko 'Vývojář' na 'Zapnuto'"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 360
-#: NEEDS WORK
-msgid "5. Enter Host PC IP"
-msgstr "5. Zadejte IP adresu hostitelského počítače"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 361
-#: NEEDS WORK
-#, python-brace-format
-msgid "Enter your computer's IP address: {ip}"
-msgstr "Zadejte IP adresu vašeho počítače: {ip}"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 368
-#: NEEDS WORK
-msgid "Important Notes"
-msgstr "Důležité poznámky"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 373
-#: NEEDS WORK
-msgid "Right-to-Left Languages"
-msgstr "Jazyky zprava doleva"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 374
-#: NEEDS WORK
-msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
-msgstr "Pokud TV používá arabštinu/hebrejštinu, zadejte IP adresu pozpátku."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 381
-#: NEEDS WORK
-msgid "Virtual Keyboard Issues"
-msgstr "Problémy s virtuální klávesnicí"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 382
-#: NEEDS WORK
-msgid "If on-screen keyboard doesn't work, use Samsung SmartThings app or external Bluetooth keyboard"
-msgstr ""
-"Pokud na obrazovce klávesnice nefunguje, použijte aplikaci Samsung SmartThings nebo externí "
-"Bluetooth klávesnici."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 389
-#: NEEDS WORK
-msgid "Network Connection"
-msgstr "Síťové připojení"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 390
-#: NEEDS WORK
-msgid "Ensure TV and computer are on the same network"
-msgstr "Ujistěte se, že TV a počítač jsou ve stejné síti."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 400
-#: NEEDS WORK
-msgid "Copy Your Computer's IP"
-msgstr "Zkopírujte IP adresu vašeho počítače"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 401
-#: NEEDS WORK
-#, python-brace-format
-msgid "Click to copy: {ip}"
-msgstr "Klikněte pro zkopírování: {ip}"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 403
-# File: usr/share/jellytizen/pages/device.py, line: 430
-#: NEEDS WORK
-msgid "Copy IP"
-msgstr "Kopírovat IP"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 422
-#: NEEDS WORK
-msgid "Unable to determine IP"
-msgstr "Nelze určit IP"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 429
-#: NEEDS WORK
-msgid "Copied!"
-msgstr "Zkopírováno!"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 37
 #: NEEDS WORK

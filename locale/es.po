@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the JellyTizen package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: JellyTizen\n"
@@ -45,30 +46,135 @@ msgstr "Cancelar"
 msgid "Developer Certificates"
 msgstr "Certificados de Desarrollador"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 32
+# File: usr/share/jellytizen/pages/certificates.py, line: 48
 #: NEEDS WORK
-msgid "Configure Samsung developer certificates for app installation"
-msgstr "Configurar certificados de desarrollador de Samsung para la instalación de aplicaciones"
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "Se requieren certificados para instalar aplicaciones en televisores Samsung."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 37
+# File: usr/share/jellytizen/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Certificate Files"
-msgstr "Archivos de Certificado"
+msgid "📋 What are Developer Certificates?"
+msgstr "📋 ¿Qué son los Certificados de Desarrollador?"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 38
+# File: usr/share/jellytizen/pages/certificates.py, line: 56
 #: NEEDS WORK
-msgid "Upload your Samsung developer certificate files"
-msgstr "Sube tus archivos de certificado de desarrollador de Samsung"
+msgid "Samsung requires signed apps. You need certificates from Tizen Studio."
+msgstr "Samsung requiere aplicaciones firmadas. Necesitas certificados de Tizen Studio."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 61
+#: NEEDS WORK
+msgid "Author Certificate (author.p12)"
+msgstr "Certificado de Autor (author.p12)"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 62
+#: NEEDS WORK
+msgid "Your personal certificate that identifies you as the app developer"
+msgstr "Tu certificado personal que te identifica como el desarrollador de la aplicación"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 69
+#: NEEDS WORK
+msgid "Distributor Certificate (distributor.p12)"
+msgstr "Certificado de Distribuidor (distributor.p12)"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 70
+#: NEEDS WORK
+msgid "Samsung's certificate that allows app installation on devices"
+msgstr "Certificado de Samsung que permite la instalación de aplicaciones en dispositivos."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 79
+#: NEEDS WORK
+msgid "🔧 How to Get Certificates"
+msgstr "🔧 Cómo Obtener Certificados"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 80
+#: NEEDS WORK
+msgid "Follow these steps to create your certificates"
+msgstr "Sigue estos pasos para crear tus certificados"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 85
+#: NEEDS WORK
+msgid "1. Install Tizen Studio"
+msgstr "1. Instalar Tizen Studio"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 86
+#: NEEDS WORK
+msgid "Download from Samsung Developer website"
+msgstr "Descargar desde el sitio web de desarrolladores de Samsung"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 90
+#: NEEDS WORK
+msgid "Download"
+msgstr "Descargar"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 99
+#: NEEDS WORK
+msgid "2. Open Certificate Manager"
+msgstr "2. Abrir el Administrador de Certificados"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 100
+#: NEEDS WORK
+msgid "In Tizen Studio: Tools → Certificate Manager"
+msgstr "En Tizen Studio: Herramientas → Administrador de Certificados"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 107
+#: NEEDS WORK
+msgid "3. Create Samsung Certificate"
+msgstr "3. Crear Certificado de Samsung"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 108
+#: NEEDS WORK
+msgid "Click '+' → Samsung Certificate → TV → Create new profile"
+msgstr "Haga clic en '+' → Certificado de Samsung → TV → Crear nuevo perfil"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 115
+#: NEEDS WORK
+msgid "4. Sign in with Samsung Account"
+msgstr "4. Iniciar sesión con la cuenta de Samsung"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 116
+#: NEEDS WORK
+msgid "Use the same account registered on your TV"
+msgstr "Utiliza la misma cuenta registrada en tu televisor."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 123
+#: NEEDS WORK
+msgid "5. Add Your TV's DUID"
+msgstr "5. Agrega el DUID de tu televisor"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 124
+#: NEEDS WORK
+msgid "The DUID is shown in the TV's Developer Mode settings"
+msgstr "El DUID se muestra en la configuración del Modo Desarrollador del televisor."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 131
+#: NEEDS WORK
+msgid "6. Export Certificates"
+msgstr "6. Exportar Certificados"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 132
+#: NEEDS WORK
+msgid "Certificates are saved in ~/SamsungCertificate/<profile_name>/"
+msgstr "Los certificados se guardan en ~/SamsungCertificate/<nombre_perfil>/"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 141
+#: NEEDS WORK
+msgid "📁 Upload Your Certificates"
+msgstr "📁 Cargar sus certificados"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 142
+#: NEEDS WORK
+msgid "Select the .p12 certificate files from your computer"
+msgstr "Seleccione los archivos de certificado .p12 de su computadora"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 43
 #: NEEDS WORK
 msgid "Author Certificate"
 msgstr "Certificado de Autor"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 44
+# File: usr/share/jellytizen/pages/certificates.py, line: 148
 #: NEEDS WORK
-msgid "author.p12 - Your developer certificate"
-msgstr "author.p12 - Su certificado de desarrollador"
+msgid "Select author.p12 file"
+msgstr "Seleccionar archivo author.p12"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 46
 # File: usr/share/jellytizen/pages/certificates.py, line: 58
@@ -81,51 +187,55 @@ msgstr "Navegar"
 msgid "Distributor Certificate"
 msgstr "Certificado de Distribuidor"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 56
+# File: usr/share/jellytizen/pages/certificates.py, line: 162
 #: NEEDS WORK
-msgid "distributor.p12 - Samsung's distributor certificate"
-msgstr "distribuidor.p12 - certificado de distribuidor de Samsung"
+msgid "Select distributor.p12 file"
+msgstr "Seleccionar archivo distributor.p12"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 67
-# File: usr/share/jellytizen/pages/certificates.py, line: 73
+# File: usr/share/jellytizen/pages/certificates.py, line: 177
 #: NEEDS WORK
-msgid "Certificate Password"
-msgstr "Contraseña del certificado"
+msgid "🔐 Certificate Password"
+msgstr "🔐 Contraseña del certificado"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 68
+# File: usr/share/jellytizen/pages/certificates.py, line: 178
 #: NEEDS WORK
-msgid "Enter the password for your author certificate"
-msgstr "Ingrese la contraseña de su certificado de autor"
+msgid "Enter the password you chose when creating the certificates"
+msgstr "Introduce la contraseña que elegiste al crear los certificados"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 80
+# File: usr/share/jellytizen/pages/certificates.py, line: 183
 #: NEEDS WORK
-msgid "Developer Profile"
-msgstr "Perfil del desarrollador"
+msgid "Password"
+msgstr "Contraseña"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 81
+# File: usr/share/jellytizen/pages/certificates.py, line: 192
 #: NEEDS WORK
-msgid "Configure your developer profile information"
-msgstr "Configura la información de tu perfil de desarrollador"
+msgid "👤 Developer Profile"
+msgstr "👤 Perfil del desarrollador"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 193
+#: NEEDS WORK
+msgid "A name to identify this certificate configuration"
+msgstr "Un nombre para identificar esta configuración de certificado"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 86
 #: NEEDS WORK
 msgid "Profile Name"
 msgstr "Nombre del perfil"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 93
+# File: usr/share/jellytizen/pages/certificates.py, line: 208
 #: NEEDS WORK
-msgid "Certificate Validation"
-msgstr "Validación de Certificado"
+msgid "✅ Validate and Continue"
+msgstr "✅ Validar y Continuar"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 98
 #: NEEDS WORK
 msgid "Validate Certificates"
 msgstr "Validar Certificados"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 99
+# File: usr/share/jellytizen/pages/certificates.py, line: 214
 #: NEEDS WORK
-msgid "Check if certificates are valid and properly configured"
-msgstr "Verifique si los certificados son válidos y están configurados correctamente."
+msgid "Check if certificates are valid before continuing"
+msgstr "Verifique si los certificados son válidos antes de continuar"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 101
 #: NEEDS WORK
@@ -137,10 +247,10 @@ msgstr "Validar"
 msgid "Continue to Installation"
 msgstr "Continuar con la instalación"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
+# File: usr/share/jellytizen/pages/certificates.py, line: 226
 #: NEEDS WORK
-msgid "Start the Jellyfin installation process"
-msgstr "Iniciar el proceso de instalación de Jellyfin"
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "Proceder a instalar Jellyfin en tu televisor"
 # 
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
 # 
@@ -164,14 +274,14 @@ msgstr "Seleccionar certificado {cert_type}"
 msgid "P12 Certificate Files"
 msgstr "Archivos de certificado P12"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 162
-# File: usr/share/jellytizen/pages/certificates.py, line: 165
-# File: usr/share/jellytizen/pages/certificates.py, line: 184
-# File: usr/share/jellytizen/pages/certificates.py, line: 190
+# File: usr/share/jellytizen/pages/certificates.py, line: 276
+# File: usr/share/jellytizen/pages/certificates.py, line: 279
+# File: usr/share/jellytizen/pages/certificates.py, line: 299
+# File: usr/share/jellytizen/pages/certificates.py, line: 306
 #: NEEDS WORK
 #, python-brace-format
-msgid "Selected: {path}"
-msgstr "Seleccionado: {path}"
+msgid "✅ Selected: {filename}"
+msgstr "✅ Seleccionado: {filename}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 163
 # File: usr/share/jellytizen/pages/certificates.py, line: 166
@@ -181,10 +291,47 @@ msgstr "Seleccionado: {path}"
 msgid "Change"
 msgstr "Cambiar"
 # 
+# File: usr/share/jellytizen/pages/certificates.py, line: 322
+#: NEEDS WORK
+msgid "All fields filled - click to validate"
+msgstr "Todos los campos llenos - haga clic para validar"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 326
+#: NEEDS WORK
+msgid "author certificate"
+msgstr "certificado de autor"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 328
+#: NEEDS WORK
+msgid "distributor certificate"
+msgstr "certificado de distribuidor"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "contraseña"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "Faltante: {items}"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 346
+#: NEEDS WORK
+msgid "✅ Certificates are valid!"
+msgstr "✅ ¡Los certificados son válidos!"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 217
 #: NEEDS WORK
 msgid "Certificates validated successfully!"
 msgstr "¡Certificados validados con éxito!"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 349
+#: NEEDS WORK
+#, python-brace-format
+msgid "❌ Validation failed: {message}"
+msgstr "❌ La validación falló: {message}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 219
 #: NEEDS WORK
@@ -377,6 +524,133 @@ msgstr "Configuración del dispositivo"
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "Conéctate a tu televisor o proyector Samsung Tizen."
 # 
+# File: usr/share/jellytizen/pages/device.py, line: 63
+#: NEEDS WORK
+msgid "Required Step: Enable Developer Mode"
+msgstr "Paso requerido: Habilitar el modo desarrollador"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 70
+#: NEEDS WORK
+msgid "You must complete these steps on your Samsung TV before connecting"
+msgstr "Debes completar estos pasos en tu televisor Samsung antes de conectar."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 75
+#: NEEDS WORK
+msgid "1. Open Apps"
+msgstr "1. Abrir aplicaciones"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 76
+#: NEEDS WORK
+msgid "On the TV, go to the 'Apps' section"
+msgstr "En la TV, ve a la sección 'Aplicaciones'"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 83
+#: NEEDS WORK
+msgid "2. Go to App Settings"
+msgstr "2. Ir a la configuración de la aplicación"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 84
+#: NEEDS WORK
+msgid "Scroll to the end of the Apps list and select 'App Settings'"
+msgstr "Desplázate hasta el final de la lista de aplicaciones y selecciona 'Configuración de la aplicación'"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 91
+#: NEEDS WORK
+msgid "3. Press '123' Button"
+msgstr "3. Presiona el botón '123'"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 92
+#: NEEDS WORK
+msgid "Inside App Settings, press the '123' button on your remote control"
+msgstr "Dentro de la configuración de la aplicación, presiona el botón '123' en tu control remoto."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 99
+#: NEEDS WORK
+msgid "4. Enter Secret Code"
+msgstr "4. Introduzca el código secreto"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 100
+#: NEEDS WORK
+msgid "Type '12345' using the remote - Developer Mode menu will appear"
+msgstr "Escribe '12345' usando el control remoto - Aparecerá el menú de Modo Desarrollador"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 107
+#: NEEDS WORK
+msgid "5. Enable Developer Mode"
+msgstr "5. Habilitar Modo Desarrollador"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 108
+#: NEEDS WORK
+msgid "Toggle 'Developer Mode' to 'On' in the menu"
+msgstr "Activa 'Modo Desarrollador' en el menú."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 116
+#: NEEDS WORK
+msgid "6. Enter Host PC IP"
+msgstr "6. Ingrese la IP del PC host"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 361
+#: NEEDS WORK
+#, python-brace-format
+msgid "Enter your computer's IP address: {ip}"
+msgstr "Introduce la dirección IP de tu computadora: {ip}"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 403
+# File: usr/share/jellytizen/pages/device.py, line: 430
+#: NEEDS WORK
+msgid "Copy IP"
+msgstr "Copiar IP"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 131
+#: NEEDS WORK
+msgid "7. Restart TV"
+msgstr "7. Reiniciar TV"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 132
+#: NEEDS WORK
+msgid "Turn off and on your TV to apply Developer Mode settings"
+msgstr "Apaga y enciende tu televisor para aplicar la configuración del Modo Desarrollador."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 368
+#: NEEDS WORK
+msgid "Important Notes"
+msgstr "Notas Importantes"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 373
+#: NEEDS WORK
+msgid "Right-to-Left Languages"
+msgstr "Idiomas de derecha a izquierda"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 374
+#: NEEDS WORK
+msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
+msgstr "Si el televisor utiliza árabe/hebreo, ingrese la dirección IP al revés."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 389
+#: NEEDS WORK
+msgid "Network Connection"
+msgstr "Conexión de red"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 390
+#: NEEDS WORK
+msgid "Ensure TV and computer are on the same network"
+msgstr "Asegúrate de que la TV y el ordenador estén en la misma red."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 162
+#: NEEDS WORK
+msgid "Confirmation"
+msgstr "Confirmación"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 167
+#: NEEDS WORK
+msgid "Developer Mode Enabled"
+msgstr "Modo de desarrollador habilitado"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 168
+#: NEEDS WORK
+msgid "I confirm I have completed the steps above on my TV"
+msgstr "Confirmo que he completado los pasos anteriores en mi televisor."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 55
 #: NEEDS WORK
 msgid "Device Discovery"
@@ -423,21 +697,6 @@ msgstr "Ingrese los detalles del dispositivo manualmente"
 msgid "Device IP Address"
 msgstr "Dirección IP del dispositivo"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 92
-#: NEEDS WORK
-msgid "Developer Mode"
-msgstr "Modo de desarrollador"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 93
-#: NEEDS WORK
-msgid "Enable if your TV is in developer mode"
-msgstr "Habilitar si tu televisor está en modo de desarrollador"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 107
-#: NEEDS WORK
-msgid "How to enable Developer Mode on Samsung TV"
-msgstr "Cómo habilitar el Modo Desarrollador en el televisor Samsung"
-# 
 # File: usr/share/jellytizen/pages/device.py, line: 119
 #: NEEDS WORK
 msgid "Connect to Device"
@@ -463,6 +722,16 @@ msgstr "Continuar a Certificados"
 #: NEEDS WORK
 msgid "Setup developer certificates"
 msgstr "Configurar certificados de desarrollador"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 422
+#: NEEDS WORK
+msgid "Unable to determine IP"
+msgstr "No se puede determinar la IP"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 429
+#: NEEDS WORK
+msgid "Copied!"
+msgstr "¡Copiado!"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 153
 #: NEEDS WORK
@@ -547,148 +816,6 @@ msgstr "Conexión fallida: {message}"
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Certificados"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 283
-#: NEEDS WORK
-msgid "Samsung TV Developer Mode Setup"
-msgstr "Configuración del Modo Desarrollador de Samsung TV"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 316
-#: NEEDS WORK
-msgid "Enable Developer Mode"
-msgstr "Habilitar Modo Desarrollador"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 317
-#: NEEDS WORK
-msgid "Follow these steps to enable Developer Mode on your Samsung TV"
-msgstr "Sigue estos pasos para habilitar el Modo Desarrollador en tu televisor Samsung."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 322
-#: NEEDS WORK
-msgid "Step-by-Step Instructions"
-msgstr "Instrucciones paso a paso"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 323
-#: NEEDS WORK
-msgid "These steps must be performed directly on your Samsung TV"
-msgstr "Estos pasos deben realizarse directamente en tu televisor Samsung."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 328
-#: NEEDS WORK
-msgid "1. Open Smart Hub"
-msgstr "1. Abrir Smart Hub"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 329
-#: NEEDS WORK
-msgid "On the TV, open the 'Smart Hub'"
-msgstr "En la TV, abre el 'Smart Hub'"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 336
-#: NEEDS WORK
-msgid "2. Go to Apps Panel"
-msgstr "2. Ve a Panel de Aplicaciones"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 337
-#: NEEDS WORK
-msgid "Select the 'Apps' panel in Smart Hub"
-msgstr "Selecciona el panel de 'Aplicaciones' en Smart Hub"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 344
-#: NEEDS WORK
-msgid "3. Enter Secret Code"
-msgstr "3. Introduzca el código secreto"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 345
-#: NEEDS WORK
-msgid "Press '123' button (or long press Home button) before typing '12345' with on-screen keyboard"
-msgstr ""
-"Presiona el botón '123' (o mantén presionado el botón de Inicio) antes de escribir '12345' con el "
-"teclado en pantalla."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 352
-#: NEEDS WORK
-msgid "4. Toggle Developer Mode"
-msgstr "4. Alternar Modo Desarrollador"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 353
-#: NEEDS WORK
-msgid "Toggle the 'Developer' button to 'On'"
-msgstr "Activa el botón 'Desarrollador' a 'On'"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 360
-#: NEEDS WORK
-msgid "5. Enter Host PC IP"
-msgstr "5. Introduzca la IP del PC host"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 361
-#: NEEDS WORK
-#, python-brace-format
-msgid "Enter your computer's IP address: {ip}"
-msgstr "Introduce la dirección IP de tu computadora: {ip}"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 368
-#: NEEDS WORK
-msgid "Important Notes"
-msgstr "Notas Importantes"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 373
-#: NEEDS WORK
-msgid "Right-to-Left Languages"
-msgstr "Idiomas de derecha a izquierda"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 374
-#: NEEDS WORK
-msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
-msgstr "Si el televisor utiliza árabe/hebreo, ingrese la dirección IP al revés."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 381
-#: NEEDS WORK
-msgid "Virtual Keyboard Issues"
-msgstr "Problemas con el teclado virtual"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 382
-#: NEEDS WORK
-msgid "If on-screen keyboard doesn't work, use Samsung SmartThings app or external Bluetooth keyboard"
-msgstr ""
-"Si el teclado en pantalla no funciona, utiliza la aplicación Samsung SmartThings o un teclado "
-"Bluetooth externo."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 389
-#: NEEDS WORK
-msgid "Network Connection"
-msgstr "Conexión de red"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 390
-#: NEEDS WORK
-msgid "Ensure TV and computer are on the same network"
-msgstr "Asegúrate de que la TV y el ordenador estén en la misma red."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 400
-#: NEEDS WORK
-msgid "Copy Your Computer's IP"
-msgstr "Copia la IP de tu computadora"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 401
-#: NEEDS WORK
-#, python-brace-format
-msgid "Click to copy: {ip}"
-msgstr "Haga clic para copiar: {ip}"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 403
-# File: usr/share/jellytizen/pages/device.py, line: 430
-#: NEEDS WORK
-msgid "Copy IP"
-msgstr "Copiar IP"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 422
-#: NEEDS WORK
-msgid "Unable to determine IP"
-msgstr "No se puede determinar la IP"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 429
-#: NEEDS WORK
-msgid "Copied!"
-msgstr "¡Copiado!"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 37
 #: NEEDS WORK

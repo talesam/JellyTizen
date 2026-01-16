@@ -33,112 +33,222 @@ msgstr  ""
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
 #
 # File: usr/share/jellytizen/utils/ui_helpers.py, line: 172
-# File: usr/share/jellytizen/pages/preferences.py, line: 171
+# File: usr/share/jellytizen/pages/preferences.py, line: 173
 # File: usr/share/jellytizen/pages/install.py, line: 110
 # File: usr/share/jellytizen/pages/welcome.py, line: 198
 msgid   "Cancel"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 31
+# File: usr/share/jellytizen/pages/certificates.py, line: 47
 msgid   "Developer Certificates"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 32
-msgid   "Configure Samsung developer certificates for app installation"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/certificates.py, line: 37
-msgid   "Certificate Files"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/certificates.py, line: 38
-msgid   "Upload your Samsung developer certificate files"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/certificates.py, line: 43
-msgid   "Author Certificate"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/certificates.py, line: 44
-msgid   "author.p12 - Your developer certificate"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/certificates.py, line: 46
-# File: usr/share/jellytizen/pages/certificates.py, line: 58
-msgid   "Browse"
+# File: usr/share/jellytizen/pages/certificates.py, line: 48
+msgid   "Certificates are required to install apps on Samsung TVs"
 msgstr  ""
 
 #
 # File: usr/share/jellytizen/pages/certificates.py, line: 55
-msgid   "Distributor Certificate"
+msgid   "📋 What are Developer Certificates?"
 msgstr  ""
 
 #
 # File: usr/share/jellytizen/pages/certificates.py, line: 56
-msgid   "distributor.p12 - Samsung's distributor certificate"
+msgid   "Samsung requires signed apps. You need certificates from Tizen "
+        "Studio."
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 67
-# File: usr/share/jellytizen/pages/certificates.py, line: 73
-msgid   "Certificate Password"
+# File: usr/share/jellytizen/pages/certificates.py, line: 61
+msgid   "Author Certificate (author.p12)"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 68
-msgid   "Enter the password for your author certificate"
+# File: usr/share/jellytizen/pages/certificates.py, line: 62
+msgid   "Your personal certificate that identifies you as the app developer"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 69
+msgid   "Distributor Certificate (distributor.p12)"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 70
+msgid   "Samsung's certificate that allows app installation on devices"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 79
+msgid   "🔧 How to Get Certificates"
 msgstr  ""
 
 #
 # File: usr/share/jellytizen/pages/certificates.py, line: 80
-msgid   "Developer Profile"
+msgid   "Follow these steps to create your certificates"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 81
-msgid   "Configure your developer profile information"
+# File: usr/share/jellytizen/pages/certificates.py, line: 85
+msgid   "1. Install Tizen Studio"
 msgstr  ""
 
 #
 # File: usr/share/jellytizen/pages/certificates.py, line: 86
-msgid   "Profile Name"
+msgid   "Download from Samsung Developer website"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 93
-msgid   "Certificate Validation"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/certificates.py, line: 98
-msgid   "Validate Certificates"
+# File: usr/share/jellytizen/pages/certificates.py, line: 90
+msgid   "Download"
 msgstr  ""
 
 #
 # File: usr/share/jellytizen/pages/certificates.py, line: 99
-msgid   "Check if certificates are valid and properly configured"
+msgid   "2. Open Certificate Manager"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 101
-msgid   "Validate"
+# File: usr/share/jellytizen/pages/certificates.py, line: 100
+msgid   "In Tizen Studio: Tools → Certificate Manager"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 114
-msgid   "Continue to Installation"
+# File: usr/share/jellytizen/pages/certificates.py, line: 107
+msgid   "3. Create Samsung Certificate"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 108
+msgid   "Click '+' → Samsung Certificate → TV → Create new profile"
 msgstr  ""
 
 #
 # File: usr/share/jellytizen/pages/certificates.py, line: 115
-msgid   "Start the Jellyfin installation process"
+msgid   "4. Sign in with Samsung Account"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 116
+msgid   "Use the same account registered on your TV"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 123
+msgid   "5. Add Your TV's DUID"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 124
+msgid   "The DUID is shown in the TV's Developer Mode settings"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 131
+msgid   "6. Export Certificates"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 132
+msgid   "Certificates are saved in ~/SamsungCertificate/<profile_name>/"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 141
+msgid   "📁 Upload Your Certificates"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 142
+msgid   "Select the .p12 certificate files from your computer"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 147
+msgid   "Author Certificate"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 148
+msgid   "Select author.p12 file"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 152
+# File: usr/share/jellytizen/pages/certificates.py, line: 166
+msgid   "Browse"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 161
+msgid   "Distributor Certificate"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 162
+msgid   "Select distributor.p12 file"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 177
+msgid   "🔐 Certificate Password"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 178
+msgid   "Enter the password you chose when creating the certificates"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 183
+msgid   "Password"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 192
+msgid   "👤 Developer Profile"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 193
+msgid   "A name to identify this certificate configuration"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 198
+msgid   "Profile Name"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 208
+msgid   "✅ Validate and Continue"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 213
+msgid   "Validate Certificates"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 214
+msgid   "Check if certificates are valid before continuing"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 216
+msgid   "Validate"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 225
+msgid   "Continue to Installation"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 226
+msgid   "Proceed to install Jellyfin on your TV"
 msgstr  ""
 
 #
@@ -146,53 +256,90 @@ msgstr  ""
 #
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 117
-# File: usr/share/jellytizen/pages/device.py, line: 135
+# File: usr/share/jellytizen/pages/certificates.py, line: 228
+# File: usr/share/jellytizen/pages/device.py, line: 246
 # File: usr/share/jellytizen/pages/welcome.py, line: 105
 msgid   "Continue"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 132
+# File: usr/share/jellytizen/pages/certificates.py, line: 243
 #, python-brace-format
 msgid   "Select {cert_type} certificate"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 136
+# File: usr/share/jellytizen/pages/certificates.py, line: 247
 msgid   "P12 Certificate Files"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 162
-# File: usr/share/jellytizen/pages/certificates.py, line: 165
-# File: usr/share/jellytizen/pages/certificates.py, line: 184
-# File: usr/share/jellytizen/pages/certificates.py, line: 190
+# File: usr/share/jellytizen/pages/certificates.py, line: 276
+# File: usr/share/jellytizen/pages/certificates.py, line: 279
+# File: usr/share/jellytizen/pages/certificates.py, line: 299
+# File: usr/share/jellytizen/pages/certificates.py, line: 306
 #, python-brace-format
-msgid   "Selected: {path}"
+msgid   "✅ Selected: {filename}"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 163
-# File: usr/share/jellytizen/pages/certificates.py, line: 166
-# File: usr/share/jellytizen/pages/certificates.py, line: 185
-# File: usr/share/jellytizen/pages/certificates.py, line: 191
+# File: usr/share/jellytizen/pages/certificates.py, line: 277
+# File: usr/share/jellytizen/pages/certificates.py, line: 280
+# File: usr/share/jellytizen/pages/certificates.py, line: 300
+# File: usr/share/jellytizen/pages/certificates.py, line: 307
 msgid   "Change"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 217
+# File: usr/share/jellytizen/pages/certificates.py, line: 322
+msgid   "All fields filled - click to validate"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 326
+msgid   "author certificate"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 328
+msgid   "distributor certificate"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 330
+msgid   "password"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 331
+#, python-brace-format
+msgid   "Missing: {items}"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 346
+msgid   "✅ Certificates are valid!"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 347
 msgid   "Certificates validated successfully!"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 219
+# File: usr/share/jellytizen/pages/certificates.py, line: 349
+#, python-brace-format
+msgid   "❌ Validation failed: {message}"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/certificates.py, line: 350
 #, python-brace-format
 msgid   "Certificate validation failed: {message}"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/certificates.py, line: 231
+# File: usr/share/jellytizen/pages/certificates.py, line: 362
 msgid   "Installation"
 msgstr  ""
 
@@ -265,99 +412,99 @@ msgid   "Scan port range (e.g., 8000-8080)"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 80
+# File: usr/share/jellytizen/pages/preferences.py, line: 82
 msgid   "Logging"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 81
+# File: usr/share/jellytizen/pages/preferences.py, line: 83
 msgid   "Configure application logging"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 86
+# File: usr/share/jellytizen/pages/preferences.py, line: 88
 msgid   "Log Level"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 87
+# File: usr/share/jellytizen/pages/preferences.py, line: 89
 msgid   "Verbosity of application logs"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 104
+# File: usr/share/jellytizen/pages/preferences.py, line: 106
 msgid   "Save Logs to File"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 105
+# File: usr/share/jellytizen/pages/preferences.py, line: 107
 msgid   "Save application logs to ~/.local/share/jellytizen/logs"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 112
+# File: usr/share/jellytizen/pages/preferences.py, line: 114
 msgid   "Advanced"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 118
+# File: usr/share/jellytizen/pages/preferences.py, line: 120
 msgid   "Developer Options"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 119
+# File: usr/share/jellytizen/pages/preferences.py, line: 121
 msgid   "Advanced settings for developers"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 124
+# File: usr/share/jellytizen/pages/preferences.py, line: 126
 msgid   "Debug Mode"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 125
+# File: usr/share/jellytizen/pages/preferences.py, line: 127
 msgid   "Enable debug mode for development"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 132
+# File: usr/share/jellytizen/pages/preferences.py, line: 134
 msgid   "Allow Custom Scripts"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 133
+# File: usr/share/jellytizen/pages/preferences.py, line: 135
 msgid   "Allow execution of custom installation scripts"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 140
-# File: usr/share/jellytizen/pages/preferences.py, line: 148
-# File: usr/share/jellytizen/pages/preferences.py, line: 172
+# File: usr/share/jellytizen/pages/preferences.py, line: 142
+# File: usr/share/jellytizen/pages/preferences.py, line: 150
+# File: usr/share/jellytizen/pages/preferences.py, line: 174
 msgid   "Reset"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 141
+# File: usr/share/jellytizen/pages/preferences.py, line: 143
 msgid   "Reset application settings"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 145
+# File: usr/share/jellytizen/pages/preferences.py, line: 147
 msgid   "Reset All Settings"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 146
+# File: usr/share/jellytizen/pages/preferences.py, line: 148
 msgid   "Reset all preferences to default values"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 168
+# File: usr/share/jellytizen/pages/preferences.py, line: 170
 msgid   "Reset All Settings?"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/preferences.py, line: 169
+# File: usr/share/jellytizen/pages/preferences.py, line: 171
 msgid   "This will reset all preferences to their default values. This action "
         "cannot be undone."
 msgstr  ""
@@ -365,325 +512,306 @@ msgstr  ""
 #
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
 #
-# File: usr/share/jellytizen/pages/device.py, line: 49
+# File: usr/share/jellytizen/pages/device.py, line: 50
 # File: usr/share/jellytizen/pages/welcome.py, line: 185
 msgid   "Device Setup"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 50
+# File: usr/share/jellytizen/pages/device.py, line: 51
 msgid   "Connect to your Samsung Tizen TV or projector"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 55
-msgid   "Device Discovery"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 60
-msgid   "Scan Network"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 61
-msgid   "Automatically discover Samsung devices on your network"
-msgstr  ""
-
-#
 # File: usr/share/jellytizen/pages/device.py, line: 63
-# File: usr/share/jellytizen/pages/device.py, line: 163
-msgid   "Scan"
+msgid   "Required Step: Enable Developer Mode"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 73
-msgid   "Discovered Devices"
+# File: usr/share/jellytizen/pages/device.py, line: 70
+msgid   "You must complete these steps on your Samsung TV before connecting"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 74
-msgid   "Select your target device"
+# File: usr/share/jellytizen/pages/device.py, line: 75
+msgid   "1. Open Apps"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 79
-msgid   "Manual Connection"
+# File: usr/share/jellytizen/pages/device.py, line: 76
+msgid   "On the TV, go to the 'Apps' section"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 80
-msgid   "Enter device details manually"
+# File: usr/share/jellytizen/pages/device.py, line: 83
+msgid   "2. Go to App Settings"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 85
-msgid   "Device IP Address"
+# File: usr/share/jellytizen/pages/device.py, line: 84
+msgid   "Scroll to the end of the Apps list and select 'App Settings'"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 91
+msgid   "3. Press '123' Button"
 msgstr  ""
 
 #
 # File: usr/share/jellytizen/pages/device.py, line: 92
-msgid   "Developer Mode"
+msgid   "Inside App Settings, press the '123' button on your remote control"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 93
-msgid   "Enable if your TV is in developer mode"
+# File: usr/share/jellytizen/pages/device.py, line: 99
+msgid   "4. Enter Secret Code"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 100
+msgid   "Type '12345' using the remote - Developer Mode menu will appear"
 msgstr  ""
 
 #
 # File: usr/share/jellytizen/pages/device.py, line: 107
-msgid   "How to enable Developer Mode on Samsung TV"
+msgid   "5. Enable Developer Mode"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 119
-msgid   "Connect to Device"
+# File: usr/share/jellytizen/pages/device.py, line: 108
+msgid   "Toggle 'Developer Mode' to 'On' in the menu"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 120
-msgid   "Establish connection with your TV"
+# File: usr/share/jellytizen/pages/device.py, line: 116
+msgid   "6. Enter Host PC IP"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 122
-# File: usr/share/jellytizen/pages/device.py, line: 250
-msgid   "Connect"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 132
-msgid   "Continue to Certificates"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 133
-msgid   "Setup developer certificates"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 153
-msgid   "Scanning..."
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 178
-msgid   "No devices found"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 179
-msgid   "Try manual connection or check network"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 186
-msgid   "Unknown Device"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 187
-#, python-brace-format
-msgid   "IP: {ip} | Model: {model}"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 187
-msgid   "Unknown"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 189
-msgid   "Select"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 200
-msgid   "Found 1 device - Select your target device"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 202
-#, python-brace-format
-msgid   "Found {count} devices - Select your target device"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 209
-#, python-brace-format
-msgid   "Device selected: {ip}"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 232
-msgid   "Please enter a device IP address"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 236
-msgid   "Please enter a valid IP address"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 241
-msgid   "Connecting..."
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 255
-msgid   "Connected successfully!"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 257
-#, python-brace-format
-msgid   "Connection failed: {message}"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 264
-msgid   "Certificates"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 283
-msgid   "Samsung TV Developer Mode Setup"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 316
-msgid   "Enable Developer Mode"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 317
-msgid   "Follow these steps to enable Developer Mode on your Samsung TV"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 322
-msgid   "Step-by-Step Instructions"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 323
-msgid   "These steps must be performed directly on your Samsung TV"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 328
-msgid   "1. Open Smart Hub"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 329
-msgid   "On the TV, open the 'Smart Hub'"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 336
-msgid   "2. Go to Apps Panel"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 337
-msgid   "Select the 'Apps' panel in Smart Hub"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 344
-msgid   "3. Enter Secret Code"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 345
-msgid   "Press '123' button (or long press Home button) before typing '12345' "
-        "with on-screen keyboard"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 352
-msgid   "4. Toggle Developer Mode"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 353
-msgid   "Toggle the 'Developer' button to 'On'"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 360
-msgid   "5. Enter Host PC IP"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 361
+# File: usr/share/jellytizen/pages/device.py, line: 117
 #, python-brace-format
 msgid   "Enter your computer's IP address: {ip}"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 368
-msgid   "Important Notes"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 373
-msgid   "Right-to-Left Languages"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 374
-msgid   "If TV uses Arabic/Hebrew, enter the IP address backwards"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 381
-msgid   "Virtual Keyboard Issues"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 382
-msgid   "If on-screen keyboard doesn't work, use Samsung SmartThings app or "
-        "external Bluetooth keyboard"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 389
-msgid   "Network Connection"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 390
-msgid   "Ensure TV and computer are on the same network"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 400
-msgid   "Copy Your Computer's IP"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 401
-#, python-brace-format
-msgid   "Click to copy: {ip}"
-msgstr  ""
-
-#
-# File: usr/share/jellytizen/pages/device.py, line: 403
-# File: usr/share/jellytizen/pages/device.py, line: 430
+# File: usr/share/jellytizen/pages/device.py, line: 122
 msgid   "Copy IP"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 422
+# File: usr/share/jellytizen/pages/device.py, line: 131
+msgid   "7. Restart TV"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 132
+msgid   "Turn off and on your TV to apply Developer Mode settings"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 139
+msgid   "Important Notes"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 144
+msgid   "Right-to-Left Languages"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 145
+msgid   "If TV uses Arabic/Hebrew, enter the IP address backwards"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 152
+msgid   "Network Connection"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 153
+msgid   "Ensure TV and computer are on the same network"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 162
+msgid   "Confirmation"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 167
+msgid   "Developer Mode Enabled"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 168
+msgid   "I confirm I have completed the steps above on my TV"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 183
+msgid   "Device Discovery"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 188
+msgid   "Scan Network"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 189
+msgid   "Automatically discover Samsung devices on your network"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 191
+# File: usr/share/jellytizen/pages/device.py, line: 290
+msgid   "Scan"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 201
+msgid   "Discovered Devices"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 202
+msgid   "Select your target device"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 209
+msgid   "Manual Connection"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 210
+msgid   "Enter device details manually"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 215
+msgid   "Device IP Address"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 228
+msgid   "Connect to Device"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 229
+msgid   "Establish connection with your TV"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 231
+# File: usr/share/jellytizen/pages/device.py, line: 380
+msgid   "Connect"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 243
+msgid   "Continue to Certificates"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 244
+msgid   "Setup developer certificates"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 265
 msgid   "Unable to determine IP"
 msgstr  ""
 
 #
-# File: usr/share/jellytizen/pages/device.py, line: 429
+# File: usr/share/jellytizen/pages/device.py, line: 273
 msgid   "Copied!"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 280
+msgid   "Scanning..."
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 305
+msgid   "No devices found"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 306
+msgid   "Try manual connection or check network"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 313
+msgid   "Unknown Device"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 314
+#, python-brace-format
+msgid   "IP: {ip} | Model: {model}"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 314
+msgid   "Unknown"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 316
+msgid   "Select"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 327
+msgid   "Found 1 device - Select your target device"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 329
+#, python-brace-format
+msgid   "Found {count} devices - Select your target device"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 336
+#, python-brace-format
+msgid   "Device selected: {ip}"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 362
+msgid   "Please enter a device IP address"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 366
+msgid   "Please enter a valid IP address"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 371
+msgid   "Connecting..."
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 385
+msgid   "Connected successfully!"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 387
+#, python-brace-format
+msgid   "Connection failed: {message}"
+msgstr  ""
+
+#
+# File: usr/share/jellytizen/pages/device.py, line: 394
+msgid   "Certificates"
 msgstr  ""
 
 #

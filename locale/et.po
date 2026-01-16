@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the JellyTizen package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: JellyTizen\n"
@@ -45,30 +46,135 @@ msgstr "Tühista"
 msgid "Developer Certificates"
 msgstr "Arendaja sertifikaadid"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 32
+# File: usr/share/jellytizen/pages/certificates.py, line: 48
 #: NEEDS WORK
-msgid "Configure Samsung developer certificates for app installation"
-msgstr "Konfigureeri Samsungi arendaja sertifikaadid rakenduse installimiseks"
+msgid "Certificates are required to install apps on Samsung TVs"
+msgstr "Sertifikaid on vajalikud rakenduste installimiseks Samsungi teleritesse."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 37
+# File: usr/share/jellytizen/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "Certificate Files"
-msgstr "Sertifikaadifailid"
+msgid "📋 What are Developer Certificates?"
+msgstr "📋 Mis on arendaja sertifikaadid?"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 38
+# File: usr/share/jellytizen/pages/certificates.py, line: 56
 #: NEEDS WORK
-msgid "Upload your Samsung developer certificate files"
-msgstr "Laadi üles oma Samsungi arendaja sertifikaadi failid"
+msgid "Samsung requires signed apps. You need certificates from Tizen Studio."
+msgstr "Samsung nõuab allkirjastatud rakendusi. Teil on vaja Tizen Studio sertifikaate."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 61
+#: NEEDS WORK
+msgid "Author Certificate (author.p12)"
+msgstr "Autori sertifikaat (author.p12)"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 62
+#: NEEDS WORK
+msgid "Your personal certificate that identifies you as the app developer"
+msgstr "Teie isiklik sertifikaat, mis tuvastab teid rakenduse arendajana."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 69
+#: NEEDS WORK
+msgid "Distributor Certificate (distributor.p12)"
+msgstr "Jaotaja sertifikaat (distributor.p12)"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 70
+#: NEEDS WORK
+msgid "Samsung's certificate that allows app installation on devices"
+msgstr "Samsungi sertifikaat, mis võimaldab rakenduste installimist seadmetesse"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 79
+#: NEEDS WORK
+msgid "🔧 How to Get Certificates"
+msgstr "🔧 Kuidas saada sertifikaate"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 80
+#: NEEDS WORK
+msgid "Follow these steps to create your certificates"
+msgstr "Järgige neid samme, et luua oma sertifikaate."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 85
+#: NEEDS WORK
+msgid "1. Install Tizen Studio"
+msgstr "1. Installi Tizen Studio"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 86
+#: NEEDS WORK
+msgid "Download from Samsung Developer website"
+msgstr "Laadi alla Samsungi arendaja veebisaidilt"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 90
+#: NEEDS WORK
+msgid "Download"
+msgstr "Laadi alla"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 99
+#: NEEDS WORK
+msgid "2. Open Certificate Manager"
+msgstr "2. Ava sertifika haldurit"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 100
+#: NEEDS WORK
+msgid "In Tizen Studio: Tools → Certificate Manager"
+msgstr "Tizen Studio: Tööriistad → Sertifikaadi haldur"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 107
+#: NEEDS WORK
+msgid "3. Create Samsung Certificate"
+msgstr "3. Loo Samsungi sertifikaat"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 108
+#: NEEDS WORK
+msgid "Click '+' → Samsung Certificate → TV → Create new profile"
+msgstr "Klõpsa '+' → Samsungi sertifikaat → TV → Loo uus profiil"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 115
+#: NEEDS WORK
+msgid "4. Sign in with Samsung Account"
+msgstr "4. Logi sisse Samsungi kontoga"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 116
+#: NEEDS WORK
+msgid "Use the same account registered on your TV"
+msgstr "Kasutage sama kontot, mis on registreeritud teie teleris."
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 123
+#: NEEDS WORK
+msgid "5. Add Your TV's DUID"
+msgstr "5. Lisa oma TV DUID"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 124
+#: NEEDS WORK
+msgid "The DUID is shown in the TV's Developer Mode settings"
+msgstr "DUID kuvatakse teleri arendaja režiimi seadetes"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 131
+#: NEEDS WORK
+msgid "6. Export Certificates"
+msgstr "6. Ekspordi sertifikaadid"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 132
+#: NEEDS WORK
+msgid "Certificates are saved in ~/SamsungCertificate/<profile_name>/"
+msgstr "Sertifikaadid salvestatakse kausta ~/SamsungCertificate/<profile_name>/"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 141
+#: NEEDS WORK
+msgid "📁 Upload Your Certificates"
+msgstr "📁 Laadi üles oma sertifikaadid"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 142
+#: NEEDS WORK
+msgid "Select the .p12 certificate files from your computer"
+msgstr "Valige oma arvutist .p12 sertifikaadifailid."
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 43
 #: NEEDS WORK
 msgid "Author Certificate"
 msgstr "Autori sertifikaat"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 44
+# File: usr/share/jellytizen/pages/certificates.py, line: 148
 #: NEEDS WORK
-msgid "author.p12 - Your developer certificate"
-msgstr "author.p12 - Teie arendaja sertifikaat"
+msgid "Select author.p12 file"
+msgstr "Vali author.p12 fail"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 46
 # File: usr/share/jellytizen/pages/certificates.py, line: 58
@@ -81,51 +187,55 @@ msgstr "Sirvi"
 msgid "Distributor Certificate"
 msgstr "Jaotaja sertifikaat"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 56
+# File: usr/share/jellytizen/pages/certificates.py, line: 162
 #: NEEDS WORK
-msgid "distributor.p12 - Samsung's distributor certificate"
-msgstr "distributor.p12 - Samsungi jaotustunnistus"
+msgid "Select distributor.p12 file"
+msgstr "Vali distributor.p12 fail"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 67
-# File: usr/share/jellytizen/pages/certificates.py, line: 73
+# File: usr/share/jellytizen/pages/certificates.py, line: 177
 #: NEEDS WORK
-msgid "Certificate Password"
-msgstr "Sertifikaadi parool"
+msgid "🔐 Certificate Password"
+msgstr "🔐 Sertifika Parool"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 68
+# File: usr/share/jellytizen/pages/certificates.py, line: 178
 #: NEEDS WORK
-msgid "Enter the password for your author certificate"
-msgstr "Sisestage oma autori sertifikaadi parool"
+msgid "Enter the password you chose when creating the certificates"
+msgstr "Sisestage parool, mille valisite sertifikaatide loomisel."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 80
+# File: usr/share/jellytizen/pages/certificates.py, line: 183
 #: NEEDS WORK
-msgid "Developer Profile"
-msgstr "Arendaja profiil"
+msgid "Password"
+msgstr "Parool"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 81
+# File: usr/share/jellytizen/pages/certificates.py, line: 192
 #: NEEDS WORK
-msgid "Configure your developer profile information"
-msgstr "Konfigureeri oma arendaja profiili teave"
+msgid "👤 Developer Profile"
+msgstr "👤 Arendaja profiil"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 193
+#: NEEDS WORK
+msgid "A name to identify this certificate configuration"
+msgstr "Nimi, et tuvastada seda sertifikaadi konfiguratsiooni"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 86
 #: NEEDS WORK
 msgid "Profile Name"
 msgstr "Profiili nimi"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 93
+# File: usr/share/jellytizen/pages/certificates.py, line: 208
 #: NEEDS WORK
-msgid "Certificate Validation"
-msgstr "Sertifikaadi valideerimine"
+msgid "✅ Validate and Continue"
+msgstr "✅ Kinnita ja Jätka"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 98
 #: NEEDS WORK
 msgid "Validate Certificates"
 msgstr "Kinnita sertifikaate"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 99
+# File: usr/share/jellytizen/pages/certificates.py, line: 214
 #: NEEDS WORK
-msgid "Check if certificates are valid and properly configured"
-msgstr "Kontrolli, kas sertifikaadid on kehtivad ja õigesti konfigureeritud"
+msgid "Check if certificates are valid before continuing"
+msgstr "Kontrolli, kas sertifikaadid on kehtivad enne jätkamist"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 101
 #: NEEDS WORK
@@ -137,10 +247,10 @@ msgstr "Kinnita"
 msgid "Continue to Installation"
 msgstr "Jätka installimisega"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
+# File: usr/share/jellytizen/pages/certificates.py, line: 226
 #: NEEDS WORK
-msgid "Start the Jellyfin installation process"
-msgstr "Alusta Jellyfini installimisprotsess."
+msgid "Proceed to install Jellyfin on your TV"
+msgstr "Jätka Jellyfini installimist oma telerisse"
 # 
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
 # 
@@ -164,14 +274,14 @@ msgstr "Vali {cert_type} sertifikaat"
 msgid "P12 Certificate Files"
 msgstr "P12 sertifikafailid"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 162
-# File: usr/share/jellytizen/pages/certificates.py, line: 165
-# File: usr/share/jellytizen/pages/certificates.py, line: 184
-# File: usr/share/jellytizen/pages/certificates.py, line: 190
+# File: usr/share/jellytizen/pages/certificates.py, line: 276
+# File: usr/share/jellytizen/pages/certificates.py, line: 279
+# File: usr/share/jellytizen/pages/certificates.py, line: 299
+# File: usr/share/jellytizen/pages/certificates.py, line: 306
 #: NEEDS WORK
 #, python-brace-format
-msgid "Selected: {path}"
-msgstr "Valitud: {path}"
+msgid "✅ Selected: {filename}"
+msgstr "✅ Valitud: {filename}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 163
 # File: usr/share/jellytizen/pages/certificates.py, line: 166
@@ -181,10 +291,47 @@ msgstr "Valitud: {path}"
 msgid "Change"
 msgstr "Muuda"
 # 
+# File: usr/share/jellytizen/pages/certificates.py, line: 322
+#: NEEDS WORK
+msgid "All fields filled - click to validate"
+msgstr "Kõik väljad on täidetud - klõpsake valideerimiseks"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 326
+#: NEEDS WORK
+msgid "author certificate"
+msgstr "autori sertifikaat"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 328
+#: NEEDS WORK
+msgid "distributor certificate"
+msgstr "jaotustunnistus"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 330
+#: NEEDS WORK
+msgid "password"
+msgstr "parool"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 331
+#: NEEDS WORK
+#, python-brace-format
+msgid "Missing: {items}"
+msgstr "Puuduvad: {items}"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 346
+#: NEEDS WORK
+msgid "✅ Certificates are valid!"
+msgstr "✅ Sertifikaadid on kehtivad!"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 217
 #: NEEDS WORK
 msgid "Certificates validated successfully!"
 msgstr "Sertifikaadid valideeriti edukalt!"
+# 
+# File: usr/share/jellytizen/pages/certificates.py, line: 349
+#: NEEDS WORK
+#, python-brace-format
+msgid "❌ Validation failed: {message}"
+msgstr "❌ Kehtivuse kontroll ebaõnnestus: {message}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 219
 #: NEEDS WORK
@@ -375,6 +522,133 @@ msgstr "Seadme seadistus"
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "Ühendage oma Samsung Tizen teler või projektoriga"
 # 
+# File: usr/share/jellytizen/pages/device.py, line: 63
+#: NEEDS WORK
+msgid "Required Step: Enable Developer Mode"
+msgstr "Nõutav samm: Luba arendaja režiim"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 70
+#: NEEDS WORK
+msgid "You must complete these steps on your Samsung TV before connecting"
+msgstr "Enne ühendamist peate need sammud oma Samsungi teleris lõpetama."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 75
+#: NEEDS WORK
+msgid "1. Open Apps"
+msgstr "1. Ava rakendused"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 76
+#: NEEDS WORK
+msgid "On the TV, go to the 'Apps' section"
+msgstr "Teleru, mine 'Rakendused' jaotisse."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 83
+#: NEEDS WORK
+msgid "2. Go to App Settings"
+msgstr "2. Mine rakenduse seaded"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 84
+#: NEEDS WORK
+msgid "Scroll to the end of the Apps list and select 'App Settings'"
+msgstr "Kerige rakenduste loendi lõppu ja valige 'Rakenduse seaded'"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 91
+#: NEEDS WORK
+msgid "3. Press '123' Button"
+msgstr "3. Vajutage '123' nuppu"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 92
+#: NEEDS WORK
+msgid "Inside App Settings, press the '123' button on your remote control"
+msgstr "Rakenduse seadetes vajutage oma kaugjuhtimispuldil nuppu '123'"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 99
+#: NEEDS WORK
+msgid "4. Enter Secret Code"
+msgstr "4. Sisestage salajane kood"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 100
+#: NEEDS WORK
+msgid "Type '12345' using the remote - Developer Mode menu will appear"
+msgstr "Sisestage '12345' kaugjuhtimispuldi abil - arendaja režiimi menüü ilmub"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 107
+#: NEEDS WORK
+msgid "5. Enable Developer Mode"
+msgstr "5. Luba Arendaja Režiim"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 108
+#: NEEDS WORK
+msgid "Toggle 'Developer Mode' to 'On' in the menu"
+msgstr "Lülita 'Arendaja režiim' menüüs 'Käivitamiseks'"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 116
+#: NEEDS WORK
+msgid "6. Enter Host PC IP"
+msgstr "6. Sisestage hostarvuti IP"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 361
+#: NEEDS WORK
+#, python-brace-format
+msgid "Enter your computer's IP address: {ip}"
+msgstr "Sisestage oma arvuti IP-aadress: {ip}"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 403
+# File: usr/share/jellytizen/pages/device.py, line: 430
+#: NEEDS WORK
+msgid "Copy IP"
+msgstr "Kopeeri IP"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 131
+#: NEEDS WORK
+msgid "7. Restart TV"
+msgstr "7. Taaskäivita telerii"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 132
+#: NEEDS WORK
+msgid "Turn off and on your TV to apply Developer Mode settings"
+msgstr "Lülitage oma teler välja ja sisse, et rakendada arendaja režiimi seadeid."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 368
+#: NEEDS WORK
+msgid "Important Notes"
+msgstr "Olulised märkused"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 373
+#: NEEDS WORK
+msgid "Right-to-Left Languages"
+msgstr "Paremest vasakule suunatud keeled"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 374
+#: NEEDS WORK
+msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
+msgstr "Kui teler kasutab araabia/heebrea keelt, sisestage IP-aadress tagurpidi."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 389
+#: NEEDS WORK
+msgid "Network Connection"
+msgstr "Võrguside"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 390
+#: NEEDS WORK
+msgid "Ensure TV and computer are on the same network"
+msgstr "Veenduge, et teler ja arvuti on samas võrgus."
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 162
+#: NEEDS WORK
+msgid "Confirmation"
+msgstr "Kinnitus"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 167
+#: NEEDS WORK
+msgid "Developer Mode Enabled"
+msgstr "Arendaja režiim lubatud"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 168
+#: NEEDS WORK
+msgid "I confirm I have completed the steps above on my TV"
+msgstr "Kinnitan, et olen ülaltoodud sammud oma teleris lõpetanud."
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 55
 #: NEEDS WORK
 msgid "Device Discovery"
@@ -421,21 +695,6 @@ msgstr "Sisestage seadme andmed käsitsi"
 msgid "Device IP Address"
 msgstr "Seadme IP-aadress"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 92
-#: NEEDS WORK
-msgid "Developer Mode"
-msgstr "Arendaja režiim"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 93
-#: NEEDS WORK
-msgid "Enable if your TV is in developer mode"
-msgstr "Luba, kui teie teler on arendaja režiimis."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 107
-#: NEEDS WORK
-msgid "How to enable Developer Mode on Samsung TV"
-msgstr "Kuidas lubada arendaja režiimi Samsungi teleris"
-# 
 # File: usr/share/jellytizen/pages/device.py, line: 119
 #: NEEDS WORK
 msgid "Connect to Device"
@@ -461,6 +720,16 @@ msgstr "Jätka sertifikaatide juurde"
 #: NEEDS WORK
 msgid "Setup developer certificates"
 msgstr "Seadke arendaja sertifikaadid"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 422
+#: NEEDS WORK
+msgid "Unable to determine IP"
+msgstr "Ei õnnestu määrata IP-d"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 429
+#: NEEDS WORK
+msgid "Copied!"
+msgstr "Kopeeritud!"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 153
 #: NEEDS WORK
@@ -545,146 +814,6 @@ msgstr "Ühenduse loomine ebaõnnestus: {message}"
 #: NEEDS WORK
 msgid "Certificates"
 msgstr "Sertifikaadid"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 283
-#: NEEDS WORK
-msgid "Samsung TV Developer Mode Setup"
-msgstr "Samsung TV arendaja režiimi seadistamine"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 316
-#: NEEDS WORK
-msgid "Enable Developer Mode"
-msgstr "Luba arendaja režiim"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 317
-#: NEEDS WORK
-msgid "Follow these steps to enable Developer Mode on your Samsung TV"
-msgstr "Järgige neid samme, et lubada arendaja režiim oma Samsungi teleris."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 322
-#: NEEDS WORK
-msgid "Step-by-Step Instructions"
-msgstr "Sammuti juhised"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 323
-#: NEEDS WORK
-msgid "These steps must be performed directly on your Samsung TV"
-msgstr "Need to perform these steps directly on your Samsung TV."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 328
-#: NEEDS WORK
-msgid "1. Open Smart Hub"
-msgstr "Ava Smart Hub"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 329
-#: NEEDS WORK
-msgid "On the TV, open the 'Smart Hub'"
-msgstr "Telerel, avage 'Smart Hub'"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 336
-#: NEEDS WORK
-msgid "2. Go to Apps Panel"
-msgstr "2. Mine rakenduste paneelile"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 337
-#: NEEDS WORK
-msgid "Select the 'Apps' panel in Smart Hub"
-msgstr "Valige Smart Hubis 'Rakendused' paneel."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 344
-#: NEEDS WORK
-msgid "3. Enter Secret Code"
-msgstr "3. Sisestage salakood"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 345
-#: NEEDS WORK
-msgid "Press '123' button (or long press Home button) before typing '12345' with on-screen keyboard"
-msgstr "Pühi '123' nuppu (või pika vajutusega Ava nuppu) enne '12345' sisestamist ekraanil klaviatuuriga"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 352
-#: NEEDS WORK
-msgid "4. Toggle Developer Mode"
-msgstr "4. Lülita arendaja režiim"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 353
-#: NEEDS WORK
-msgid "Toggle the 'Developer' button to 'On'"
-msgstr "Lülita 'Arendaja' nupp 'Käivitamiseks'"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 360
-#: NEEDS WORK
-msgid "5. Enter Host PC IP"
-msgstr "5. Sisestage hostarvuti IP"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 361
-#: NEEDS WORK
-#, python-brace-format
-msgid "Enter your computer's IP address: {ip}"
-msgstr "Sisestage oma arvuti IP-aadress: {ip}"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 368
-#: NEEDS WORK
-msgid "Important Notes"
-msgstr "Olulised märkused"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 373
-#: NEEDS WORK
-msgid "Right-to-Left Languages"
-msgstr "Paremest vasakule suunatud keeled"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 374
-#: NEEDS WORK
-msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
-msgstr "Kui teler kasutab araabia/heebrea keelt, sisestage IP-aadress tagurpidi."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 381
-#: NEEDS WORK
-msgid "Virtual Keyboard Issues"
-msgstr "Virtuaalne klaviatuuri probleemid"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 382
-#: NEEDS WORK
-msgid "If on-screen keyboard doesn't work, use Samsung SmartThings app or external Bluetooth keyboard"
-msgstr ""
-"Kui ekraanil klaviatuur ei tööta, kasutage Samsung SmartThings rakendust või välist Bluetooth "
-"klaviatuuri."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 389
-#: NEEDS WORK
-msgid "Network Connection"
-msgstr "Võrguside"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 390
-#: NEEDS WORK
-msgid "Ensure TV and computer are on the same network"
-msgstr "Veenduge, et teler ja arvuti on samas võrgus."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 400
-#: NEEDS WORK
-msgid "Copy Your Computer's IP"
-msgstr "Kopeeri oma arvuti IP"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 401
-#: NEEDS WORK
-#, python-brace-format
-msgid "Click to copy: {ip}"
-msgstr "Klõpsa, et kopeerida: {ip}"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 403
-# File: usr/share/jellytizen/pages/device.py, line: 430
-#: NEEDS WORK
-msgid "Copy IP"
-msgstr "Kopeeri IP"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 422
-#: NEEDS WORK
-msgid "Unable to determine IP"
-msgstr "Ei õnnestu määrata IP-d"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 429
-#: NEEDS WORK
-msgid "Copied!"
-msgstr "Kopeeritud!"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 37
 #: NEEDS WORK
