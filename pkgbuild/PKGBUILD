@@ -1,19 +1,32 @@
 # Maintainer: Tales A. Mendonça <talesam@gmail.com>
 
-pkgname=pkgbuild-template-translate
-pkgdesc="Package template for BigCommunity"
-# Uncomment and edit the following lines as needed
-#depends=('')
-#makedepends=('')
-#optdepends=('')
-#conflicts=('')
-#provides=('')
-#replaces=('')
+pkgname=jellytizen
+pkgdesc="Install Jellyfin on Samsung Tizen TVs and projectors"
+depends=(
+    'python>=3.8'
+    'python-gobject'
+    'gtk4'
+    'libadwaita'
+    'vte4'
+    'python-cryptography'
+    'docker'
+    'gettext'
+)
+makedepends=(
+    'python-build'
+    'python-installer'
+    'python-wheel'
+    'python-setuptools'
+)
+optdepends=(
+    'tizen-studio: For local Tizen SDK development'
+    'sdb: Samsung Debug Bridge for device connection'
+)
 pkgver=$(date +%y.%m.%d)
 pkgrel=$(date +%H%M)
 arch=('any')
 license=('MIT')
-url="https://github.com/big-comm/${pkgname}"
+url="https://github.com/talesam/${pkgname}"
 source=("git+${url}.git")
 md5sums=('SKIP')
 
