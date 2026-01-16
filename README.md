@@ -1,7 +1,7 @@
 # JellyTizen
 
 <p align="center">
-  <img src="data/icons/128x128/com.github.jellytizen.png" alt="JellyTizen Logo" width="128">
+  <img src="https://github.com/talesam/JellyTizen/blob/main/usr/share/icons/hicolor/scalable/apps/jellytizen.svg" alt="JellyTizen Logo" width="128">
 </p>
 
 <p align="center">
@@ -12,6 +12,11 @@
   <img src="https://img.shields.io/badge/GTK-4-4A86CF?logo=gtk&logoColor=white" alt="GTK4">
   <img src="https://img.shields.io/badge/Docker-required-2496ED?logo=docker&logoColor=white" alt="Docker">
 </p>
+
+<p align="center">
+  <img width="818" height="702" alt="jellytizen" src="https://github.com/user-attachments/assets/767488a3-0004-4656-9eff-374313e8aa0d" />
+</p>
+
 
 **One-click Jellyfin installation for Samsung Tizen TVs and projectors.**
 
