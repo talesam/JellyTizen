@@ -295,13 +295,29 @@ class DockerService:
         author_cert: str,
         dist_cert: str,
         password: str,
-        callback: Callable[[bool, str], None]
+        callback: Callable[[bool, str], None],
+        use_default: bool = False
     ) -> None:
-        """Setup certificates in Docker environment."""
+        """
+        Setup certificates in Docker environment.
+        
+        Args:
+            author_cert: Path to author certificate (ignored if use_default=True)
+            dist_cert: Path to distributor certificate (ignored if use_default=True)
+            password: Certificate password (ignored if use_default=True)
+            callback: Callback function (success: bool, message: str)
+            use_default: If True, skip certificate setup and use container's built-in certs
+        """
         def setup_certs():
             password_file = None
             try:
-                self.logger.info("Setting up certificates")
+                # If using default certificates, skip the setup
+                if use_default:
+                    self.logger.info("Using built-in certificates from Docker container")
+                    GLib.idle_add(callback, True, "Using built-in certificates")
+                    return
+                
+                self.logger.info("Setting up custom certificates")
 
                 # Create workspace directory
                 os.makedirs(self.workspace_host, exist_ok=True)
@@ -439,6 +455,87 @@ class DockerService:
                 GLib.idle_add(callback, False, str(e))
 
         thread = threading.Thread(target=install_app, daemon=True)
+        thread.start()
+
+    def install_jellyfin_direct_async(
+        self,
+        tv_ip: str,
+        callback: Callable[[bool, str], None],
+        progress_callback: Optional[Callable[[str], None]] = None,
+        build_option: str = "Jellyfin"
+    ) -> None:
+        """
+        Install Jellyfin directly using the Georift container.
+        
+        This is the simplified installation method that:
+        1. Pulls the pre-built WGT from jellyfin-tizen-builds
+        2. Connects to the TV via SDB
+        3. Installs the app directly
+        
+        Args:
+            tv_ip: IP address of the Samsung TV
+            callback: Callback function (success: bool, message: str)
+            progress_callback: Optional callback for progress updates
+            build_option: Build variant (Jellyfin, Jellyfin-TrueHD, etc.)
+        """
+        def install_direct():
+            try:
+                def log_progress(msg: str):
+                    if progress_callback:
+                        GLib.idle_add(progress_callback, msg)
+                    self.logger.info(msg)
+                
+                log_progress(f"Starting Jellyfin installation to {tv_ip}...")
+                log_progress(f"Using container: {self.image_name}:{self.image_tag}")
+                
+                # Run the Georift container with the TV IP
+                # Format: docker run --rm <image> <tv_ip> [build_option]
+                cmd = [
+                    'docker', 'run', '--rm',
+                    f'{self.image_name}:{self.image_tag}',
+                    tv_ip,
+                    build_option
+                ]
+                
+                log_progress(f"Executing: {' '.join(cmd)}")
+                
+                # Run with real-time output capture
+                process = subprocess.Popen(
+                    cmd,
+                    stdout=subprocess.PIPE,
+                    stderr=subprocess.STDOUT,
+                    text=True,
+                    bufsize=1
+                )
+                
+                # Stream output in real-time
+                output_lines = []
+                for line in iter(process.stdout.readline, ''):
+                    line = line.strip()
+                    if line:
+                        output_lines.append(line)
+                        log_progress(line)
+                
+                process.wait()
+                
+                if process.returncode == 0:
+                    self.logger.info("Jellyfin installed successfully!")
+                    GLib.idle_add(callback, True, "Jellyfin installed successfully!")
+                else:
+                    error_output = '\n'.join(output_lines[-5:])  # Last 5 lines
+                    error_msg = f"Installation failed (exit code {process.returncode})"
+                    self.logger.error(f"{error_msg}: {error_output}")
+                    GLib.idle_add(callback, False, error_msg)
+                
+            except FileNotFoundError:
+                error_msg = "Docker executable not found"
+                self.logger.error(error_msg)
+                GLib.idle_add(callback, False, error_msg)
+            except Exception as e:
+                self.logger.exception(f"Error during installation: {e}")
+                GLib.idle_add(callback, False, str(e))
+        
+        thread = threading.Thread(target=install_direct, daemon=True)
         thread.start()
 
     def stop_all_processes(self) -> None:

@@ -52,108 +52,69 @@ class DevicePage(Gtk.ScrolledWindow):
         main_box.append(header_group)
 
         # ============================================
-        # DEVELOPER MODE INSTRUCTIONS (INLINE - MANDATORY STEP)
+        # DEVELOPER MODE INSTRUCTIONS (COLLAPSIBLE)
         # ============================================
+        instructions_group = Adw.PreferencesGroup()
+        instructions_group.set_title(_("Setup Instructions"))
+        main_box.append(instructions_group)
         
-        # Warning banner with icon
-        warning_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
-        warning_box.set_margin_bottom(12)
-        warning_icon = Gtk.Image.new_from_icon_name("dialog-warning-symbolic")
-        warning_icon.add_css_class("warning")
-        warning_label = Gtk.Label(label=_("Required Step: Enable Developer Mode"))
-        warning_label.add_css_class("title-2")
-        warning_box.append(warning_icon)
-        warning_box.append(warning_label)
-        main_box.append(warning_box)
-        
-        self.dev_instructions_group = Adw.PreferencesGroup()
-        self.dev_instructions_group.set_description(_("You must complete these steps on your Samsung TV before connecting"))
-        main_box.append(self.dev_instructions_group)
+        # Main expander for instructions
+        self.instructions_expander = Adw.ExpanderRow()
+        self.instructions_expander.set_title(_("Enable Developer Mode on TV"))
+        self.instructions_expander.set_subtitle(_("Click to view step-by-step instructions"))
+        expander_icon = Gtk.Image.new_from_icon_name("dialog-warning-symbolic")
+        expander_icon.add_css_class("warning")
+        self.instructions_expander.add_prefix(expander_icon)
+        instructions_group.add(self.instructions_expander)
 
         # Step 1
         step1 = Adw.ActionRow()
         step1.set_title(_("1. Open Apps"))
         step1.set_subtitle(_("On the TV, go to the 'Apps' section"))
-        step1_icon = Gtk.Image.new_from_icon_name("view-app-grid-symbolic")
-        step1.add_prefix(step1_icon)
-        self.dev_instructions_group.add(step1)
+        self.instructions_expander.add_row(step1)
 
         # Step 2
         step2 = Adw.ActionRow()
         step2.set_title(_("2. Go to App Settings"))
-        step2.set_subtitle(_("Scroll to the end of the Apps list and select 'App Settings'"))
-        step2_icon = Gtk.Image.new_from_icon_name("emblem-system-symbolic")
-        step2.add_prefix(step2_icon)
-        self.dev_instructions_group.add(step2)
+        step2.set_subtitle(_("Scroll to the end and select 'App Settings'"))
+        self.instructions_expander.add_row(step2)
 
         # Step 3
         step3 = Adw.ActionRow()
         step3.set_title(_("3. Press '123' Button"))
-        step3.set_subtitle(_("Inside App Settings, press the '123' button on your remote control"))
-        step3_icon = Gtk.Image.new_from_icon_name("input-keyboard-symbolic")
-        step3.add_prefix(step3_icon)
-        self.dev_instructions_group.add(step3)
+        step3.set_subtitle(_("Press the '123' button on your remote"))
+        self.instructions_expander.add_row(step3)
 
         # Step 4
         step4 = Adw.ActionRow()
-        step4.set_title(_("4. Enter Secret Code"))
-        step4.set_subtitle(_("Type '12345' using the remote - Developer Mode menu will appear"))
-        step4_icon = Gtk.Image.new_from_icon_name("dialog-password-symbolic")
-        step4.add_prefix(step4_icon)
-        self.dev_instructions_group.add(step4)
+        step4.set_title(_("4. Enter Code '12345'"))
+        step4.set_subtitle(_("Developer Mode menu will appear"))
+        self.instructions_expander.add_row(step4)
 
-        # Step 5 - Toggle Developer Mode
+        # Step 5
         step5 = Adw.ActionRow()
         step5.set_title(_("5. Enable Developer Mode"))
-        step5.set_subtitle(_("Toggle 'Developer Mode' to 'On' in the menu"))
-        step5_icon = Gtk.Image.new_from_icon_name("preferences-other-symbolic")
-        step5.add_prefix(step5_icon)
-        self.dev_instructions_group.add(step5)
+        step5.set_subtitle(_("Toggle 'Developer Mode' to 'On'"))
+        self.instructions_expander.add_row(step5)
 
         # Step 6 - With IP address
         local_ip = self._get_local_ip()
         step6 = Adw.ActionRow()
-        step6.set_title(_("6. Enter Host PC IP"))
-        step6.set_subtitle(_("Enter your computer's IP address: {ip}").format(ip=local_ip))
-        step6_icon = Gtk.Image.new_from_icon_name("network-wired-symbolic")
-        step6.add_prefix(step6_icon)
+        step6.set_title(_("6. Enter This IP: {ip}").format(ip=local_ip))
+        step6.set_subtitle(_("Your computer's IP address"))
         
-        # Copy IP button inline
         copy_button = Gtk.Button.new_with_label(_("Copy IP"))
         copy_button.set_valign(Gtk.Align.CENTER)
         copy_button.add_css_class("suggested-action")
         copy_button.connect("clicked", self._copy_ip_to_clipboard)
         step6.add_suffix(copy_button)
-        self.dev_instructions_group.add(step6)
+        self.instructions_expander.add_row(step6)
 
-        # Step 7 - Restart TV
+        # Step 7
         step7 = Adw.ActionRow()
         step7.set_title(_("7. Restart TV"))
-        step7.set_subtitle(_("Turn off and on your TV to apply Developer Mode settings"))
-        step7_icon = Gtk.Image.new_from_icon_name("system-reboot-symbolic")
-        step7.add_prefix(step7_icon)
-        self.dev_instructions_group.add(step7)
-
-        # Important notes group
-        notes_group = Adw.PreferencesGroup()
-        notes_group.set_title(_("Important Notes"))
-        main_box.append(notes_group)
-
-        # Note about languages
-        note1 = Adw.ActionRow()
-        note1.set_title(_("Right-to-Left Languages"))
-        note1.set_subtitle(_("If TV uses Arabic/Hebrew, enter the IP address backwards"))
-        note1_icon = Gtk.Image.new_from_icon_name("dialog-information-symbolic")
-        note1.add_prefix(note1_icon)
-        notes_group.add(note1)
-
-        # Note about network
-        note2 = Adw.ActionRow()
-        note2.set_title(_("Network Connection"))
-        note2.set_subtitle(_("Ensure TV and computer are on the same network"))
-        note2_icon = Gtk.Image.new_from_icon_name("network-wireless-symbolic")
-        note2.add_prefix(note2_icon)
-        notes_group.add(note2)
+        step7.set_subtitle(_("Turn off and on your TV"))
+        self.instructions_expander.add_row(step7)
 
         # ============================================
         # DEVELOPER MODE CONFIRMATION (MANDATORY)

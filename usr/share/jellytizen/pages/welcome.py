@@ -9,7 +9,7 @@ from utils.i18n import _
 from utils.ui_helpers import ErrorNotification
 
 class WelcomePage(Gtk.Box):
-    """Welcome page with Docker verification."""
+    """Welcome page with Docker verification - simplified layout."""
 
     def __init__(self, window):
         super().__init__(orientation=Gtk.Orientation.VERTICAL, spacing=0)
@@ -17,7 +17,6 @@ class WelcomePage(Gtk.Box):
         self.window = window
         self.docker_service = DockerService(logger=window.logger)
         
-        # Remove all margins and spacing that might cause scrollbars
         self.set_hexpand(True)
         self.set_vexpand(True)
         
@@ -26,53 +25,58 @@ class WelcomePage(Gtk.Box):
         
     def _setup_ui(self):
         """Setup the welcome page UI."""
-        # Create a clamp to center content and limit width
+        # Create a clamp to center content
         clamp = Adw.Clamp()
-        clamp.set_maximum_size(800)
-        clamp.set_tightening_threshold(600)
-        clamp.set_margin_top(24)
-        clamp.set_margin_bottom(24)
-        clamp.set_margin_start(24)
-        clamp.set_margin_end(24)
+        clamp.set_maximum_size(700)
+        clamp.set_tightening_threshold(500)
+        clamp.set_margin_top(32)
+        clamp.set_margin_bottom(32)
+        clamp.set_margin_start(32)
+        clamp.set_margin_end(32)
         self.append(clamp)
         
         # Main content box
         main_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=32)
         clamp.set_child(main_box)
         
-        # Welcome header
-        self._create_header_section(main_box)
+        # ============================================
+        # HEADER
+        # ============================================
+        header_box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=16)
+        header_box.set_halign(Gtk.Align.CENTER)
+        header_box.set_margin_top(24)
+        header_box.set_margin_bottom(24)
+        main_box.append(header_box)
         
-        # System requirements
-        self._create_requirements_section(main_box)
+        # Icon - larger
+        icon = Gtk.Image.new_from_icon_name("tv-symbolic")
+        icon.set_pixel_size(96)
+        icon.add_css_class("dim-label")
+        header_box.append(icon)
         
-        # Actions
-        self._create_actions_section(main_box)
+        # Title - larger
+        title = Gtk.Label(label=_("JellyTizen Installer"))
+        title.add_css_class("title-1")
+        header_box.append(title)
         
-    def _create_header_section(self, parent):
-        """Create the header section."""
-        header_group = Adw.PreferencesGroup()
-        parent.append(header_group)
-
-        # App info
-        status_page = Adw.StatusPage()
-        status_page.set_icon_name("tv-symbolic")
-        status_page.set_title(_("JellyTizen Installer"))
-        status_page.set_description(_("This application will help you install Jellyfin media server on your Samsung Smart TV or projector running Tizen OS."))
-
-        header_group.add(status_page)
+        # Description
+        desc = Gtk.Label(label=_("Install Jellyfin on your Samsung Smart TV or projector"))
+        desc.add_css_class("dim-label")
+        desc.set_wrap(True)
+        desc.set_justify(Gtk.Justification.CENTER)
+        header_box.append(desc)
         
-    def _create_requirements_section(self, parent):
-        """Create requirements section."""
+        # ============================================
+        # REQUIREMENTS - In same flow
+        # ============================================
         self.requirements_group = Adw.PreferencesGroup()
         self.requirements_group.set_title(_("System Requirements"))
-        self.requirements_group.set_description(_("Checking required dependencies..."))
-        parent.append(self.requirements_group)
+        main_box.append(self.requirements_group)
 
         # Docker status row
         self.docker_row = Adw.ActionRow()
         self.docker_row.set_title(_("Docker Engine"))
-        self.docker_row.set_subtitle(_("Required for building Tizen applications"))
+        self.docker_row.set_subtitle(_("Checking..."))
         
         self.docker_spinner = Gtk.Spinner()
         self.docker_spinner.start()
@@ -85,22 +89,21 @@ class WelcomePage(Gtk.Box):
         self.install_docker_row.set_title(_("Install Docker"))
         self.install_docker_row.set_subtitle(_("Docker is required but not installed"))
 
-        self.install_docker_button = Gtk.Button.new_with_label(_("Install Docker"))
+        self.install_docker_button = Gtk.Button.new_with_label(_("Install"))
         self.install_docker_button.set_valign(Gtk.Align.CENTER)
         self.install_docker_button.add_css_class("suggested-action")
         self.install_docker_button.connect("clicked", self._on_install_docker)
         self.install_docker_row.add_suffix(self.install_docker_button)
 
-    def _create_actions_section(self, parent):
-        """Create actions section."""
+        # ============================================
+        # CONTINUE BUTTON
+        # ============================================
         self.actions_group = Adw.PreferencesGroup()
-        self.actions_group.set_title(_("Get Started"))
-        parent.append(self.actions_group)
+        main_box.append(self.actions_group)
 
-        # Continue button
         self.continue_row = Adw.ActionRow()
-        self.continue_row.set_title(_("Continue to Device Setup"))
-        self.continue_row.set_subtitle(_("Connect to your Samsung TV"))
+        self.continue_row.set_title(_("Continue"))
+        self.continue_row.set_subtitle(_("Configure your Samsung TV"))
 
         self.continue_button = Gtk.Button.new_with_label(_("Continue"))
         self.continue_button.set_valign(Gtk.Align.CENTER)
@@ -129,19 +132,16 @@ class WelcomePage(Gtk.Box):
                 success_icon = Gtk.Image.new_from_icon_name("emblem-ok-symbolic")
                 success_icon.add_css_class("success")
                 self.docker_row.add_suffix(success_icon)
-                self.docker_row.set_subtitle(_("Docker is installed and running"))
-
+                self.docker_row.set_subtitle(_("Ready"))
                 self.continue_button.set_sensitive(True)
 
             elif is_installed and not is_running:
                 # Docker installed but not running
                 warning_icon = Gtk.Image.new_from_icon_name("dialog-warning-symbolic")
-                warning_icon.add_css_class("warning")
                 self.docker_row.add_suffix(warning_icon)
-                self.docker_row.set_subtitle(_("Docker is installed but not running"))
+                self.docker_row.set_subtitle(_("Not running"))
 
-                # Add start Docker button
-                start_button = Gtk.Button.new_with_label(_("Start Docker"))
+                start_button = Gtk.Button.new_with_label(_("Start"))
                 start_button.set_valign(Gtk.Align.CENTER)
                 start_button.connect("clicked", self._on_start_docker)
                 self.docker_row.add_suffix(start_button)
@@ -149,16 +149,14 @@ class WelcomePage(Gtk.Box):
             else:
                 # Docker not installed
                 error_icon = Gtk.Image.new_from_icon_name("dialog-error-symbolic")
-                error_icon.add_css_class("error")
                 self.docker_row.add_suffix(error_icon)
-                self.docker_row.set_subtitle(_("Docker is not installed"))
-                
+                self.docker_row.set_subtitle(_("Not installed"))
                 self.requirements_group.add(self.install_docker_row)
                 
         except Exception as e:
             self.window.logger.error(f"Error checking Docker status: {e}")
             
-        return False  # Don't repeat the timeout
+        return False
         
     def _on_install_docker(self, button):
         """Handle Docker installation."""
@@ -192,16 +190,14 @@ class DockerInstallDialog(Adw.AlertDialog):
 
         self.window = window
         self.set_heading(_("Install Docker"))
-        self.set_body(_("Docker is required for building Tizen applications. Please install Docker for your distribution:"))
+        self.set_body(_("Select your distribution:"))
 
-        # Add responses for different distributions
         self.add_response("cancel", _("Cancel"))
         self.add_response("arch", _("Arch/Manjaro"))
         self.add_response("debian", _("Debian/Ubuntu"))
         self.add_response("fedora", _("Fedora/RHEL"))
         
         self.set_default_response("cancel")
-        
         self.connect("response", self._on_response)
         
     def _on_response(self, dialog, response):
@@ -213,7 +209,7 @@ class DockerInstallDialog(Adw.AlertDialog):
             except Exception as e:
                 self.window.logger.error(f"Error installing Docker: {e}")
                 ErrorNotification.show_error_dialog(
-                    self.window, _("Error"), _("Failed to install Docker: {error}").format(error=str(e))
+                    self.window, _("Error"), str(e)
                 )
 
         self.close()

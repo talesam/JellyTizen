@@ -40,7 +40,7 @@ TIMEOUT_STATUS_CHECK = 500  # milliseconds
 
 # Docker Constants
 DOCKER_CONTAINER_NAME = "jellytizen-builder"
-DOCKER_IMAGE_NAME = "jellytizen/tizen-builder"
+DOCKER_IMAGE_NAME = "ghcr.io/georift/install-jellyfin-tizen"
 DOCKER_IMAGE_TAG = "latest"
 DOCKER_WORKSPACE_HOST = "/tmp/jellytizen"
 DOCKER_WORKSPACE_CONTAINER = "/workspace"
@@ -65,10 +65,15 @@ CERT_PASSWORD_FILE = ".password"
 DEFAULT_PROFILE_NAME = "JellyTizen"
 DEFAULT_DEVICE_ID = "DEVICE-001"
 
+# Default Certificate Settings
+# When True, uses built-in certificates from the Docker container
+# No need for users to create certificates via Tizen Studio
+USE_DEFAULT_CERTIFICATES = True
+
 # UI Window Constants
-WINDOW_DEFAULT_WIDTH = 900
-WINDOW_DEFAULT_HEIGHT = 700
-WINDOW_MIN_WIDTH = 800
+WINDOW_DEFAULT_WIDTH = 800
+WINDOW_DEFAULT_HEIGHT = 680
+WINDOW_MIN_WIDTH = 700
 WINDOW_MIN_HEIGHT = 600
 
 # UI Layout Constants
@@ -84,11 +89,11 @@ TERMINAL_SCROLLBACK_LINES = 1000
 
 # Application Metadata
 APP_ID = "org.talesam.jellytizen"
-APP_VERSION = "1.0.7"
+APP_VERSION = "1.0.8"
 APP_NAME = "JellyTizen"
-APP_GITHUB_URL = "https://github.com/jellytizen/jellytizen"
-APP_ISSUE_URL = "https://github.com/jellytizen/jellytizen/issues"
-APP_COPYRIGHT = "© 2024 JellyTizen Team"
+APP_GITHUB_URL = "https://github.com/talesam/jellytizen"
+APP_ISSUE_URL = "https://github.com/talesam/jellytizen/issues"
+APP_COPYRIGHT = "© 2026 JellyTizen"
 
 # Network Scanning Constants
 SCAN_MAX_WORKERS = 30

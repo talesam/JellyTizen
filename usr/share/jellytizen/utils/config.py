@@ -40,13 +40,14 @@ class ConfigManager:
                 'last_connected': None
             },
             'certificates': {
+                'use_default': True,  # Use built-in certificates from Docker container
                 'author_cert_path': '',
                 'distributor_cert_path': '',
                 'password': '',
                 'profile_name': 'JellyTizen'
             },
             'docker': {
-                'image': 'jellytizen/tizen-builder:latest',
+                'image': 'ghcr.io/georift/install-jellyfin-tizen:latest',
                 'auto_pull': True,
                 'container_name': 'jellytizen-builder',
                 'workspace_path': '/tmp/jellytizen'

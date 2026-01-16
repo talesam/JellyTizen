@@ -58,13 +58,11 @@ class JellyTizenWindow(Adw.ApplicationWindow):
 
         self.set_title(APP_NAME)
 
-        # Get window size from config or use defaults
-        window_width = self.config_manager.get('ui.window_width', WINDOW_DEFAULT_WIDTH)
-        window_height = self.config_manager.get('ui.window_height', WINDOW_DEFAULT_HEIGHT)
-        self.set_default_size(window_width, window_height)
+        # Set window size from constants
+        self.set_default_size(WINDOW_DEFAULT_WIDTH, WINDOW_DEFAULT_HEIGHT)
 
         # Set minimum size
-        self.set_resizable(True)  # Allow user to resize manually
+        self.set_resizable(True)
         self.set_size_request(WINDOW_MIN_WIDTH, WINDOW_MIN_HEIGHT)
 
         self._setup_ui()
@@ -79,6 +77,14 @@ class JellyTizenWindow(Adw.ApplicationWindow):
         # Header bar
         self.header_bar = Adw.HeaderBar()
         self.content_box.append(self.header_bar)
+        
+        # Back button (initially hidden)
+        self.back_button = Gtk.Button()
+        self.back_button.set_icon_name("go-previous-symbolic")
+        self.back_button.set_tooltip_text(_("Go Back"))
+        self.back_button.set_visible(False)
+        self.back_button.connect("clicked", self._on_back_clicked)
+        self.header_bar.pack_start(self.back_button)
 
         # Menu button
         self.menu_button = Gtk.MenuButton()
@@ -94,6 +100,7 @@ class JellyTizenWindow(Adw.ApplicationWindow):
         # Navigation view with scroll control
         self.navigation_view = Adw.NavigationView()
         self.navigation_view.set_vexpand(True)  # Fill available space
+        self.navigation_view.connect("notify::visible-page", self._on_page_changed)
         self.toast_overlay.set_child(self.navigation_view)
         
         # Pages
@@ -103,8 +110,23 @@ class JellyTizenWindow(Adw.ApplicationWindow):
         self.install_page = InstallPage(self)
         
         # Add welcome page initially
-        nav_page = Adw.NavigationPage(child=self.welcome_page, title=_("Welcome"))
+        nav_page = Adw.NavigationPage(child=self.welcome_page, title=_("Welcome"), tag="welcome")
         self.navigation_view.add(nav_page)
+    
+    def _on_page_changed(self, nav_view, param):
+        """Update back button visibility when page changes."""
+        # Show back button if we can go back (not on first page)
+        can_go_back = nav_view.get_previous_page(nav_view.get_visible_page()) is not None
+        self.back_button.set_visible(can_go_back)
+        
+        # Update header title
+        visible_page = nav_view.get_visible_page()
+        if visible_page:
+            self.header_bar.set_title_widget(Gtk.Label(label=visible_page.get_title()))
+    
+    def _on_back_clicked(self, button):
+        """Handle back button click."""
+        self.navigation_view.pop()
 
     def _create_menu(self):
         """Create the main application menu."""

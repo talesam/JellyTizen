@@ -279,54 +279,37 @@ class DeviceService:
         thread.start()
 
     def _connect_developer_mode(self, ip: str) -> bool:
-        """Connect to device in developer mode using SDB."""
+        """
+        Verify device connectivity for developer mode.
+        
+        Note: The actual SDB connection happens during installation via Docker,
+        since the Tizen SDK (including SDB) runs inside the Docker container.
+        This method just verifies the device is reachable and prepared for installation.
+        """
         try:
-            # Check if sdb is available
-            result = subprocess.run(
-                ['which', 'sdb'],
-                capture_output=True,
-                text=True,
-                timeout=TIMEOUT_SOCKET
-            )
-
-            if result.returncode != 0:
-                self.logger.error("SDB (Samsung Debug Bridge) not found")
+            # Verify the device is a Samsung TV and reachable
+            samsung_info = self._identify_samsung_device(ip, SAMSUNG_API_PORT)
+            
+            if samsung_info:
+                self.logger.info(f"Developer mode - device verified: {samsung_info.get('name', 'Samsung TV')}")
+                
+                # Also check if the SDB port is accessible (indicates developer mode is enabled on TV)
+                if self._check_port_quick(ip, SDB_PORT):
+                    self.logger.info(f"SDB port {SDB_PORT} is accessible - developer mode confirmed on TV")
+                    return True
+                else:
+                    # SDB port not accessible, but device is reachable
+                    # This might mean developer mode is not fully enabled on the TV
+                    self.logger.warning(f"SDB port {SDB_PORT} not accessible - ensure Developer Mode is enabled on TV and TV was restarted")
+                    # Still return True since the device is valid Samsung TV
+                    # The actual SDB connection will be attempted during installation
+                    return True
+            else:
+                self.logger.warning("Could not verify Samsung device")
                 return False
 
-            self.logger.info(f"Attempting SDB connection to {ip}:{SDB_PORT}")
-
-            # Try to connect via SDB
-            result = subprocess.run(
-                ['sdb', 'connect', f"{ip}:{SDB_PORT}"],
-                capture_output=True,
-                text=True,
-                timeout=TIMEOUT_SDB_CONNECT
-            )
-
-            if result.returncode == 0:
-                # Verify connection
-                result = subprocess.run(
-                    ['sdb', 'devices'],
-                    capture_output=True,
-                    text=True,
-                    timeout=TIMEOUT_SDB_DEVICES
-                )
-
-                is_connected = ip in result.stdout
-                self.logger.info(f"SDB connection result: {is_connected}")
-                return is_connected
-
-            self.logger.warning(f"SDB connect failed: {result.stderr}")
-            return False
-
-        except subprocess.TimeoutExpired as e:
-            self.logger.error(f"SDB operation timed out: {e}")
-            return False
-        except FileNotFoundError:
-            self.logger.error("SDB executable not found")
-            return False
         except Exception as e:
-            self.logger.exception(f"Developer mode connection error: {e}")
+            self.logger.exception(f"Developer mode verification error: {e}")
             return False
 
     def _connect_normal_mode(self, ip: str) -> bool:
