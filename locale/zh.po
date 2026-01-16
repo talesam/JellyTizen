@@ -53,118 +53,40 @@ msgstr "在三星电视上安装应用程序需要证书。"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "📋 What are Developer Certificates?"
-msgstr "📋 什么是开发者证书？"
+msgid "Certificate Mode"
+msgstr "证书模式"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 56
+# File: usr/share/jellytizen/pages/certificates.py, line: 60
 #: NEEDS WORK
-msgid "Samsung requires signed apps. You need certificates from Tizen Studio."
-msgstr "三星要求应用程序签名。您需要来自Tizen Studio的证书。"
+msgid "Use Built-in Certificates"
+msgstr "使用内置证书"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 61
 #: NEEDS WORK
-msgid "Author Certificate (author.p12)"
-msgstr "作者证书 (author.p12)"
+msgid "Recommended - No Tizen Studio required"
+msgstr "推荐 - 无需 Tizen Studio"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 62
+# File: usr/share/jellytizen/pages/certificates.py, line: 73
 #: NEEDS WORK
-msgid "Your personal certificate that identifies you as the app developer"
-msgstr "您的个人证书，标识您为应用程序开发者"
+msgid "How it works"
+msgstr "它是如何工作的"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 69
+# File: usr/share/jellytizen/pages/certificates.py, line: 74
 #: NEEDS WORK
-msgid "Distributor Certificate (distributor.p12)"
-msgstr "分销商证书 (distributor.p12)"
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr "Docker容器包含预配置的证书。您可以立即安装Jellyfin，无需任何设置。"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 70
+# File: usr/share/jellytizen/pages/certificates.py, line: 83
 #: NEEDS WORK
-msgid "Samsung's certificate that allows app installation on devices"
-msgstr "三星证书，允许在设备上安装应用程序"
+msgid "Custom Certificates (Advanced)"
+msgstr "自定义证书（高级）"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 79
+# File: usr/share/jellytizen/pages/certificates.py, line: 84
 #: NEEDS WORK
-msgid "🔧 How to Get Certificates"
-msgstr "🔧 如何获取证书"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 80
-#: NEEDS WORK
-msgid "Follow these steps to create your certificates"
-msgstr "按照以下步骤创建您的证书"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 85
-#: NEEDS WORK
-msgid "1. Install Tizen Studio"
-msgstr "安装 Tizen Studio"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 86
-#: NEEDS WORK
-msgid "Download from Samsung Developer website"
-msgstr "从三星开发者网站下载"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 90
-#: NEEDS WORK
-msgid "Download"
-msgstr "下载"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 99
-#: NEEDS WORK
-msgid "2. Open Certificate Manager"
-msgstr "2. 打开证书管理器"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 100
-#: NEEDS WORK
-msgid "In Tizen Studio: Tools → Certificate Manager"
-msgstr "在 Tizen Studio 中：工具 → 证书管理器"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 107
-#: NEEDS WORK
-msgid "3. Create Samsung Certificate"
-msgstr "3. 创建三星证书"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 108
-#: NEEDS WORK
-msgid "Click '+' → Samsung Certificate → TV → Create new profile"
-msgstr "点击 '+' → 三星证书 → 电视 → 创建新配置文件"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "4. Sign in with Samsung Account"
-msgstr "4. 使用三星账户登录"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 116
-#: NEEDS WORK
-msgid "Use the same account registered on your TV"
-msgstr "使用您电视上注册的相同帐户"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "5. Add Your TV's DUID"
-msgstr "5. 添加您电视的 DUID"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 124
-#: NEEDS WORK
-msgid "The DUID is shown in the TV's Developer Mode settings"
-msgstr "DUID 显示在电视的开发者模式设置中"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 131
-#: NEEDS WORK
-msgid "6. Export Certificates"
-msgstr "6. 导出证书"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 132
-#: NEEDS WORK
-msgid "Certificates are saved in ~/SamsungCertificate/<profile_name>/"
-msgstr "证书保存在 ~/SamsungCertificate/<profile_name>/"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 141
-#: NEEDS WORK
-msgid "📁 Upload Your Certificates"
-msgstr "📁 上传您的证书"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 142
-#: NEEDS WORK
-msgid "Select the .p12 certificate files from your computer"
-msgstr "从您的计算机中选择 .p12 证书文件"
+msgid "Only needed if you want to use your own certificates"
+msgstr "仅在您想使用自己的证书时需要。"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 43
 #: NEEDS WORK
@@ -192,55 +114,25 @@ msgstr "分销商证书"
 msgid "Select distributor.p12 file"
 msgstr "选择 distributor.p12 文件"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 177
+# File: usr/share/jellytizen/pages/certificates.py, line: 115
 #: NEEDS WORK
-msgid "🔐 Certificate Password"
-msgstr "🔐 证书密码"
+msgid "Certificate Password"
+msgstr "证书密码"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 178
+# File: usr/share/jellytizen/pages/certificates.py, line: 122
 #: NEEDS WORK
-msgid "Enter the password you chose when creating the certificates"
-msgstr "输入您在创建证书时选择的密码"
+msgid "Need help creating certificates?"
+msgstr "需要帮助创建证书吗？"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 183
+# File: usr/share/jellytizen/pages/certificates.py, line: 123
 #: NEEDS WORK
-msgid "Password"
-msgstr "密码"
+msgid "View tutorial on Samsung Developer website"
+msgstr "在三星开发者网站上查看教程"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 192
+# File: usr/share/jellytizen/pages/certificates.py, line: 127
 #: NEEDS WORK
-msgid "👤 Developer Profile"
-msgstr "👤 开发者资料"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 193
-#: NEEDS WORK
-msgid "A name to identify this certificate configuration"
-msgstr "用于标识此证书配置的名称"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 86
-#: NEEDS WORK
-msgid "Profile Name"
-msgstr "个人资料名称"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 208
-#: NEEDS WORK
-msgid "✅ Validate and Continue"
-msgstr "✅ 验证并继续"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 98
-#: NEEDS WORK
-msgid "Validate Certificates"
-msgstr "验证证书"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 214
-#: NEEDS WORK
-msgid "Check if certificates are valid before continuing"
-msgstr "在继续之前检查证书是否有效"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 101
-#: NEEDS WORK
-msgid "Validate"
-msgstr "验证"
+msgid "View Guide"
+msgstr "查看指南"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 114
 #: NEEDS WORK
@@ -263,6 +155,11 @@ msgstr "继续在您的电视上安装Jellyfin"
 msgid "Continue"
 msgstr "继续"
 # 
+# File: usr/share/jellytizen/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "准备安装，内置证书"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 132
 #: NEEDS WORK
 #, python-brace-format
@@ -274,14 +171,14 @@ msgstr "选择 {cert_type} 证书"
 msgid "P12 Certificate Files"
 msgstr "P12证书文件"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 276
-# File: usr/share/jellytizen/pages/certificates.py, line: 279
-# File: usr/share/jellytizen/pages/certificates.py, line: 299
-# File: usr/share/jellytizen/pages/certificates.py, line: 306
+# File: usr/share/jellytizen/pages/certificates.py, line: 212
+# File: usr/share/jellytizen/pages/certificates.py, line: 215
+# File: usr/share/jellytizen/pages/certificates.py, line: 231
+# File: usr/share/jellytizen/pages/certificates.py, line: 238
 #: NEEDS WORK
 #, python-brace-format
-msgid "✅ Selected: {filename}"
-msgstr "✅ 已选择: {filename}"
+msgid "✅ {filename}"
+msgstr "✅ {文件名}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 163
 # File: usr/share/jellytizen/pages/certificates.py, line: 166
@@ -291,10 +188,10 @@ msgstr "✅ 已选择: {filename}"
 msgid "Change"
 msgstr "更改"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 322
+# File: usr/share/jellytizen/pages/certificates.py, line: 251
 #: NEEDS WORK
-msgid "All fields filled - click to validate"
-msgstr "所有字段已填写 - 点击验证"
+msgid "Ready to install with custom certificates"
+msgstr "准备好安装自定义证书"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 326
 #: NEEDS WORK
@@ -316,28 +213,6 @@ msgstr "密码"
 #, python-brace-format
 msgid "Missing: {items}"
 msgstr "缺失：{items}"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 346
-#: NEEDS WORK
-msgid "✅ Certificates are valid!"
-msgstr "✅ 证书有效！"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 217
-#: NEEDS WORK
-msgid "Certificates validated successfully!"
-msgstr "证书验证成功！"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 349
-#: NEEDS WORK
-#, python-brace-format
-msgid "❌ Validation failed: {message}"
-msgstr "❌ 验证失败：{message}"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 219
-#: NEEDS WORK
-#, python-brace-format
-msgid "Certificate validation failed: {message}"
-msgstr "证书验证失败：{message}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 231
 #: NEEDS WORK
@@ -467,16 +342,6 @@ msgstr "调试模式"
 msgid "Enable debug mode for development"
 msgstr "启用开发调试模式"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 132
-#: NEEDS WORK
-msgid "Allow Custom Scripts"
-msgstr "允许自定义脚本"
-# 
-# File: usr/share/jellytizen/pages/preferences.py, line: 133
-#: NEEDS WORK
-msgid "Allow execution of custom installation scripts"
-msgstr "允许执行自定义安装脚本"
-# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 140
 # File: usr/share/jellytizen/pages/preferences.py, line: 148
 # File: usr/share/jellytizen/pages/preferences.py, line: 172
@@ -522,15 +387,20 @@ msgstr "设备设置"
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "连接到您的三星 Tizen 电视或投影仪"
 # 
+# File: usr/share/jellytizen/pages/device.py, line: 58
+#: NEEDS WORK
+msgid "Setup Instructions"
+msgstr "安装说明"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 63
 #: NEEDS WORK
-msgid "Required Step: Enable Developer Mode"
-msgstr "必需步骤：启用开发者模式"
+msgid "Enable Developer Mode on TV"
+msgstr "在电视上启用开发者模式"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 70
+# File: usr/share/jellytizen/pages/device.py, line: 64
 #: NEEDS WORK
-msgid "You must complete these steps on your Samsung TV before connecting"
-msgstr "在连接之前，您必须在三星电视上完成这些步骤。"
+msgid "Click to view step-by-step instructions"
+msgstr "点击查看逐步说明"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 75
 #: NEEDS WORK
@@ -547,51 +417,51 @@ msgstr "在电视上，进入“应用程序”部分"
 msgid "2. Go to App Settings"
 msgstr "2. 转到应用设置"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 84
+# File: usr/share/jellytizen/pages/device.py, line: 79
 #: NEEDS WORK
-msgid "Scroll to the end of the Apps list and select 'App Settings'"
-msgstr "滚动到应用列表的末尾并选择“应用设置”"
+msgid "Scroll to the end and select 'App Settings'"
+msgstr "滚动到末尾并选择“应用设置”"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 91
 #: NEEDS WORK
 msgid "3. Press '123' Button"
 msgstr "3. 按 '123' 按钮"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 92
+# File: usr/share/jellytizen/pages/device.py, line: 85
 #: NEEDS WORK
-msgid "Inside App Settings, press the '123' button on your remote control"
-msgstr "在应用设置中，按下遥控器上的 '123' 按钮"
+msgid "Press the '123' button on your remote"
+msgstr "按下遥控器上的 '123' 按钮"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 99
+# File: usr/share/jellytizen/pages/device.py, line: 90
 #: NEEDS WORK
-msgid "4. Enter Secret Code"
-msgstr "4. 输入密钥"
+msgid "4. Enter Code '12345'"
+msgstr "4. 输入代码 '12345'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 100
+# File: usr/share/jellytizen/pages/device.py, line: 91
 #: NEEDS WORK
-msgid "Type '12345' using the remote - Developer Mode menu will appear"
-msgstr "使用遥控器输入 '12345' - 开发者模式菜单将出现"
+msgid "Developer Mode menu will appear"
+msgstr "开发者模式菜单将出现"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 107
 #: NEEDS WORK
 msgid "5. Enable Developer Mode"
 msgstr "5. 启用开发者模式"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 108
+# File: usr/share/jellytizen/pages/device.py, line: 97
 #: NEEDS WORK
-msgid "Toggle 'Developer Mode' to 'On' in the menu"
-msgstr "在菜单中将“开发者模式”切换为“开启”"
+msgid "Toggle 'Developer Mode' to 'On'"
+msgstr "将“开发者模式”切换为“开启”"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 116
-#: NEEDS WORK
-msgid "6. Enter Host PC IP"
-msgstr "6. 输入主机PC IP"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 361
+# File: usr/share/jellytizen/pages/device.py, line: 103
 #: NEEDS WORK
 #, python-brace-format
-msgid "Enter your computer's IP address: {ip}"
-msgstr "输入您计算机的IP地址：{ip}"
+msgid "6. Enter This IP: {ip}"
+msgstr "6. 输入此 IP: {ip}"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 104
+#: NEEDS WORK
+msgid "Your computer's IP address"
+msgstr "您计算机的IP地址"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 403
 # File: usr/share/jellytizen/pages/device.py, line: 430
@@ -604,35 +474,10 @@ msgstr "复制IP"
 msgid "7. Restart TV"
 msgstr "7. 重启电视"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 132
+# File: usr/share/jellytizen/pages/device.py, line: 116
 #: NEEDS WORK
-msgid "Turn off and on your TV to apply Developer Mode settings"
-msgstr "关闭并重新打开电视以应用开发者模式设置"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 368
-#: NEEDS WORK
-msgid "Important Notes"
-msgstr "重要说明"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 373
-#: NEEDS WORK
-msgid "Right-to-Left Languages"
-msgstr "从右到左的语言"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 374
-#: NEEDS WORK
-msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
-msgstr "如果电视使用阿拉伯语/希伯来语，请反向输入IP地址"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 389
-#: NEEDS WORK
-msgid "Network Connection"
-msgstr "网络连接"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 390
-#: NEEDS WORK
-msgid "Ensure TV and computer are on the same network"
-msgstr "确保电视和电脑在同一网络上"
+msgid "Turn off and on your TV"
+msgstr "关闭和打开您的电视"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 162
 #: NEEDS WORK
@@ -815,35 +660,42 @@ msgstr "连接失败：{message}"
 msgid "Certificates"
 msgstr "证书"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 37
+# File: usr/share/jellytizen/pages/install.py, line: 53
+# File: usr/share/jellytizen/pages/install.py, line: 116
+# File: usr/share/jellytizen/pages/install.py, line: 385
 #: NEEDS WORK
-msgid "Jellyfin Installation"
-msgstr "Jellyfin 安装"
+msgid "Install Jellyfin"
+msgstr "安装 Jellyfin"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 38
+# File: usr/share/jellytizen/pages/install.py, line: 54
 #: NEEDS WORK
-msgid "Installing Jellyfin on your Samsung Tizen device"
-msgstr "在您的三星 Tizen 设备上安装 Jellyfin"
+msgid "One-click installation to your Samsung TV"
+msgstr "一键安装到您的三星电视"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 59
+#: NEEDS WORK
+msgid "Target Device"
+msgstr "目标设备"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 60
+#: NEEDS WORK
+msgid "Loading..."
+msgstr "加载中..."
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 43
 #: NEEDS WORK
 msgid "Installation Progress"
 msgstr "安装进度"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 48
+# File: usr/share/jellytizen/pages/install.py, line: 74
 #: NEEDS WORK
-msgid "Overall Progress"
-msgstr "整体进度"
+msgid "Ready to install"
+msgstr "准备安装"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 49
+# File: usr/share/jellytizen/pages/install.py, line: 75
 #: NEEDS WORK
-msgid "Ready to start installation"
-msgstr "准备开始安装"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 61
-#: NEEDS WORK
-msgid "Current Step"
-msgstr "当前步骤"
+msgid "Click the button below to start"
+msgstr "点击下面的按钮开始"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 62
 #: NEEDS WORK
@@ -855,255 +707,145 @@ msgstr "等待开始..."
 msgid "Installation Log"
 msgstr "安装日志"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 68
+# File: usr/share/jellytizen/pages/install.py, line: 139
 #: NEEDS WORK
-msgid "Detailed output from the installation process"
-msgstr "安装过程的详细输出"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 94
-# File: usr/share/jellytizen/pages/install.py, line: 97
-# File: usr/share/jellytizen/pages/install.py, line: 336
-#: NEEDS WORK
-msgid "Start Installation"
-msgstr "开始安装"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 95
-#: NEEDS WORK
-msgid "Begin the Jellyfin installation process"
-msgstr "开始Jellyfin安装过程"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 107
-#: NEEDS WORK
-msgid "Cancel Installation"
-msgstr "取消安装"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 108
-#: NEEDS WORK
-msgid "Stop the current installation process"
-msgstr "停止当前安装过程"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 121
-#: NEEDS WORK
-msgid "Installation Complete"
-msgstr "安装完成"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 126
-#: NEEDS WORK
-msgid "Installation Successful!"
-msgstr "安装成功！"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 127
-#: NEEDS WORK
-msgid "Jellyfin has been installed on your device"
-msgstr "Jellyfin 已经安装在您的设备上"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 129
-#: NEEDS WORK
-msgid "Finish"
-msgstr "完成"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 159
-#: NEEDS WORK
-msgid "Preparing Docker environment"
-msgstr "准备 Docker 环境"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 160
-#: NEEDS WORK
-msgid "Downloading Tizen SDK"
-msgstr "正在下载 Tizen SDK"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 161
-#: NEEDS WORK
-msgid "Setting up certificates"
-msgstr "设置证书"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 162
-#: NEEDS WORK
-msgid "Building Jellyfin app"
-msgstr "构建 Jellyfin 应用程序"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 163
-#: NEEDS WORK
-msgid "Connecting to device"
-msgstr "连接到设备"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 164
-#: NEEDS WORK
-msgid "Installing application"
-msgstr "安装应用程序"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 196
-#: NEEDS WORK
-#, python-brace-format
-msgid "Step {current} of {total}"
-msgstr "步骤 {current} / {total}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 204
-#: NEEDS WORK
-msgid "Checking Docker status..."
-msgstr "检查 Docker 状态..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 208
-#: NEEDS WORK
-msgid "Docker environment ready"
-msgstr "Docker环境已准备好"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 210
-#: NEEDS WORK
-#, python-brace-format
-msgid "Docker error: {message}"
-msgstr "Docker 错误：{message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 217
-#: NEEDS WORK
-msgid "Downloading Tizen SDK..."
-msgstr "正在下载 Tizen SDK..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 221
-#: NEEDS WORK
-msgid "Tizen SDK ready"
-msgstr "Tizen SDK 准备就绪"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 223
-#: NEEDS WORK
-#, python-brace-format
-msgid "SDK error: {message}"
-msgstr "SDK错误：{message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 230
-#: NEEDS WORK
-msgid "Setting up certificates..."
-msgstr "正在设置证书..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 238
-#: NEEDS WORK
-msgid "Certificates configured"
-msgstr "已配置证书"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 240
-#: NEEDS WORK
-#, python-brace-format
-msgid "Certificate error: {message}"
-msgstr "证书错误：{message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 249
-#: NEEDS WORK
-msgid "Building Jellyfin application..."
-msgstr "构建 Jellyfin 应用程序..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 253
-#: NEEDS WORK
-msgid "Application built successfully"
-msgstr "应用程序构建成功"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 255
-#: NEEDS WORK
-#, python-brace-format
-msgid "Build error: {message}"
-msgstr "构建错误：{message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 262
-#: NEEDS WORK
-msgid "Connecting to device..."
-msgstr "正在连接设备..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 269
-#: NEEDS WORK
-msgid "Device connected successfully"
-msgstr "设备连接成功"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 271
-#: NEEDS WORK
-#, python-brace-format
-msgid "Connection error: {message}"
-msgstr "连接错误：{message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 278
-#: NEEDS WORK
-msgid "Installing Jellyfin on device..."
-msgstr "在设备上安装Jellyfin..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 282
-#: NEEDS WORK
-msgid "Installation completed successfully!"
-msgstr "安装成功！"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 284
-#: NEEDS WORK
-#, python-brace-format
-msgid "Installation error: {message}"
-msgstr "安装错误：{message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 298
-#: NEEDS WORK
-msgid "Complete"
-msgstr "完成"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 299
-#: NEEDS WORK
-msgid "Installation completed successfully"
-msgstr "安装成功完成"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 300
-#: NEEDS WORK
-msgid "All steps completed"
-msgstr "所有步骤已完成"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 302
-#: NEEDS WORK
-msgid "Install Again"
-msgstr "重新安装"
+msgid "Click to view detailed output"
+msgstr "点击查看详细输出"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 307
 #: NEEDS WORK
 msgid "Installation Complete!"
 msgstr "安装完成！"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 308
+# File: usr/share/jellytizen/pages/install.py, line: 174
 #: NEEDS WORK
-msgid "Jellyfin has been successfully installed on your device."
-msgstr "Jellyfin 已成功安装在您的设备上。"
+msgid "Jellyfin is ready!"
+msgstr "Jellyfin 已准备好！"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 309
+# File: usr/share/jellytizen/pages/install.py, line: 175
 #: NEEDS WORK
-msgid "You can now launch Jellyfin from your TV's app menu."
-msgstr "您现在可以从电视的应用菜单中启动Jellyfin。"
+msgid "Open the Jellyfin app on your TV"
+msgstr "在您的电视上打开Jellyfin应用程序"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 315
+# File: usr/share/jellytizen/pages/install.py, line: 179
 #: NEEDS WORK
-msgid "Installation failed"
-msgstr "安装失败"
+msgid "Done"
+msgstr "完成"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 316
-# File: usr/share/jellytizen/pages/install.py, line: 323
+# File: usr/share/jellytizen/pages/install.py, line: 197
 #: NEEDS WORK
-#, python-brace-format
-msgid "Error: {message}"
-msgstr "错误: {message}"
+msgid "No device selected - please go back"
+msgstr "未选择设备 - 请返回"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 318
+# File: usr/share/jellytizen/pages/install.py, line: 206
 #: NEEDS WORK
-msgid "Retry Installation"
-msgstr "重试安装"
+msgid "No TV configured. Please go back and select a device."
+msgstr "未配置电视。请返回并选择一个设备。"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 231
+#: NEEDS WORK
+msgid "Starting Installation"
+msgstr "正在开始安装"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 236
+#: NEEDS WORK
+msgid "Downloading container..."
+msgstr "正在下载容器..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 237
+#: NEEDS WORK
+msgid "Pulling Docker image..."
+msgstr "正在拉取 Docker 镜像..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 250
+#: NEEDS WORK
+msgid "Container ready!"
+msgstr "容器已准备好！"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 254
+#: NEEDS WORK
+msgid "Installing to TV..."
+msgstr "正在安装到电视..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 255
+#: NEEDS WORK
+msgid "Connecting and installing..."
+msgstr "连接和安装中..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 256
+#: NEEDS WORK
+msgid "This may take a few minutes..."
+msgstr "这可能需要几分钟..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 275
+#: NEEDS WORK
+msgid "Installing..."
+msgstr "安装中..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 277
+#: NEEDS WORK
+msgid "Downloading app..."
+msgstr "正在下载应用..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 279
+#: NEEDS WORK
+msgid "Transferring..."
+msgstr "正在传输..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 281
+#: NEEDS WORK
+msgid "Connecting to TV..."
+msgstr "正在连接到电视..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 283
+#: NEEDS WORK
+msgid "Finishing..."
+msgstr "完成中..."
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 216
+#: NEEDS WORK
+msgid "Error"
+msgstr "错误"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 339
+#: NEEDS WORK
+msgid "Jellyfin is now on your TV"
+msgstr "Jellyfin 现在在您的电视上"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 341
+#: NEEDS WORK
+msgid "Reinstall"
+msgstr "重新安装"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 348
+#: NEEDS WORK
+msgid "Find Jellyfin in your TV's app list."
+msgstr "在您电视的应用列表中找到 Jellyfin。"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 322
 #: NEEDS WORK
 msgid "Installation Failed"
 msgstr "安装失败"
 # 
+# File: usr/share/jellytizen/pages/install.py, line: 362
+#: NEEDS WORK
+msgid "Retry"
+msgstr "重试"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 379
+# File: usr/share/jellytizen/pages/install.py, line: 383
+#: NEEDS WORK
+msgid "Cancelled"
+msgstr "已取消"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 380
+#: NEEDS WORK
+msgid "Installation was cancelled"
+msgstr "安装已取消"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 333
 #: NEEDS WORK
 msgid "Installation cancelled"
-msgstr "安装已取消"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 334
-#: NEEDS WORK
-msgid "Cancelled by user"
-msgstr "用户取消"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 340
-#: NEEDS WORK
-msgid "Installation Cancelled"
 msgstr "安装已取消"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 60
@@ -1111,32 +853,25 @@ msgstr "安装已取消"
 msgid "JellyTizen Installer"
 msgstr "JellyTizen 安装程序"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 61
+# File: usr/share/jellytizen/pages/welcome.py, line: 63
 #: NEEDS WORK
-msgid ""
-"This application will help you install Jellyfin media server on your Samsung Smart TV or projector "
-"running Tizen OS."
-msgstr "此应用程序将帮助您在运行 Tizen 操作系统的三星智能电视或投影仪上安装 Jellyfin 媒体服务器。"
+msgid "Install Jellyfin on your Samsung Smart TV or projector"
+msgstr "在您的三星智能电视或投影仪上安装Jellyfin"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 68
 #: NEEDS WORK
 msgid "System Requirements"
 msgstr "系统要求"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 69
-#: NEEDS WORK
-msgid "Checking required dependencies..."
-msgstr "检查所需依赖项..."
-# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 74
 #: NEEDS WORK
 msgid "Docker Engine"
 msgstr "Docker 引擎"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 75
+# File: usr/share/jellytizen/pages/welcome.py, line: 79
 #: NEEDS WORK
-msgid "Required for building Tizen applications"
-msgstr "构建 Tizen 应用程序所需"
+msgid "Checking..."
+msgstr "检查中..."
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 85
 # File: usr/share/jellytizen/pages/welcome.py, line: 88
@@ -1150,45 +885,40 @@ msgstr "安装 Docker"
 msgid "Docker is required but not installed"
 msgstr "需要安装Docker。"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 97
+# File: usr/share/jellytizen/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Get Started"
-msgstr "开始使用"
+msgid "Install"
+msgstr "安装"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 102
+# File: usr/share/jellytizen/pages/welcome.py, line: 106
 #: NEEDS WORK
-msgid "Continue to Device Setup"
-msgstr "继续设备设置"
+msgid "Configure your Samsung TV"
+msgstr "配置您的三星电视"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 103
+# File: usr/share/jellytizen/pages/welcome.py, line: 135
 #: NEEDS WORK
-msgid "Connect to your Samsung TV"
-msgstr "连接到您的三星电视"
+msgid "Ready"
+msgstr "准备好"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 132
+# File: usr/share/jellytizen/pages/welcome.py, line: 142
 #: NEEDS WORK
-msgid "Docker is installed and running"
-msgstr "Docker已安装并正在运行"
-# 
-# File: usr/share/jellytizen/pages/welcome.py, line: 141
-#: NEEDS WORK
-msgid "Docker is installed but not running"
-msgstr "Docker已安装但未运行"
+msgid "Not running"
+msgstr "未运行"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 144
 #: NEEDS WORK
-msgid "Start Docker"
-msgstr "启动 Docker"
+msgid "Start"
+msgstr "开始"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 154
+# File: usr/share/jellytizen/pages/welcome.py, line: 153
 #: NEEDS WORK
-msgid "Docker is not installed"
-msgstr "未安装 Docker"
+msgid "Not installed"
+msgstr "未安装"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 195
+# File: usr/share/jellytizen/pages/welcome.py, line: 193
 #: NEEDS WORK
-msgid "Docker is required for building Tizen applications. Please install Docker for your distribution:"
-msgstr "构建 Tizen 应用程序需要 Docker。请为您的发行版安装 Docker："
+msgid "Select your distribution:"
+msgstr "选择您的发行版："
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 199
 #: NEEDS WORK
@@ -1205,16 +935,10 @@ msgstr "德比安/乌班图"
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
+# File: usr/share/jellytizen/app.py, line: 84
 #: NEEDS WORK
-msgid "Error"
-msgstr "错误"
-# 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
-#: NEEDS WORK
-#, python-brace-format
-msgid "Failed to install Docker: {error}"
-msgstr "安装 Docker 失败：{error}"
+msgid "Go Back"
+msgstr "返回"
 # 
 # File: usr/share/jellytizen/app.py, line: 106
 #: NEEDS WORK

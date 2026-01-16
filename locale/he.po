@@ -53,118 +53,40 @@ msgstr "דרושים תעודות כדי להתקין אפליקציות על ט
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "📋 What are Developer Certificates?"
-msgstr "📋 מה הם תעודות מפתחים?"
+msgid "Certificate Mode"
+msgstr "מצב תעודה"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 56
+# File: usr/share/jellytizen/pages/certificates.py, line: 60
 #: NEEDS WORK
-msgid "Samsung requires signed apps. You need certificates from Tizen Studio."
-msgstr "סמסונג דורשת אפליקציות חתומות. אתה זקוק לתעודות מ-Tizen Studio."
+msgid "Use Built-in Certificates"
+msgstr "השתמש בתעודות המובנות"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 61
 #: NEEDS WORK
-msgid "Author Certificate (author.p12)"
-msgstr "תעודת מחבר (author.p12)"
+msgid "Recommended - No Tizen Studio required"
+msgstr "מומלץ - אין צורך ב-Tizen Studio"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 62
+# File: usr/share/jellytizen/pages/certificates.py, line: 73
 #: NEEDS WORK
-msgid "Your personal certificate that identifies you as the app developer"
-msgstr "הסרטיפיקט האישי שלך שמזהה אותך כמפתח האפליקציה"
+msgid "How it works"
+msgstr "איך זה עובד"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 69
+# File: usr/share/jellytizen/pages/certificates.py, line: 74
 #: NEEDS WORK
-msgid "Distributor Certificate (distributor.p12)"
-msgstr "תעודת מפיץ (distributor.p12)"
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr "מיכל הדוקר כולל תעודות מאושרות מראש. אתה יכול להתקין את ג'ליפין מיד ללא כל הגדרה."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 70
+# File: usr/share/jellytizen/pages/certificates.py, line: 83
 #: NEEDS WORK
-msgid "Samsung's certificate that allows app installation on devices"
-msgstr "הסמכת סמסונג המאפשרת התקנת אפליקציות על מכשירים"
+msgid "Custom Certificates (Advanced)"
+msgstr "תעודות מותאמות אישית (מתקדמות)"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 79
+# File: usr/share/jellytizen/pages/certificates.py, line: 84
 #: NEEDS WORK
-msgid "🔧 How to Get Certificates"
-msgstr "🔧 איך לקבל תעודות"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 80
-#: NEEDS WORK
-msgid "Follow these steps to create your certificates"
-msgstr "עקוב אחרי הצעדים הללו כדי ליצור את התעודות שלך"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 85
-#: NEEDS WORK
-msgid "1. Install Tizen Studio"
-msgstr "1. התקן את Tizen Studio"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 86
-#: NEEDS WORK
-msgid "Download from Samsung Developer website"
-msgstr "הורד מאתר המפתחים של סמסונג"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 90
-#: NEEDS WORK
-msgid "Download"
-msgstr "הורדה"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 99
-#: NEEDS WORK
-msgid "2. Open Certificate Manager"
-msgstr "2. פתח את מנהל התעודות"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 100
-#: NEEDS WORK
-msgid "In Tizen Studio: Tools → Certificate Manager"
-msgstr "ב-Tizen Studio: כלים → מנהל תעודות"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 107
-#: NEEDS WORK
-msgid "3. Create Samsung Certificate"
-msgstr "3. צור תעודת סמסונג"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 108
-#: NEEDS WORK
-msgid "Click '+' → Samsung Certificate → TV → Create new profile"
-msgstr "לחץ '+' → תעודת סמסונג → טלוויזיה → צור פרופיל חדש"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "4. Sign in with Samsung Account"
-msgstr "4. התחבר עם חשבון סמסונג"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 116
-#: NEEDS WORK
-msgid "Use the same account registered on your TV"
-msgstr "השתמש באותו חשבון שנרשם בטלוויזיה שלך"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "5. Add Your TV's DUID"
-msgstr "5. הוסף את ה-DUID של הטלוויזיה שלך"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 124
-#: NEEDS WORK
-msgid "The DUID is shown in the TV's Developer Mode settings"
-msgstr "ה-DUID מוצג בהגדרות מצב המפתחים של הטלוויזיה"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 131
-#: NEEDS WORK
-msgid "6. Export Certificates"
-msgstr "6. ייצוא תעודות"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 132
-#: NEEDS WORK
-msgid "Certificates are saved in ~/SamsungCertificate/<profile_name>/"
-msgstr "הסמכים נשמרים ב- ~/SamsungCertificate/<profile_name>/"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 141
-#: NEEDS WORK
-msgid "📁 Upload Your Certificates"
-msgstr "📁 העלה את התעודות שלך"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 142
-#: NEEDS WORK
-msgid "Select the .p12 certificate files from your computer"
-msgstr "בחר את קבצי התעודה .p12 מהמחשב שלך"
+msgid "Only needed if you want to use your own certificates"
+msgstr "נדרש רק אם אתה רוצה להשתמש בתעודות שלך"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 43
 #: NEEDS WORK
@@ -192,55 +114,25 @@ msgstr "תעודת מפיץ"
 msgid "Select distributor.p12 file"
 msgstr "בחר קובץ distributor.p12"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 177
+# File: usr/share/jellytizen/pages/certificates.py, line: 115
 #: NEEDS WORK
-msgid "🔐 Certificate Password"
-msgstr "🔐 סיסמת תעודה"
+msgid "Certificate Password"
+msgstr "סיסמת תעודה"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 178
+# File: usr/share/jellytizen/pages/certificates.py, line: 122
 #: NEEDS WORK
-msgid "Enter the password you chose when creating the certificates"
-msgstr "הזן את הסיסמה שבחרת כאשר יצרת את התעודות"
+msgid "Need help creating certificates?"
+msgstr "זקוק לעזרה ביצירת תעודות?"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 183
+# File: usr/share/jellytizen/pages/certificates.py, line: 123
 #: NEEDS WORK
-msgid "Password"
-msgstr "סיסמה"
+msgid "View tutorial on Samsung Developer website"
+msgstr "צפה במדריך באתר המפתחים של סמסונג"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 192
+# File: usr/share/jellytizen/pages/certificates.py, line: 127
 #: NEEDS WORK
-msgid "👤 Developer Profile"
-msgstr "👤 פרופיל מפתח"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 193
-#: NEEDS WORK
-msgid "A name to identify this certificate configuration"
-msgstr "שם לזיהוי תצורת התעודה הזו"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 86
-#: NEEDS WORK
-msgid "Profile Name"
-msgstr "שם פרופיל"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 208
-#: NEEDS WORK
-msgid "✅ Validate and Continue"
-msgstr "✅ אמת והמשך"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 98
-#: NEEDS WORK
-msgid "Validate Certificates"
-msgstr "אמתת תעודות"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 214
-#: NEEDS WORK
-msgid "Check if certificates are valid before continuing"
-msgstr "בדוק אם התעודות תקפות לפני ההמשך"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 101
-#: NEEDS WORK
-msgid "Validate"
-msgstr "אמת"
+msgid "View Guide"
+msgstr "צפה במדריך"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 114
 #: NEEDS WORK
@@ -263,6 +155,11 @@ msgstr "המשך להתקין את Jellyfin על הטלוויזיה שלך"
 msgid "Continue"
 msgstr "המשך"
 # 
+# File: usr/share/jellytizen/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "מוכן להתקנה עם תעודות מובנות"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 132
 #: NEEDS WORK
 #, python-brace-format
@@ -274,14 +171,14 @@ msgstr "בחר תעודת {cert_type}"
 msgid "P12 Certificate Files"
 msgstr "קבצי תעודת P12"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 276
-# File: usr/share/jellytizen/pages/certificates.py, line: 279
-# File: usr/share/jellytizen/pages/certificates.py, line: 299
-# File: usr/share/jellytizen/pages/certificates.py, line: 306
+# File: usr/share/jellytizen/pages/certificates.py, line: 212
+# File: usr/share/jellytizen/pages/certificates.py, line: 215
+# File: usr/share/jellytizen/pages/certificates.py, line: 231
+# File: usr/share/jellytizen/pages/certificates.py, line: 238
 #: NEEDS WORK
 #, python-brace-format
-msgid "✅ Selected: {filename}"
-msgstr "✅ נבחר: {filename}"
+msgid "✅ {filename}"
+msgstr "✅ {שם הקובץ}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 163
 # File: usr/share/jellytizen/pages/certificates.py, line: 166
@@ -291,10 +188,10 @@ msgstr "✅ נבחר: {filename}"
 msgid "Change"
 msgstr "שנה"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 322
+# File: usr/share/jellytizen/pages/certificates.py, line: 251
 #: NEEDS WORK
-msgid "All fields filled - click to validate"
-msgstr "כל השדות מולאו - לחץ לאישור"
+msgid "Ready to install with custom certificates"
+msgstr "מוכן להתקנה עם תעודות מותאמות אישית"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 326
 #: NEEDS WORK
@@ -316,28 +213,6 @@ msgstr "סיסמה"
 #, python-brace-format
 msgid "Missing: {items}"
 msgstr "חסר: {items}"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 346
-#: NEEDS WORK
-msgid "✅ Certificates are valid!"
-msgstr "✅ התעודות תקפות!"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 217
-#: NEEDS WORK
-msgid "Certificates validated successfully!"
-msgstr "הסמכות אושרו בהצלחה!"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 349
-#: NEEDS WORK
-#, python-brace-format
-msgid "❌ Validation failed: {message}"
-msgstr "❌ אימות נכשל: {message}"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 219
-#: NEEDS WORK
-#, python-brace-format
-msgid "Certificate validation failed: {message}"
-msgstr "אימות תעודה נכשל: {message}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 231
 #: NEEDS WORK
@@ -467,16 +342,6 @@ msgstr "מצב דיבוג"
 msgid "Enable debug mode for development"
 msgstr "אפשר מצב דיבוג לפיתוח"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 132
-#: NEEDS WORK
-msgid "Allow Custom Scripts"
-msgstr "אפשר סקריפטים מותאמים אישית"
-# 
-# File: usr/share/jellytizen/pages/preferences.py, line: 133
-#: NEEDS WORK
-msgid "Allow execution of custom installation scripts"
-msgstr "אפשר להריץ סקריפטים מותאמים אישית להתקנה"
-# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 140
 # File: usr/share/jellytizen/pages/preferences.py, line: 148
 # File: usr/share/jellytizen/pages/preferences.py, line: 172
@@ -522,15 +387,20 @@ msgstr "הגדרת מכשיר"
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "חבר לטלוויזיה או למקרן Samsung Tizen שלך"
 # 
+# File: usr/share/jellytizen/pages/device.py, line: 58
+#: NEEDS WORK
+msgid "Setup Instructions"
+msgstr "הוראות התקנה"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 63
 #: NEEDS WORK
-msgid "Required Step: Enable Developer Mode"
-msgstr "שלב נדרש: הפעלת מצב מפתח"
+msgid "Enable Developer Mode on TV"
+msgstr "אפשר מצב מפתחים בטלוויזיה"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 70
+# File: usr/share/jellytizen/pages/device.py, line: 64
 #: NEEDS WORK
-msgid "You must complete these steps on your Samsung TV before connecting"
-msgstr "עליך להשלים את הצעדים הללו בטלוויזיה של סמסונג שלך לפני חיבור."
+msgid "Click to view step-by-step instructions"
+msgstr "לחץ כדי לראות הוראות שלב אחר שלב"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 75
 #: NEEDS WORK
@@ -547,51 +417,51 @@ msgstr "על הטלוויזיה, עבור לסעיף 'אפליקציות'"
 msgid "2. Go to App Settings"
 msgstr "2. עבור להגדרות האפליקציה"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 84
+# File: usr/share/jellytizen/pages/device.py, line: 79
 #: NEEDS WORK
-msgid "Scroll to the end of the Apps list and select 'App Settings'"
-msgstr "גלול לסוף רשימת האפליקציות ובחר 'הגדרות אפליקציה'"
+msgid "Scroll to the end and select 'App Settings'"
+msgstr "גלול לסוף ובחר 'הגדרות אפליקציה'"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 91
 #: NEEDS WORK
 msgid "3. Press '123' Button"
 msgstr "3. לחץ על כפתור '123'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 92
+# File: usr/share/jellytizen/pages/device.py, line: 85
 #: NEEDS WORK
-msgid "Inside App Settings, press the '123' button on your remote control"
-msgstr "בתוך הגדרות האפליקציה, לחץ על כפתור '123' בשלט הרחוק שלך"
+msgid "Press the '123' button on your remote"
+msgstr "לחץ על כפתור '123' בשלט הרחוק שלך"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 99
+# File: usr/share/jellytizen/pages/device.py, line: 90
 #: NEEDS WORK
-msgid "4. Enter Secret Code"
-msgstr "4. הזן קוד סודי"
+msgid "4. Enter Code '12345'"
+msgstr "4. הזן קוד '12345'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 100
+# File: usr/share/jellytizen/pages/device.py, line: 91
 #: NEEDS WORK
-msgid "Type '12345' using the remote - Developer Mode menu will appear"
-msgstr "הקלד '12345' באמצעות השלט - תפריט מצב מפתח יופיע"
+msgid "Developer Mode menu will appear"
+msgstr "תפריט מצב מפתח יופיע"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 107
 #: NEEDS WORK
 msgid "5. Enable Developer Mode"
 msgstr "5. אפשר מצב מפתחים"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 108
+# File: usr/share/jellytizen/pages/device.py, line: 97
 #: NEEDS WORK
-msgid "Toggle 'Developer Mode' to 'On' in the menu"
-msgstr "הפעל את 'מצב מפתח' בתפריט"
+msgid "Toggle 'Developer Mode' to 'On'"
+msgstr "הפעל את 'מצב מפתח' ל'פעיל'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 116
-#: NEEDS WORK
-msgid "6. Enter Host PC IP"
-msgstr "6. הזן את כתובת ה-IP של המחשב המארח"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 361
+# File: usr/share/jellytizen/pages/device.py, line: 103
 #: NEEDS WORK
 #, python-brace-format
-msgid "Enter your computer's IP address: {ip}"
-msgstr "הזן את כתובת ה-IP של המחשב שלך: {ip}"
+msgid "6. Enter This IP: {ip}"
+msgstr "6. הזן את ה-IP הזה: {ip}"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 104
+#: NEEDS WORK
+msgid "Your computer's IP address"
+msgstr "כתובת ה-IP של המחשב שלך"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 403
 # File: usr/share/jellytizen/pages/device.py, line: 430
@@ -604,35 +474,10 @@ msgstr "העתק כתובת IP"
 msgid "7. Restart TV"
 msgstr "7. הפעל מחדש את הטלוויזיה"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 132
+# File: usr/share/jellytizen/pages/device.py, line: 116
 #: NEEDS WORK
-msgid "Turn off and on your TV to apply Developer Mode settings"
-msgstr "כבה והדלק את הטלוויזיה שלך כדי להחיל את הגדרות מצב המפתחים"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 368
-#: NEEDS WORK
-msgid "Important Notes"
-msgstr "הערות חשובות"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 373
-#: NEEDS WORK
-msgid "Right-to-Left Languages"
-msgstr "שפות מימין לשמאל"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 374
-#: NEEDS WORK
-msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
-msgstr "אם הטלוויזיה משתמשת בערבית/עברית, הזן את כתובת ה-IP הפוכה"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 389
-#: NEEDS WORK
-msgid "Network Connection"
-msgstr "חיבור רשת"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 390
-#: NEEDS WORK
-msgid "Ensure TV and computer are on the same network"
-msgstr "ודא שהטלוויזיה והמחשב נמצאים באותה רשת"
+msgid "Turn off and on your TV"
+msgstr "כבה והדלק את הטלוויזיה שלך"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 162
 #: NEEDS WORK
@@ -815,35 +660,42 @@ msgstr "חיבור נכשל: {message}"
 msgid "Certificates"
 msgstr "תעודות"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 37
+# File: usr/share/jellytizen/pages/install.py, line: 53
+# File: usr/share/jellytizen/pages/install.py, line: 116
+# File: usr/share/jellytizen/pages/install.py, line: 385
 #: NEEDS WORK
-msgid "Jellyfin Installation"
-msgstr "התקנת ג'לי פינ"
+msgid "Install Jellyfin"
+msgstr "התקן את Jellyfin"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 38
+# File: usr/share/jellytizen/pages/install.py, line: 54
 #: NEEDS WORK
-msgid "Installing Jellyfin on your Samsung Tizen device"
-msgstr "התקנת ג'ליפין על מכשיר סמסונג טיזן שלך"
+msgid "One-click installation to your Samsung TV"
+msgstr "התקנה בלחיצה אחת לטלוויזיה של סמסונג"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 59
+#: NEEDS WORK
+msgid "Target Device"
+msgstr "מכשיר יעד"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 60
+#: NEEDS WORK
+msgid "Loading..."
+msgstr "טוען..."
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 43
 #: NEEDS WORK
 msgid "Installation Progress"
 msgstr "התקנת התקדמות"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 48
+# File: usr/share/jellytizen/pages/install.py, line: 74
 #: NEEDS WORK
-msgid "Overall Progress"
-msgstr "התקדמות כוללת"
+msgid "Ready to install"
+msgstr "מוכן להתקנה"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 49
+# File: usr/share/jellytizen/pages/install.py, line: 75
 #: NEEDS WORK
-msgid "Ready to start installation"
-msgstr "מוכן להתחיל התקנה"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 61
-#: NEEDS WORK
-msgid "Current Step"
-msgstr "שלב נוכחי"
+msgid "Click the button below to start"
+msgstr "לחץ על הכפתור למטה כדי להתחיל"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 62
 #: NEEDS WORK
@@ -855,255 +707,145 @@ msgstr "ממתין להתחלה..."
 msgid "Installation Log"
 msgstr "יומן התקנה"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 68
+# File: usr/share/jellytizen/pages/install.py, line: 139
 #: NEEDS WORK
-msgid "Detailed output from the installation process"
-msgstr "פלט מפורט מתהליך ההתקנה"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 94
-# File: usr/share/jellytizen/pages/install.py, line: 97
-# File: usr/share/jellytizen/pages/install.py, line: 336
-#: NEEDS WORK
-msgid "Start Installation"
-msgstr "התחל התקנה"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 95
-#: NEEDS WORK
-msgid "Begin the Jellyfin installation process"
-msgstr "התחל את תהליך ההתקנה של Jellyfin"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 107
-#: NEEDS WORK
-msgid "Cancel Installation"
-msgstr "ביטול התקנה"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 108
-#: NEEDS WORK
-msgid "Stop the current installation process"
-msgstr "הפסיק את תהליך ההתקנה הנוכחי"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 121
-#: NEEDS WORK
-msgid "Installation Complete"
-msgstr "ההתקנה הושלמה"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 126
-#: NEEDS WORK
-msgid "Installation Successful!"
-msgstr "התקנה הצליחה!"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 127
-#: NEEDS WORK
-msgid "Jellyfin has been installed on your device"
-msgstr "ג'לי פינ הותקן על המכשיר שלך"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 129
-#: NEEDS WORK
-msgid "Finish"
-msgstr "סיים"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 159
-#: NEEDS WORK
-msgid "Preparing Docker environment"
-msgstr "מכין סביבה של דוקר"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 160
-#: NEEDS WORK
-msgid "Downloading Tizen SDK"
-msgstr "מוריד את Tizen SDK"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 161
-#: NEEDS WORK
-msgid "Setting up certificates"
-msgstr "הגדרת תעודות"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 162
-#: NEEDS WORK
-msgid "Building Jellyfin app"
-msgstr "בנייה של אפליקציית Jellyfin"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 163
-#: NEEDS WORK
-msgid "Connecting to device"
-msgstr "מחבר למכשיר"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 164
-#: NEEDS WORK
-msgid "Installing application"
-msgstr "מתקין יישום"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 196
-#: NEEDS WORK
-#, python-brace-format
-msgid "Step {current} of {total}"
-msgstr "שלב {current} מתוך {total}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 204
-#: NEEDS WORK
-msgid "Checking Docker status..."
-msgstr "בודק את מצב Docker..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 208
-#: NEEDS WORK
-msgid "Docker environment ready"
-msgstr "סביבת דוקר מוכנה"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 210
-#: NEEDS WORK
-#, python-brace-format
-msgid "Docker error: {message}"
-msgstr "שגיאת Docker: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 217
-#: NEEDS WORK
-msgid "Downloading Tizen SDK..."
-msgstr "מוריד את Tizen SDK..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 221
-#: NEEDS WORK
-msgid "Tizen SDK ready"
-msgstr "Tizen SDK מוכן"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 223
-#: NEEDS WORK
-#, python-brace-format
-msgid "SDK error: {message}"
-msgstr "שגיאת SDK: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 230
-#: NEEDS WORK
-msgid "Setting up certificates..."
-msgstr "מגדיר תעודות..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 238
-#: NEEDS WORK
-msgid "Certificates configured"
-msgstr "תעודות מוגדרות"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 240
-#: NEEDS WORK
-#, python-brace-format
-msgid "Certificate error: {message}"
-msgstr "שגיאת תעודה: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 249
-#: NEEDS WORK
-msgid "Building Jellyfin application..."
-msgstr "בונה את יישום ג'ליפין..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 253
-#: NEEDS WORK
-msgid "Application built successfully"
-msgstr "היישום נבנה בהצלחה"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 255
-#: NEEDS WORK
-#, python-brace-format
-msgid "Build error: {message}"
-msgstr "שגיאת בנייה: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 262
-#: NEEDS WORK
-msgid "Connecting to device..."
-msgstr "מחבר למכשיר..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 269
-#: NEEDS WORK
-msgid "Device connected successfully"
-msgstr "התקן מחובר בהצלחה"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 271
-#: NEEDS WORK
-#, python-brace-format
-msgid "Connection error: {message}"
-msgstr "שגיאת חיבור: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 278
-#: NEEDS WORK
-msgid "Installing Jellyfin on device..."
-msgstr "מתקין את ג'ליפין על המכשיר..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 282
-#: NEEDS WORK
-msgid "Installation completed successfully!"
-msgstr "ההתקנה הושלמה בהצלחה!"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 284
-#: NEEDS WORK
-#, python-brace-format
-msgid "Installation error: {message}"
-msgstr "שגיאת התקנה: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 298
-#: NEEDS WORK
-msgid "Complete"
-msgstr "מלא"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 299
-#: NEEDS WORK
-msgid "Installation completed successfully"
-msgstr "ההתקנה הושלמה בהצלחה"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 300
-#: NEEDS WORK
-msgid "All steps completed"
-msgstr "כל הצעדים הושלמו"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 302
-#: NEEDS WORK
-msgid "Install Again"
-msgstr "התקן שוב"
+msgid "Click to view detailed output"
+msgstr "לחץ כדי לראות פלט מפורט"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 307
 #: NEEDS WORK
 msgid "Installation Complete!"
 msgstr "ההתקנה הושלמה!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 308
+# File: usr/share/jellytizen/pages/install.py, line: 174
 #: NEEDS WORK
-msgid "Jellyfin has been successfully installed on your device."
-msgstr "ג'לי פינ הותקן בהצלחה על המכשיר שלך."
+msgid "Jellyfin is ready!"
+msgstr "ג'לי פינ מוכן!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 309
+# File: usr/share/jellytizen/pages/install.py, line: 175
 #: NEEDS WORK
-msgid "You can now launch Jellyfin from your TV's app menu."
-msgstr "כעת תוכל להפעיל את Jellyfin מתפריט האפליקציות של הטלוויזיה שלך."
+msgid "Open the Jellyfin app on your TV"
+msgstr "פתח את אפליקציית Jellyfin בטלוויזיה שלך"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 315
+# File: usr/share/jellytizen/pages/install.py, line: 179
 #: NEEDS WORK
-msgid "Installation failed"
-msgstr "ההתקנה נכשלה"
+msgid "Done"
+msgstr "בוצע"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 316
-# File: usr/share/jellytizen/pages/install.py, line: 323
+# File: usr/share/jellytizen/pages/install.py, line: 197
 #: NEEDS WORK
-#, python-brace-format
-msgid "Error: {message}"
-msgstr "שגיאה: {message}"
+msgid "No device selected - please go back"
+msgstr "לא נבחר מכשיר - אנא חזור назад"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 318
+# File: usr/share/jellytizen/pages/install.py, line: 206
 #: NEEDS WORK
-msgid "Retry Installation"
-msgstr "נסה להתקין שוב"
+msgid "No TV configured. Please go back and select a device."
+msgstr "לא הוגדר טלוויזיה. אנא חזור ובחר מכשיר."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 231
+#: NEEDS WORK
+msgid "Starting Installation"
+msgstr "מתחיל התקנה"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 236
+#: NEEDS WORK
+msgid "Downloading container..."
+msgstr "מעדכן מיכל..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 237
+#: NEEDS WORK
+msgid "Pulling Docker image..."
+msgstr "מושך תמונת דוקר..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 250
+#: NEEDS WORK
+msgid "Container ready!"
+msgstr "המיכל מוכן!"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 254
+#: NEEDS WORK
+msgid "Installing to TV..."
+msgstr "מתקין לטלוויזיה..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 255
+#: NEEDS WORK
+msgid "Connecting and installing..."
+msgstr "מחבר ומתקין..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 256
+#: NEEDS WORK
+msgid "This may take a few minutes..."
+msgstr "זה עשוי לקחת כמה דקות..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 275
+#: NEEDS WORK
+msgid "Installing..."
+msgstr "מתקין..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 277
+#: NEEDS WORK
+msgid "Downloading app..."
+msgstr "מעדכן אפליקציה..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 279
+#: NEEDS WORK
+msgid "Transferring..."
+msgstr "מעביר..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 281
+#: NEEDS WORK
+msgid "Connecting to TV..."
+msgstr "מחבר לטלוויזיה..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 283
+#: NEEDS WORK
+msgid "Finishing..."
+msgstr "מסיים..."
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 216
+#: NEEDS WORK
+msgid "Error"
+msgstr "שגיאה"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 339
+#: NEEDS WORK
+msgid "Jellyfin is now on your TV"
+msgstr "ג'ליפין עכשיו בטלוויזיה שלך"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 341
+#: NEEDS WORK
+msgid "Reinstall"
+msgstr "התקנה מחדש"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 348
+#: NEEDS WORK
+msgid "Find Jellyfin in your TV's app list."
+msgstr "מצא את Jellyfin ברשימת האפליקציות של הטלוויזיה שלך."
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 322
 #: NEEDS WORK
 msgid "Installation Failed"
 msgstr "התקנה נכשלה"
 # 
+# File: usr/share/jellytizen/pages/install.py, line: 362
+#: NEEDS WORK
+msgid "Retry"
+msgstr "ניסיון מחדש"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 379
+# File: usr/share/jellytizen/pages/install.py, line: 383
+#: NEEDS WORK
+msgid "Cancelled"
+msgstr "בוטל"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 380
+#: NEEDS WORK
+msgid "Installation was cancelled"
+msgstr "ההתקנה בוטלה"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 333
 #: NEEDS WORK
 msgid "Installation cancelled"
-msgstr "התקנה בוטלה"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 334
-#: NEEDS WORK
-msgid "Cancelled by user"
-msgstr "בוטל על ידי המשתמש"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 340
-#: NEEDS WORK
-msgid "Installation Cancelled"
 msgstr "התקנה בוטלה"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 60
@@ -1111,34 +853,25 @@ msgstr "התקנה בוטלה"
 msgid "JellyTizen Installer"
 msgstr "ג'לי טיזן מתקין"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 61
+# File: usr/share/jellytizen/pages/welcome.py, line: 63
 #: NEEDS WORK
-msgid ""
-"This application will help you install Jellyfin media server on your Samsung Smart TV or projector "
-"running Tizen OS."
-msgstr ""
-"אפליקציה זו תעזור לך להתקין את שרת המדיה Jellyfin על טלוויזיית סמארט של סמסונג או מקרן הפועל על "
-"מערכת Tizen."
+msgid "Install Jellyfin on your Samsung Smart TV or projector"
+msgstr "התקן את Jellyfin על הטלוויזיה החכמה של סמסונג או על המקרן שלך"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 68
 #: NEEDS WORK
 msgid "System Requirements"
 msgstr "דרישות מערכת"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 69
-#: NEEDS WORK
-msgid "Checking required dependencies..."
-msgstr "בודק תלותים נדרשים..."
-# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 74
 #: NEEDS WORK
 msgid "Docker Engine"
 msgstr "דוקר אנג'ין"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 75
+# File: usr/share/jellytizen/pages/welcome.py, line: 79
 #: NEEDS WORK
-msgid "Required for building Tizen applications"
-msgstr "דרוש לבניית יישומי Tizen"
+msgid "Checking..."
+msgstr "בודק..."
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 85
 # File: usr/share/jellytizen/pages/welcome.py, line: 88
@@ -1152,45 +885,40 @@ msgstr "התקן את דוקר"
 msgid "Docker is required but not installed"
 msgstr "דרוש Docker אך הוא לא מותקן"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 97
+# File: usr/share/jellytizen/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Get Started"
-msgstr "התחל"
+msgid "Install"
+msgstr "התקן"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 102
+# File: usr/share/jellytizen/pages/welcome.py, line: 106
 #: NEEDS WORK
-msgid "Continue to Device Setup"
-msgstr "המשך להגדרת המכשיר"
+msgid "Configure your Samsung TV"
+msgstr "הגדר את הטלוויזיה שלך מסמסונג"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 103
+# File: usr/share/jellytizen/pages/welcome.py, line: 135
 #: NEEDS WORK
-msgid "Connect to your Samsung TV"
-msgstr "חבר לטלוויזיה שלך של סמסונג"
+msgid "Ready"
+msgstr "מוכן"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 132
+# File: usr/share/jellytizen/pages/welcome.py, line: 142
 #: NEEDS WORK
-msgid "Docker is installed and running"
-msgstr "דוקר מותקן ופועל"
-# 
-# File: usr/share/jellytizen/pages/welcome.py, line: 141
-#: NEEDS WORK
-msgid "Docker is installed but not running"
-msgstr "דוקר מותקן אך אינו פועל"
+msgid "Not running"
+msgstr "לא פועל"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 144
 #: NEEDS WORK
-msgid "Start Docker"
-msgstr "הפעל את דוקר"
+msgid "Start"
+msgstr "התחל"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 154
+# File: usr/share/jellytizen/pages/welcome.py, line: 153
 #: NEEDS WORK
-msgid "Docker is not installed"
-msgstr "דוקר אינו מותקן"
+msgid "Not installed"
+msgstr "לא מותקן"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 195
+# File: usr/share/jellytizen/pages/welcome.py, line: 193
 #: NEEDS WORK
-msgid "Docker is required for building Tizen applications. Please install Docker for your distribution:"
-msgstr "דרוש Docker לבניית יישומי Tizen. אנא התקן את Docker עבור הפצתך:"
+msgid "Select your distribution:"
+msgstr "בחר את ההפצה שלך:"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 199
 #: NEEDS WORK
@@ -1207,16 +935,10 @@ msgstr "דביאן/אובונטו"
 msgid "Fedora/RHEL"
 msgstr "פדורה/רד הטאח"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
+# File: usr/share/jellytizen/app.py, line: 84
 #: NEEDS WORK
-msgid "Error"
-msgstr "שגיאה"
-# 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
-#: NEEDS WORK
-#, python-brace-format
-msgid "Failed to install Docker: {error}"
-msgstr "נכשל בהתקנת Docker: {error}"
+msgid "Go Back"
+msgstr "חזור назад"
 # 
 # File: usr/share/jellytizen/app.py, line: 106
 #: NEEDS WORK

@@ -53,118 +53,42 @@ msgstr "Sertifikaid on vajalikud rakenduste installimiseks Samsungi teleritesse.
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "📋 What are Developer Certificates?"
-msgstr "📋 Mis on arendaja sertifikaadid?"
+msgid "Certificate Mode"
+msgstr "Sertifikaadi režiim"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 56
+# File: usr/share/jellytizen/pages/certificates.py, line: 60
 #: NEEDS WORK
-msgid "Samsung requires signed apps. You need certificates from Tizen Studio."
-msgstr "Samsung nõuab allkirjastatud rakendusi. Teil on vaja Tizen Studio sertifikaate."
+msgid "Use Built-in Certificates"
+msgstr "Kasutage sisseehitatud sertifikaate"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 61
 #: NEEDS WORK
-msgid "Author Certificate (author.p12)"
-msgstr "Autori sertifikaat (author.p12)"
+msgid "Recommended - No Tizen Studio required"
+msgstr "Soovitatav - Tizen Studio't ei ole vaja"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 62
+# File: usr/share/jellytizen/pages/certificates.py, line: 73
 #: NEEDS WORK
-msgid "Your personal certificate that identifies you as the app developer"
-msgstr "Teie isiklik sertifikaat, mis tuvastab teid rakenduse arendajana."
+msgid "How it works"
+msgstr "Kuidas see töötab"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 69
+# File: usr/share/jellytizen/pages/certificates.py, line: 74
 #: NEEDS WORK
-msgid "Distributor Certificate (distributor.p12)"
-msgstr "Jaotaja sertifikaat (distributor.p12)"
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr ""
+"Dockeri konteiner sisaldab eelkonfigureeritud sertifikaate. Saate Jellyfini kohe installida ilma "
+"seadistamiseta."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 70
+# File: usr/share/jellytizen/pages/certificates.py, line: 83
 #: NEEDS WORK
-msgid "Samsung's certificate that allows app installation on devices"
-msgstr "Samsungi sertifikaat, mis võimaldab rakenduste installimist seadmetesse"
+msgid "Custom Certificates (Advanced)"
+msgstr "Kohandatud sertifikaadid (Edasijõudnud)"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 79
+# File: usr/share/jellytizen/pages/certificates.py, line: 84
 #: NEEDS WORK
-msgid "🔧 How to Get Certificates"
-msgstr "🔧 Kuidas saada sertifikaate"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 80
-#: NEEDS WORK
-msgid "Follow these steps to create your certificates"
-msgstr "Järgige neid samme, et luua oma sertifikaate."
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 85
-#: NEEDS WORK
-msgid "1. Install Tizen Studio"
-msgstr "1. Installi Tizen Studio"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 86
-#: NEEDS WORK
-msgid "Download from Samsung Developer website"
-msgstr "Laadi alla Samsungi arendaja veebisaidilt"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 90
-#: NEEDS WORK
-msgid "Download"
-msgstr "Laadi alla"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 99
-#: NEEDS WORK
-msgid "2. Open Certificate Manager"
-msgstr "2. Ava sertifika haldurit"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 100
-#: NEEDS WORK
-msgid "In Tizen Studio: Tools → Certificate Manager"
-msgstr "Tizen Studio: Tööriistad → Sertifikaadi haldur"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 107
-#: NEEDS WORK
-msgid "3. Create Samsung Certificate"
-msgstr "3. Loo Samsungi sertifikaat"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 108
-#: NEEDS WORK
-msgid "Click '+' → Samsung Certificate → TV → Create new profile"
-msgstr "Klõpsa '+' → Samsungi sertifikaat → TV → Loo uus profiil"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "4. Sign in with Samsung Account"
-msgstr "4. Logi sisse Samsungi kontoga"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 116
-#: NEEDS WORK
-msgid "Use the same account registered on your TV"
-msgstr "Kasutage sama kontot, mis on registreeritud teie teleris."
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "5. Add Your TV's DUID"
-msgstr "5. Lisa oma TV DUID"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 124
-#: NEEDS WORK
-msgid "The DUID is shown in the TV's Developer Mode settings"
-msgstr "DUID kuvatakse teleri arendaja režiimi seadetes"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 131
-#: NEEDS WORK
-msgid "6. Export Certificates"
-msgstr "6. Ekspordi sertifikaadid"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 132
-#: NEEDS WORK
-msgid "Certificates are saved in ~/SamsungCertificate/<profile_name>/"
-msgstr "Sertifikaadid salvestatakse kausta ~/SamsungCertificate/<profile_name>/"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 141
-#: NEEDS WORK
-msgid "📁 Upload Your Certificates"
-msgstr "📁 Laadi üles oma sertifikaadid"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 142
-#: NEEDS WORK
-msgid "Select the .p12 certificate files from your computer"
-msgstr "Valige oma arvutist .p12 sertifikaadifailid."
+msgid "Only needed if you want to use your own certificates"
+msgstr "Ainult vajalik, kui soovite kasutada oma sertifikaate."
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 43
 #: NEEDS WORK
@@ -192,55 +116,25 @@ msgstr "Jaotaja sertifikaat"
 msgid "Select distributor.p12 file"
 msgstr "Vali distributor.p12 fail"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 177
+# File: usr/share/jellytizen/pages/certificates.py, line: 115
 #: NEEDS WORK
-msgid "🔐 Certificate Password"
-msgstr "🔐 Sertifika Parool"
+msgid "Certificate Password"
+msgstr "Sertifikaadi parool"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 178
+# File: usr/share/jellytizen/pages/certificates.py, line: 122
 #: NEEDS WORK
-msgid "Enter the password you chose when creating the certificates"
-msgstr "Sisestage parool, mille valisite sertifikaatide loomisel."
+msgid "Need help creating certificates?"
+msgstr "Kas vajad abi sertifikaatide loomisel?"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 183
+# File: usr/share/jellytizen/pages/certificates.py, line: 123
 #: NEEDS WORK
-msgid "Password"
-msgstr "Parool"
+msgid "View tutorial on Samsung Developer website"
+msgstr "Vaata õpetust Samsungi arendaja veebisaidil"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 192
+# File: usr/share/jellytizen/pages/certificates.py, line: 127
 #: NEEDS WORK
-msgid "👤 Developer Profile"
-msgstr "👤 Arendaja profiil"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 193
-#: NEEDS WORK
-msgid "A name to identify this certificate configuration"
-msgstr "Nimi, et tuvastada seda sertifikaadi konfiguratsiooni"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 86
-#: NEEDS WORK
-msgid "Profile Name"
-msgstr "Profiili nimi"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 208
-#: NEEDS WORK
-msgid "✅ Validate and Continue"
-msgstr "✅ Kinnita ja Jätka"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 98
-#: NEEDS WORK
-msgid "Validate Certificates"
-msgstr "Kinnita sertifikaate"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 214
-#: NEEDS WORK
-msgid "Check if certificates are valid before continuing"
-msgstr "Kontrolli, kas sertifikaadid on kehtivad enne jätkamist"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 101
-#: NEEDS WORK
-msgid "Validate"
-msgstr "Kinnita"
+msgid "View Guide"
+msgstr "Vaata juhendit"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 114
 #: NEEDS WORK
@@ -263,6 +157,11 @@ msgstr "Jätka Jellyfini installimist oma telerisse"
 msgid "Continue"
 msgstr "Jätka"
 # 
+# File: usr/share/jellytizen/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "Valmis installimiseks sisseehitatud sertifikaatidega"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 132
 #: NEEDS WORK
 #, python-brace-format
@@ -274,14 +173,14 @@ msgstr "Vali {cert_type} sertifikaat"
 msgid "P12 Certificate Files"
 msgstr "P12 sertifikafailid"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 276
-# File: usr/share/jellytizen/pages/certificates.py, line: 279
-# File: usr/share/jellytizen/pages/certificates.py, line: 299
-# File: usr/share/jellytizen/pages/certificates.py, line: 306
+# File: usr/share/jellytizen/pages/certificates.py, line: 212
+# File: usr/share/jellytizen/pages/certificates.py, line: 215
+# File: usr/share/jellytizen/pages/certificates.py, line: 231
+# File: usr/share/jellytizen/pages/certificates.py, line: 238
 #: NEEDS WORK
 #, python-brace-format
-msgid "✅ Selected: {filename}"
-msgstr "✅ Valitud: {filename}"
+msgid "✅ {filename}"
+msgstr "✅ {filename}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 163
 # File: usr/share/jellytizen/pages/certificates.py, line: 166
@@ -291,10 +190,10 @@ msgstr "✅ Valitud: {filename}"
 msgid "Change"
 msgstr "Muuda"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 322
+# File: usr/share/jellytizen/pages/certificates.py, line: 251
 #: NEEDS WORK
-msgid "All fields filled - click to validate"
-msgstr "Kõik väljad on täidetud - klõpsake valideerimiseks"
+msgid "Ready to install with custom certificates"
+msgstr "Valmis installimiseks kohandatud sertifikaatidega"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 326
 #: NEEDS WORK
@@ -316,28 +215,6 @@ msgstr "parool"
 #, python-brace-format
 msgid "Missing: {items}"
 msgstr "Puuduvad: {items}"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 346
-#: NEEDS WORK
-msgid "✅ Certificates are valid!"
-msgstr "✅ Sertifikaadid on kehtivad!"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 217
-#: NEEDS WORK
-msgid "Certificates validated successfully!"
-msgstr "Sertifikaadid valideeriti edukalt!"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 349
-#: NEEDS WORK
-#, python-brace-format
-msgid "❌ Validation failed: {message}"
-msgstr "❌ Kehtivuse kontroll ebaõnnestus: {message}"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 219
-#: NEEDS WORK
-#, python-brace-format
-msgid "Certificate validation failed: {message}"
-msgstr "Sertifika valideerimine ebaõnnestus: {message}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 231
 #: NEEDS WORK
@@ -467,16 +344,6 @@ msgstr "Silumisrežiim"
 msgid "Enable debug mode for development"
 msgstr "Luba debug-režiim arendamiseks"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 132
-#: NEEDS WORK
-msgid "Allow Custom Scripts"
-msgstr "Luba kohandatud skripte"
-# 
-# File: usr/share/jellytizen/pages/preferences.py, line: 133
-#: NEEDS WORK
-msgid "Allow execution of custom installation scripts"
-msgstr "Luba kohandatud installatsiooniskripti täitmine"
-# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 140
 # File: usr/share/jellytizen/pages/preferences.py, line: 148
 # File: usr/share/jellytizen/pages/preferences.py, line: 172
@@ -522,15 +389,20 @@ msgstr "Seadme seadistus"
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "Ühendage oma Samsung Tizen teler või projektoriga"
 # 
+# File: usr/share/jellytizen/pages/device.py, line: 58
+#: NEEDS WORK
+msgid "Setup Instructions"
+msgstr "Seadmise juhised"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 63
 #: NEEDS WORK
-msgid "Required Step: Enable Developer Mode"
-msgstr "Nõutav samm: Luba arendaja režiim"
+msgid "Enable Developer Mode on TV"
+msgstr "Luba arendaja režiim TV-s"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 70
+# File: usr/share/jellytizen/pages/device.py, line: 64
 #: NEEDS WORK
-msgid "You must complete these steps on your Samsung TV before connecting"
-msgstr "Enne ühendamist peate need sammud oma Samsungi teleris lõpetama."
+msgid "Click to view step-by-step instructions"
+msgstr "Klõpsa, et vaadata samm-sammult juhiseid"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 75
 #: NEEDS WORK
@@ -547,51 +419,51 @@ msgstr "Teleru, mine 'Rakendused' jaotisse."
 msgid "2. Go to App Settings"
 msgstr "2. Mine rakenduse seaded"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 84
+# File: usr/share/jellytizen/pages/device.py, line: 79
 #: NEEDS WORK
-msgid "Scroll to the end of the Apps list and select 'App Settings'"
-msgstr "Kerige rakenduste loendi lõppu ja valige 'Rakenduse seaded'"
+msgid "Scroll to the end and select 'App Settings'"
+msgstr "Kerige lõpuni ja valige 'Rakenduse seaded'"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 91
 #: NEEDS WORK
 msgid "3. Press '123' Button"
 msgstr "3. Vajutage '123' nuppu"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 92
+# File: usr/share/jellytizen/pages/device.py, line: 85
 #: NEEDS WORK
-msgid "Inside App Settings, press the '123' button on your remote control"
-msgstr "Rakenduse seadetes vajutage oma kaugjuhtimispuldil nuppu '123'"
+msgid "Press the '123' button on your remote"
+msgstr "Pühi oma kaugjuhtimispuldi '123' nuppu."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 99
+# File: usr/share/jellytizen/pages/device.py, line: 90
 #: NEEDS WORK
-msgid "4. Enter Secret Code"
-msgstr "4. Sisestage salajane kood"
+msgid "4. Enter Code '12345'"
+msgstr "4. Sisestage kood '12345'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 100
+# File: usr/share/jellytizen/pages/device.py, line: 91
 #: NEEDS WORK
-msgid "Type '12345' using the remote - Developer Mode menu will appear"
-msgstr "Sisestage '12345' kaugjuhtimispuldi abil - arendaja režiimi menüü ilmub"
+msgid "Developer Mode menu will appear"
+msgstr "Arendaja režiimi menüü ilmub"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 107
 #: NEEDS WORK
 msgid "5. Enable Developer Mode"
 msgstr "5. Luba Arendaja Režiim"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 108
+# File: usr/share/jellytizen/pages/device.py, line: 97
 #: NEEDS WORK
-msgid "Toggle 'Developer Mode' to 'On' in the menu"
-msgstr "Lülita 'Arendaja režiim' menüüs 'Käivitamiseks'"
+msgid "Toggle 'Developer Mode' to 'On'"
+msgstr "Lülita 'Arendaja režiim' sisse"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 116
-#: NEEDS WORK
-msgid "6. Enter Host PC IP"
-msgstr "6. Sisestage hostarvuti IP"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 361
+# File: usr/share/jellytizen/pages/device.py, line: 103
 #: NEEDS WORK
 #, python-brace-format
-msgid "Enter your computer's IP address: {ip}"
-msgstr "Sisestage oma arvuti IP-aadress: {ip}"
+msgid "6. Enter This IP: {ip}"
+msgstr "6. Sisesta see IP: {ip}"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 104
+#: NEEDS WORK
+msgid "Your computer's IP address"
+msgstr "Teie arvuti IP-aadress"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 403
 # File: usr/share/jellytizen/pages/device.py, line: 430
@@ -604,35 +476,10 @@ msgstr "Kopeeri IP"
 msgid "7. Restart TV"
 msgstr "7. Taaskäivita telerii"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 132
+# File: usr/share/jellytizen/pages/device.py, line: 116
 #: NEEDS WORK
-msgid "Turn off and on your TV to apply Developer Mode settings"
-msgstr "Lülitage oma teler välja ja sisse, et rakendada arendaja režiimi seadeid."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 368
-#: NEEDS WORK
-msgid "Important Notes"
-msgstr "Olulised märkused"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 373
-#: NEEDS WORK
-msgid "Right-to-Left Languages"
-msgstr "Paremest vasakule suunatud keeled"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 374
-#: NEEDS WORK
-msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
-msgstr "Kui teler kasutab araabia/heebrea keelt, sisestage IP-aadress tagurpidi."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 389
-#: NEEDS WORK
-msgid "Network Connection"
-msgstr "Võrguside"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 390
-#: NEEDS WORK
-msgid "Ensure TV and computer are on the same network"
-msgstr "Veenduge, et teler ja arvuti on samas võrgus."
+msgid "Turn off and on your TV"
+msgstr "Lülita oma teler välja ja sisse"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 162
 #: NEEDS WORK
@@ -815,35 +662,42 @@ msgstr "Ühenduse loomine ebaõnnestus: {message}"
 msgid "Certificates"
 msgstr "Sertifikaadid"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 37
+# File: usr/share/jellytizen/pages/install.py, line: 53
+# File: usr/share/jellytizen/pages/install.py, line: 116
+# File: usr/share/jellytizen/pages/install.py, line: 385
 #: NEEDS WORK
-msgid "Jellyfin Installation"
-msgstr "Jellyfini installatsioon"
+msgid "Install Jellyfin"
+msgstr "Install Jellyfini"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 38
+# File: usr/share/jellytizen/pages/install.py, line: 54
 #: NEEDS WORK
-msgid "Installing Jellyfin on your Samsung Tizen device"
-msgstr "Jellyfini installimine teie Samsung Tizen seadmes"
+msgid "One-click installation to your Samsung TV"
+msgstr "Üheklõpsuline installatsioon teie Samsungi telerisse"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 59
+#: NEEDS WORK
+msgid "Target Device"
+msgstr "Sihtseade"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 60
+#: NEEDS WORK
+msgid "Loading..."
+msgstr "Laadimine..."
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 43
 #: NEEDS WORK
 msgid "Installation Progress"
 msgstr "Installeerimise edenemine"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 48
+# File: usr/share/jellytizen/pages/install.py, line: 74
 #: NEEDS WORK
-msgid "Overall Progress"
-msgstr "Kogutulemus"
+msgid "Ready to install"
+msgstr "Valmis installimiseks"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 49
+# File: usr/share/jellytizen/pages/install.py, line: 75
 #: NEEDS WORK
-msgid "Ready to start installation"
-msgstr "Valmis installatsiooni alustamiseks"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 61
-#: NEEDS WORK
-msgid "Current Step"
-msgstr "Praegune samm"
+msgid "Click the button below to start"
+msgstr "Klõpsa alloleval nupul, et alustada"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 62
 #: NEEDS WORK
@@ -855,255 +709,145 @@ msgstr "Ootamist ootamine..."
 msgid "Installation Log"
 msgstr "Installeerimislogi"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 68
+# File: usr/share/jellytizen/pages/install.py, line: 139
 #: NEEDS WORK
-msgid "Detailed output from the installation process"
-msgstr "Paigaldusprotsessi üksikasjalik väljund"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 94
-# File: usr/share/jellytizen/pages/install.py, line: 97
-# File: usr/share/jellytizen/pages/install.py, line: 336
-#: NEEDS WORK
-msgid "Start Installation"
-msgstr "Alusta installimist"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 95
-#: NEEDS WORK
-msgid "Begin the Jellyfin installation process"
-msgstr "Alusta Jellyfini installatsiooniprotsessi"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 107
-#: NEEDS WORK
-msgid "Cancel Installation"
-msgstr "Tühista installatsioon"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 108
-#: NEEDS WORK
-msgid "Stop the current installation process"
-msgstr "Peata praegune installimisprotsess"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 121
-#: NEEDS WORK
-msgid "Installation Complete"
-msgstr "Installeerimine lõpetatud"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 126
-#: NEEDS WORK
-msgid "Installation Successful!"
-msgstr "Installeerimine õnnestus!"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 127
-#: NEEDS WORK
-msgid "Jellyfin has been installed on your device"
-msgstr "Jellyfin on teie seadmesse installitud."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 129
-#: NEEDS WORK
-msgid "Finish"
-msgstr "Lõpeta"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 159
-#: NEEDS WORK
-msgid "Preparing Docker environment"
-msgstr "Docker keskkonna ettevalmistamine"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 160
-#: NEEDS WORK
-msgid "Downloading Tizen SDK"
-msgstr "Laadimine Tizen SDK"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 161
-#: NEEDS WORK
-msgid "Setting up certificates"
-msgstr "Sertifikaatide seadistamine"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 162
-#: NEEDS WORK
-msgid "Building Jellyfin app"
-msgstr "Jellyfini rakenduse koostamine"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 163
-#: NEEDS WORK
-msgid "Connecting to device"
-msgstr "Seadme ühendamine"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 164
-#: NEEDS WORK
-msgid "Installing application"
-msgstr "Rakenduse installimine"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 196
-#: NEEDS WORK
-#, python-brace-format
-msgid "Step {current} of {total}"
-msgstr "Sammumine {current} / {total}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 204
-#: NEEDS WORK
-msgid "Checking Docker status..."
-msgstr "Kontrollin Docker'i olekut..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 208
-#: NEEDS WORK
-msgid "Docker environment ready"
-msgstr "Dockeri keskkond valmis"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 210
-#: NEEDS WORK
-#, python-brace-format
-msgid "Docker error: {message}"
-msgstr "Dockeri viga: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 217
-#: NEEDS WORK
-msgid "Downloading Tizen SDK..."
-msgstr "Laadimine Tizen SDK..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 221
-#: NEEDS WORK
-msgid "Tizen SDK ready"
-msgstr "Tizen SDK valmis"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 223
-#: NEEDS WORK
-#, python-brace-format
-msgid "SDK error: {message}"
-msgstr "SDK viga: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 230
-#: NEEDS WORK
-msgid "Setting up certificates..."
-msgstr "Sertifikaatide seadistamine..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 238
-#: NEEDS WORK
-msgid "Certificates configured"
-msgstr "Konfigureeritud sertifikaadid"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 240
-#: NEEDS WORK
-#, python-brace-format
-msgid "Certificate error: {message}"
-msgstr "Sertifika viga: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 249
-#: NEEDS WORK
-msgid "Building Jellyfin application..."
-msgstr "Jellyfini rakenduse koostamine..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 253
-#: NEEDS WORK
-msgid "Application built successfully"
-msgstr "Rakendus on edukalt loodud"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 255
-#: NEEDS WORK
-#, python-brace-format
-msgid "Build error: {message}"
-msgstr "Kogumise viga: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 262
-#: NEEDS WORK
-msgid "Connecting to device..."
-msgstr "Seadme ühendamine..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 269
-#: NEEDS WORK
-msgid "Device connected successfully"
-msgstr "Seade on edukalt ühendatud"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 271
-#: NEEDS WORK
-#, python-brace-format
-msgid "Connection error: {message}"
-msgstr "Ühenduse viga: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 278
-#: NEEDS WORK
-msgid "Installing Jellyfin on device..."
-msgstr "Jellyfini installimine seadmel..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 282
-#: NEEDS WORK
-msgid "Installation completed successfully!"
-msgstr "Installeerimine lõpetati edukalt!"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 284
-#: NEEDS WORK
-#, python-brace-format
-msgid "Installation error: {message}"
-msgstr "Installeerimisviga: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 298
-#: NEEDS WORK
-msgid "Complete"
-msgstr "Täielik"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 299
-#: NEEDS WORK
-msgid "Installation completed successfully"
-msgstr "Installeerimine lõpetati edukalt"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 300
-#: NEEDS WORK
-msgid "All steps completed"
-msgstr "Kõik sammud on lõpetatud"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 302
-#: NEEDS WORK
-msgid "Install Again"
-msgstr "Installige uuesti"
+msgid "Click to view detailed output"
+msgstr "Klõpsa, et vaadata üksikasjalikku väljundit"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 307
 #: NEEDS WORK
 msgid "Installation Complete!"
 msgstr "Installeerimine lõpetatud!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 308
+# File: usr/share/jellytizen/pages/install.py, line: 174
 #: NEEDS WORK
-msgid "Jellyfin has been successfully installed on your device."
-msgstr "Jellyfin on edukalt teie seadmesse installitud."
+msgid "Jellyfin is ready!"
+msgstr "Jellyfin on valmis!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 309
+# File: usr/share/jellytizen/pages/install.py, line: 175
 #: NEEDS WORK
-msgid "You can now launch Jellyfin from your TV's app menu."
-msgstr "Nüüd saate käivitada Jellyfini oma TV rakenduste menüüst."
+msgid "Open the Jellyfin app on your TV"
+msgstr "Ava Jellyfini rakenduse oma teleris"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 315
+# File: usr/share/jellytizen/pages/install.py, line: 179
 #: NEEDS WORK
-msgid "Installation failed"
-msgstr "Installeerimine ebaõnnestus"
+msgid "Done"
+msgstr "Tehtud"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 316
-# File: usr/share/jellytizen/pages/install.py, line: 323
+# File: usr/share/jellytizen/pages/install.py, line: 197
 #: NEEDS WORK
-#, python-brace-format
-msgid "Error: {message}"
-msgstr "Viga: {message}"
+msgid "No device selected - please go back"
+msgstr "Seadet ei ole valitud - palun minge tagasi"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 318
+# File: usr/share/jellytizen/pages/install.py, line: 206
 #: NEEDS WORK
-msgid "Retry Installation"
-msgstr "Kata installimine uuesti"
+msgid "No TV configured. Please go back and select a device."
+msgstr "TV-d ei ole seadistatud. Palun minge tagasi ja valige seade."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 231
+#: NEEDS WORK
+msgid "Starting Installation"
+msgstr "Installeerimise alustamine"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 236
+#: NEEDS WORK
+msgid "Downloading container..."
+msgstr "Laadimine konteiner..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 237
+#: NEEDS WORK
+msgid "Pulling Docker image..."
+msgstr "Tõmban Docker'i pilti..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 250
+#: NEEDS WORK
+msgid "Container ready!"
+msgstr "Konteiner valmis!"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 254
+#: NEEDS WORK
+msgid "Installing to TV..."
+msgstr "Installeerimine telerisse..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 255
+#: NEEDS WORK
+msgid "Connecting and installing..."
+msgstr "Ühendamine ja installimine..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 256
+#: NEEDS WORK
+msgid "This may take a few minutes..."
+msgstr "See võib võtta paar minutit..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 275
+#: NEEDS WORK
+msgid "Installing..."
+msgstr "Installeer..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 277
+#: NEEDS WORK
+msgid "Downloading app..."
+msgstr "Laadimine..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 279
+#: NEEDS WORK
+msgid "Transferring..."
+msgstr "Ülekandmine..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 281
+#: NEEDS WORK
+msgid "Connecting to TV..."
+msgstr "Ühendamine teleriga..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 283
+#: NEEDS WORK
+msgid "Finishing..."
+msgstr "Lõpetamine..."
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 216
+#: NEEDS WORK
+msgid "Error"
+msgstr "Viga"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 339
+#: NEEDS WORK
+msgid "Jellyfin is now on your TV"
+msgstr "Jellyfin on nüüd teie teleris"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 341
+#: NEEDS WORK
+msgid "Reinstall"
+msgstr "Taasta installatsioon"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 348
+#: NEEDS WORK
+msgid "Find Jellyfin in your TV's app list."
+msgstr "Leia Jellyfini oma TV rakenduste loendist."
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 322
 #: NEEDS WORK
 msgid "Installation Failed"
 msgstr "Installeerimine ebaõnnestus"
 # 
+# File: usr/share/jellytizen/pages/install.py, line: 362
+#: NEEDS WORK
+msgid "Retry"
+msgstr "Katsumine"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 379
+# File: usr/share/jellytizen/pages/install.py, line: 383
+#: NEEDS WORK
+msgid "Cancelled"
+msgstr "Tühistatud"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 380
+#: NEEDS WORK
+msgid "Installation was cancelled"
+msgstr "Installeerimine tühistati"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 333
 #: NEEDS WORK
 msgid "Installation cancelled"
-msgstr "Installeerimine tühistatud"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 334
-#: NEEDS WORK
-msgid "Cancelled by user"
-msgstr "Kasutaja poolt tühistatud"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 340
-#: NEEDS WORK
-msgid "Installation Cancelled"
 msgstr "Installeerimine tühistatud"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 60
@@ -1111,34 +855,25 @@ msgstr "Installeerimine tühistatud"
 msgid "JellyTizen Installer"
 msgstr "JellyTizen Installer"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 61
+# File: usr/share/jellytizen/pages/welcome.py, line: 63
 #: NEEDS WORK
-msgid ""
-"This application will help you install Jellyfin media server on your Samsung Smart TV or projector "
-"running Tizen OS."
-msgstr ""
-"See rakendus aitab teil installida Jellyfin meedia serveri oma Samsungi nutitelerisse või "
-"projektorisse, mis töötab Tizen OS-il."
+msgid "Install Jellyfin on your Samsung Smart TV or projector"
+msgstr "Installeeri Jellyfin oma Samsung Smart TV-le või projektorile"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 68
 #: NEEDS WORK
 msgid "System Requirements"
 msgstr "Süsteemi nõuded"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 69
-#: NEEDS WORK
-msgid "Checking required dependencies..."
-msgstr "Kontrollin vajalikke sõltuvusi..."
-# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 74
 #: NEEDS WORK
 msgid "Docker Engine"
 msgstr "Docker Engine"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 75
+# File: usr/share/jellytizen/pages/welcome.py, line: 79
 #: NEEDS WORK
-msgid "Required for building Tizen applications"
-msgstr "Tizen rakenduste ehitamiseks vajalik"
+msgid "Checking..."
+msgstr "Kontrollimine..."
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 85
 # File: usr/share/jellytizen/pages/welcome.py, line: 88
@@ -1152,45 +887,40 @@ msgstr "Installeeri Docker"
 msgid "Docker is required but not installed"
 msgstr "Docker on vajalik, kuid ei ole installitud"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 97
+# File: usr/share/jellytizen/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Get Started"
-msgstr "Alustage"
+msgid "Install"
+msgstr "Installige"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 102
+# File: usr/share/jellytizen/pages/welcome.py, line: 106
 #: NEEDS WORK
-msgid "Continue to Device Setup"
-msgstr "Jätka seadistuse juurde"
+msgid "Configure your Samsung TV"
+msgstr "Konfigureeri oma Samsungi telerit"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 103
+# File: usr/share/jellytizen/pages/welcome.py, line: 135
 #: NEEDS WORK
-msgid "Connect to your Samsung TV"
-msgstr "Ühenda oma Samsungi teleriga"
+msgid "Ready"
+msgstr "Valmis"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 132
+# File: usr/share/jellytizen/pages/welcome.py, line: 142
 #: NEEDS WORK
-msgid "Docker is installed and running"
-msgstr "Docker on paigaldatud ja töötab"
-# 
-# File: usr/share/jellytizen/pages/welcome.py, line: 141
-#: NEEDS WORK
-msgid "Docker is installed but not running"
-msgstr "Docker on paigaldatud, kuid ei tööta."
+msgid "Not running"
+msgstr "Ei tööta"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 144
 #: NEEDS WORK
-msgid "Start Docker"
-msgstr "Käivita Docker"
+msgid "Start"
+msgstr "Alusta"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 154
+# File: usr/share/jellytizen/pages/welcome.py, line: 153
 #: NEEDS WORK
-msgid "Docker is not installed"
-msgstr "Dockerit ei ole installitud"
+msgid "Not installed"
+msgstr "Ei ole installitud"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 195
+# File: usr/share/jellytizen/pages/welcome.py, line: 193
 #: NEEDS WORK
-msgid "Docker is required for building Tizen applications. Please install Docker for your distribution:"
-msgstr "Docker on vajalik Tizeni rakenduste ehitamiseks. Palun installige Docker oma jaotusele:"
+msgid "Select your distribution:"
+msgstr "Vali oma jaotust:"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 199
 #: NEEDS WORK
@@ -1207,16 +937,10 @@ msgstr "Debian/Ubuntu"
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
+# File: usr/share/jellytizen/app.py, line: 84
 #: NEEDS WORK
-msgid "Error"
-msgstr "Viga"
-# 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
-#: NEEDS WORK
-#, python-brace-format
-msgid "Failed to install Docker: {error}"
-msgstr "Dockerit ei õnnestunud installida: {error}"
+msgid "Go Back"
+msgstr "Mine tagasi"
 # 
 # File: usr/share/jellytizen/app.py, line: 106
 #: NEEDS WORK

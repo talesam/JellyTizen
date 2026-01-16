@@ -53,118 +53,42 @@ msgstr "Na inštaláciu aplikácií na televízoroch Samsung sú potrebné certi
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 55
 #: NEEDS WORK
-msgid "📋 What are Developer Certificates?"
-msgstr "📋 Čo sú vývojárske certifikáty?"
+msgid "Certificate Mode"
+msgstr "Režim certifikátu"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 56
+# File: usr/share/jellytizen/pages/certificates.py, line: 60
 #: NEEDS WORK
-msgid "Samsung requires signed apps. You need certificates from Tizen Studio."
-msgstr "Samsung vyžaduje podpísané aplikácie. Potrebujete certifikáty z Tizen Studio."
+msgid "Use Built-in Certificates"
+msgstr "Použiť vstavané certifikáty"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 61
 #: NEEDS WORK
-msgid "Author Certificate (author.p12)"
-msgstr "Certifikát autora (author.p12)"
+msgid "Recommended - No Tizen Studio required"
+msgstr "Odporúčané - Nie je potrebný Tizen Studio"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 62
+# File: usr/share/jellytizen/pages/certificates.py, line: 73
 #: NEEDS WORK
-msgid "Your personal certificate that identifies you as the app developer"
-msgstr "Váš osobný certifikát, ktorý vás identifikuje ako vývojára aplikácie"
+msgid "How it works"
+msgstr "Ako to funguje"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 69
+# File: usr/share/jellytizen/pages/certificates.py, line: 74
 #: NEEDS WORK
-msgid "Distributor Certificate (distributor.p12)"
-msgstr "Certifikát distribútora (distributor.p12)"
+msgid ""
+"The Docker container includes pre-configured certificates. You can install Jellyfin immediately "
+"without any setup."
+msgstr ""
+"Docker kontajner obsahuje predkonfigurované certifikáty. Môžete nainštalovať Jellyfin okamžite bez "
+"akéhokoľvek nastavenia."
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 70
+# File: usr/share/jellytizen/pages/certificates.py, line: 83
 #: NEEDS WORK
-msgid "Samsung's certificate that allows app installation on devices"
-msgstr "Certifikát Samsung, ktorý umožňuje inštaláciu aplikácií na zariadeniach"
+msgid "Custom Certificates (Advanced)"
+msgstr "Vlastné certifikáty (Pokročilé)"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 79
+# File: usr/share/jellytizen/pages/certificates.py, line: 84
 #: NEEDS WORK
-msgid "🔧 How to Get Certificates"
-msgstr "🔧 Ako získať certifikáty"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 80
-#: NEEDS WORK
-msgid "Follow these steps to create your certificates"
-msgstr "Postupujte podľa týchto krokov na vytvorenie svojich certifikátov."
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 85
-#: NEEDS WORK
-msgid "1. Install Tizen Studio"
-msgstr "1. Nainštalujte Tizen Studio"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 86
-#: NEEDS WORK
-msgid "Download from Samsung Developer website"
-msgstr "Stiahnite si z webovej stránky vývojára Samsung"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 90
-#: NEEDS WORK
-msgid "Download"
-msgstr "Stiahnuť"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 99
-#: NEEDS WORK
-msgid "2. Open Certificate Manager"
-msgstr "2. Otvorte správcu certifikátov"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 100
-#: NEEDS WORK
-msgid "In Tizen Studio: Tools → Certificate Manager"
-msgstr "V Tizen Studio: Nástroje → Správca certifikátov"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 107
-#: NEEDS WORK
-msgid "3. Create Samsung Certificate"
-msgstr "3. Vytvoriť certifikát Samsung"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 108
-#: NEEDS WORK
-msgid "Click '+' → Samsung Certificate → TV → Create new profile"
-msgstr "Kliknite '+' → Certifikát Samsung → TV → Vytvoriť nový profil"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 115
-#: NEEDS WORK
-msgid "4. Sign in with Samsung Account"
-msgstr "4. Prihláste sa pomocou účtu Samsung"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 116
-#: NEEDS WORK
-msgid "Use the same account registered on your TV"
-msgstr "Použite rovnaký účet zaregistrovaný na vašej televízii."
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 123
-#: NEEDS WORK
-msgid "5. Add Your TV's DUID"
-msgstr "5. Pridajte DUID vášho televízora"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 124
-#: NEEDS WORK
-msgid "The DUID is shown in the TV's Developer Mode settings"
-msgstr "DUID sa zobrazuje v nastaveniach režimu vývojára televízora"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 131
-#: NEEDS WORK
-msgid "6. Export Certificates"
-msgstr "6. Exportovať certifikáty"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 132
-#: NEEDS WORK
-msgid "Certificates are saved in ~/SamsungCertificate/<profile_name>/"
-msgstr "Certifikáty sú uložené v ~/SamsungCertificate/<profile_name>/"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 141
-#: NEEDS WORK
-msgid "📁 Upload Your Certificates"
-msgstr "📁 Nahrajte svoje certifikáty"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 142
-#: NEEDS WORK
-msgid "Select the .p12 certificate files from your computer"
-msgstr "Vyberte súbory certifikátov .p12 zo svojho počítača"
+msgid "Only needed if you want to use your own certificates"
+msgstr "Potrebné iba v prípade, že chcete použiť svoje vlastné certifikáty."
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 43
 #: NEEDS WORK
@@ -192,55 +116,25 @@ msgstr "Certifikát distribútora"
 msgid "Select distributor.p12 file"
 msgstr "Vyberte súbor distributor.p12"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 177
+# File: usr/share/jellytizen/pages/certificates.py, line: 115
 #: NEEDS WORK
-msgid "🔐 Certificate Password"
-msgstr "🔐 Heslo certifikátu"
+msgid "Certificate Password"
+msgstr "Heslo certifikátu"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 178
+# File: usr/share/jellytizen/pages/certificates.py, line: 122
 #: NEEDS WORK
-msgid "Enter the password you chose when creating the certificates"
-msgstr "Zadajte heslo, ktoré ste si vybrali pri vytváraní certifikátov."
+msgid "Need help creating certificates?"
+msgstr "Potrebujete pomoc pri vytváraní certifikátov?"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 183
+# File: usr/share/jellytizen/pages/certificates.py, line: 123
 #: NEEDS WORK
-msgid "Password"
-msgstr "Heslo"
+msgid "View tutorial on Samsung Developer website"
+msgstr "Zobraziť tutoriál na webovej stránke Samsung Developer"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 192
+# File: usr/share/jellytizen/pages/certificates.py, line: 127
 #: NEEDS WORK
-msgid "👤 Developer Profile"
-msgstr "👤 Profil vývojára"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 193
-#: NEEDS WORK
-msgid "A name to identify this certificate configuration"
-msgstr "Názov na identifikáciu tejto konfigurácie certifikátu"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 86
-#: NEEDS WORK
-msgid "Profile Name"
-msgstr "Názov profilu"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 208
-#: NEEDS WORK
-msgid "✅ Validate and Continue"
-msgstr "✅ Overiť a pokračovať"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 98
-#: NEEDS WORK
-msgid "Validate Certificates"
-msgstr "Overiť certifikáty"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 214
-#: NEEDS WORK
-msgid "Check if certificates are valid before continuing"
-msgstr "Skontrolujte, či sú certifikáty platné pred pokračovaním"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 101
-#: NEEDS WORK
-msgid "Validate"
-msgstr "Overiť"
+msgid "View Guide"
+msgstr "Zobraziť sprievodcu"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 114
 #: NEEDS WORK
@@ -263,6 +157,11 @@ msgstr "Pokračujte v inštalácii Jellyfin na vašej televízii"
 msgid "Continue"
 msgstr "Pokračovať"
 # 
+# File: usr/share/jellytizen/pages/certificates.py, line: 171
+#: NEEDS WORK
+msgid "Ready to install with built-in certificates"
+msgstr "Pripravené na inštaláciu s predinštalovanými certifikátmi"
+# 
 # File: usr/share/jellytizen/pages/certificates.py, line: 132
 #: NEEDS WORK
 #, python-brace-format
@@ -274,14 +173,14 @@ msgstr "Vyberte {cert_type} certifikát"
 msgid "P12 Certificate Files"
 msgstr "Súbory certifikátu P12"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 276
-# File: usr/share/jellytizen/pages/certificates.py, line: 279
-# File: usr/share/jellytizen/pages/certificates.py, line: 299
-# File: usr/share/jellytizen/pages/certificates.py, line: 306
+# File: usr/share/jellytizen/pages/certificates.py, line: 212
+# File: usr/share/jellytizen/pages/certificates.py, line: 215
+# File: usr/share/jellytizen/pages/certificates.py, line: 231
+# File: usr/share/jellytizen/pages/certificates.py, line: 238
 #: NEEDS WORK
 #, python-brace-format
-msgid "✅ Selected: {filename}"
-msgstr "✅ Vybrané: {filename}"
+msgid "✅ {filename}"
+msgstr "✅ {filename}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 163
 # File: usr/share/jellytizen/pages/certificates.py, line: 166
@@ -291,10 +190,10 @@ msgstr "✅ Vybrané: {filename}"
 msgid "Change"
 msgstr "Zmeniť"
 # 
-# File: usr/share/jellytizen/pages/certificates.py, line: 322
+# File: usr/share/jellytizen/pages/certificates.py, line: 251
 #: NEEDS WORK
-msgid "All fields filled - click to validate"
-msgstr "Všetky polia sú vyplnené - kliknite na potvrdenie"
+msgid "Ready to install with custom certificates"
+msgstr "Pripravené na inštaláciu s vlastnými certifikátmi"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 326
 #: NEEDS WORK
@@ -316,28 +215,6 @@ msgstr "heslo"
 #, python-brace-format
 msgid "Missing: {items}"
 msgstr "Chýbajúce: {items}"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 346
-#: NEEDS WORK
-msgid "✅ Certificates are valid!"
-msgstr "✅ Certifikáty sú platné!"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 217
-#: NEEDS WORK
-msgid "Certificates validated successfully!"
-msgstr "Certifikáty boli úspešne overené!"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 349
-#: NEEDS WORK
-#, python-brace-format
-msgid "❌ Validation failed: {message}"
-msgstr "❌ Overenie zlyhalo: {message}"
-# 
-# File: usr/share/jellytizen/pages/certificates.py, line: 219
-#: NEEDS WORK
-#, python-brace-format
-msgid "Certificate validation failed: {message}"
-msgstr "Overenie certifikátu zlyhalo: {message}"
 # 
 # File: usr/share/jellytizen/pages/certificates.py, line: 231
 #: NEEDS WORK
@@ -467,16 +344,6 @@ msgstr "Režim ladenia"
 msgid "Enable debug mode for development"
 msgstr "Povoliť režim ladenia pre vývoj"
 # 
-# File: usr/share/jellytizen/pages/preferences.py, line: 132
-#: NEEDS WORK
-msgid "Allow Custom Scripts"
-msgstr "Povoliť vlastné skripty"
-# 
-# File: usr/share/jellytizen/pages/preferences.py, line: 133
-#: NEEDS WORK
-msgid "Allow execution of custom installation scripts"
-msgstr "Povoliť vykonávanie vlastných inštalačných skriptov"
-# 
 # File: usr/share/jellytizen/pages/preferences.py, line: 140
 # File: usr/share/jellytizen/pages/preferences.py, line: 148
 # File: usr/share/jellytizen/pages/preferences.py, line: 172
@@ -522,15 +389,20 @@ msgstr "Nastavenie zariadenia"
 msgid "Connect to your Samsung Tizen TV or projector"
 msgstr "Pripojte sa k svojmu televízoru Samsung Tizen alebo projektoru"
 # 
+# File: usr/share/jellytizen/pages/device.py, line: 58
+#: NEEDS WORK
+msgid "Setup Instructions"
+msgstr "Inštalácia"
+# 
 # File: usr/share/jellytizen/pages/device.py, line: 63
 #: NEEDS WORK
-msgid "Required Step: Enable Developer Mode"
-msgstr "Povinný krok: Aktivujte režim vývojára"
+msgid "Enable Developer Mode on TV"
+msgstr "Povoliť režim vývojára na TV"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 70
+# File: usr/share/jellytizen/pages/device.py, line: 64
 #: NEEDS WORK
-msgid "You must complete these steps on your Samsung TV before connecting"
-msgstr "Pred pripojením musíte na svojom televízore Samsung dokončiť tieto kroky."
+msgid "Click to view step-by-step instructions"
+msgstr "Kliknite pre zobrazenie podrobných pokynov"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 75
 #: NEEDS WORK
@@ -547,51 +419,51 @@ msgstr "Na televízore prejdite do sekcie 'Aplikácie'"
 msgid "2. Go to App Settings"
 msgstr "2. Prejdite na nastavenia aplikácie"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 84
+# File: usr/share/jellytizen/pages/device.py, line: 79
 #: NEEDS WORK
-msgid "Scroll to the end of the Apps list and select 'App Settings'"
-msgstr "Prejdite na koniec zoznamu aplikácií a vyberte 'Nastavenia aplikácie'"
+msgid "Scroll to the end and select 'App Settings'"
+msgstr "Prejdite na koniec a vyberte 'Nastavenia aplikácie'"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 91
 #: NEEDS WORK
 msgid "3. Press '123' Button"
 msgstr "3. Stlačte tlačidlo '123'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 92
+# File: usr/share/jellytizen/pages/device.py, line: 85
 #: NEEDS WORK
-msgid "Inside App Settings, press the '123' button on your remote control"
-msgstr "V nastaveniach aplikácie stlačte tlačidlo '123' na diaľkovom ovládači."
+msgid "Press the '123' button on your remote"
+msgstr "Stlačte tlačidlo '123' na vašej diaľkovej ovládačke"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 99
+# File: usr/share/jellytizen/pages/device.py, line: 90
 #: NEEDS WORK
-msgid "4. Enter Secret Code"
-msgstr "4. Zadajte tajný kód"
+msgid "4. Enter Code '12345'"
+msgstr "4. Zadajte kód '12345'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 100
+# File: usr/share/jellytizen/pages/device.py, line: 91
 #: NEEDS WORK
-msgid "Type '12345' using the remote - Developer Mode menu will appear"
-msgstr "Zadajte '12345' pomocou diaľkového ovládača - Zobrazí sa ponuka režimu vývojára"
+msgid "Developer Mode menu will appear"
+msgstr "Zobrazí sa ponuka režimu vývojára"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 107
 #: NEEDS WORK
 msgid "5. Enable Developer Mode"
 msgstr "5. Povoliť režim vývojára"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 108
+# File: usr/share/jellytizen/pages/device.py, line: 97
 #: NEEDS WORK
-msgid "Toggle 'Developer Mode' to 'On' in the menu"
-msgstr "Prepnúť 'Režim vývojára' na 'Zapnuté' v ponuke"
+msgid "Toggle 'Developer Mode' to 'On'"
+msgstr "Prepnúť 'Vývojársky režim' na 'Zapnuté'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 116
-#: NEEDS WORK
-msgid "6. Enter Host PC IP"
-msgstr "6. Zadajte IP adresu hostiteľského počítača"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 361
+# File: usr/share/jellytizen/pages/device.py, line: 103
 #: NEEDS WORK
 #, python-brace-format
-msgid "Enter your computer's IP address: {ip}"
-msgstr "Zadajte IP adresu vášho počítača: {ip}"
+msgid "6. Enter This IP: {ip}"
+msgstr "6. Zadajte túto IP: {ip}"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 104
+#: NEEDS WORK
+msgid "Your computer's IP address"
+msgstr "IP adresa vášho počítača"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 403
 # File: usr/share/jellytizen/pages/device.py, line: 430
@@ -604,35 +476,10 @@ msgstr "Kopírovať IP"
 msgid "7. Restart TV"
 msgstr "7. Reštartovať televízor"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 132
+# File: usr/share/jellytizen/pages/device.py, line: 116
 #: NEEDS WORK
-msgid "Turn off and on your TV to apply Developer Mode settings"
-msgstr "Vypnite a zapnite svoj televízor, aby ste použili nastavenia režimu vývojára."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 368
-#: NEEDS WORK
-msgid "Important Notes"
-msgstr "Dôležité poznámky"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 373
-#: NEEDS WORK
-msgid "Right-to-Left Languages"
-msgstr "Jazyky sprava do lava"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 374
-#: NEEDS WORK
-msgid "If TV uses Arabic/Hebrew, enter the IP address backwards"
-msgstr "Ak TV používa arabčinu/hebrejčinu, zadajte IP adresu pozpätne."
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 389
-#: NEEDS WORK
-msgid "Network Connection"
-msgstr "Sieťové pripojenie"
-# 
-# File: usr/share/jellytizen/pages/device.py, line: 390
-#: NEEDS WORK
-msgid "Ensure TV and computer are on the same network"
-msgstr "Uistite sa, že televízor a počítač sú pripojené k rovnakej sieti."
+msgid "Turn off and on your TV"
+msgstr "Vypnite a zapnite svoj televízor"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 162
 #: NEEDS WORK
@@ -815,35 +662,42 @@ msgstr "Pripojenie zlyhalo: {message}"
 msgid "Certificates"
 msgstr "Certifikáty"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 37
+# File: usr/share/jellytizen/pages/install.py, line: 53
+# File: usr/share/jellytizen/pages/install.py, line: 116
+# File: usr/share/jellytizen/pages/install.py, line: 385
 #: NEEDS WORK
-msgid "Jellyfin Installation"
-msgstr "Inštalácia Jellyfin"
+msgid "Install Jellyfin"
+msgstr "Nainštalovať Jellyfin"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 38
+# File: usr/share/jellytizen/pages/install.py, line: 54
 #: NEEDS WORK
-msgid "Installing Jellyfin on your Samsung Tizen device"
-msgstr "Inštalácia Jellyfin na vašom zariadení Samsung Tizen"
+msgid "One-click installation to your Samsung TV"
+msgstr "Inštalácia jedným kliknutím na váš Samsung TV"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 59
+#: NEEDS WORK
+msgid "Target Device"
+msgstr "Cieľové zariadenie"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 60
+#: NEEDS WORK
+msgid "Loading..."
+msgstr "Načítanie..."
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 43
 #: NEEDS WORK
 msgid "Installation Progress"
 msgstr "Pokrok inštalácie"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 48
+# File: usr/share/jellytizen/pages/install.py, line: 74
 #: NEEDS WORK
-msgid "Overall Progress"
-msgstr "Celkový pokrok"
+msgid "Ready to install"
+msgstr "Pripravené na inštaláciu"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 49
+# File: usr/share/jellytizen/pages/install.py, line: 75
 #: NEEDS WORK
-msgid "Ready to start installation"
-msgstr "Pripravené na začatie inštalácie"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 61
-#: NEEDS WORK
-msgid "Current Step"
-msgstr "Aktuálny krok"
+msgid "Click the button below to start"
+msgstr "Kliknite na tlačidlo nižšie pre začatie"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 62
 #: NEEDS WORK
@@ -855,255 +709,145 @@ msgstr "Čaká sa na spustenie..."
 msgid "Installation Log"
 msgstr "Inštalačný protokol"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 68
+# File: usr/share/jellytizen/pages/install.py, line: 139
 #: NEEDS WORK
-msgid "Detailed output from the installation process"
-msgstr "Podrobný výstup z inštalačného procesu"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 94
-# File: usr/share/jellytizen/pages/install.py, line: 97
-# File: usr/share/jellytizen/pages/install.py, line: 336
-#: NEEDS WORK
-msgid "Start Installation"
-msgstr "Spustiť inštaláciu"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 95
-#: NEEDS WORK
-msgid "Begin the Jellyfin installation process"
-msgstr "Začnite proces inštalácie Jellyfin"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 107
-#: NEEDS WORK
-msgid "Cancel Installation"
-msgstr "Zrušiť inštaláciu"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 108
-#: NEEDS WORK
-msgid "Stop the current installation process"
-msgstr "Zastavte aktuálny proces inštalácie"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 121
-#: NEEDS WORK
-msgid "Installation Complete"
-msgstr "Inštalácia dokončená"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 126
-#: NEEDS WORK
-msgid "Installation Successful!"
-msgstr "Inštalácia bola úspešná!"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 127
-#: NEEDS WORK
-msgid "Jellyfin has been installed on your device"
-msgstr "Jellyfin bol nainštalovaný na vašom zariadení"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 129
-#: NEEDS WORK
-msgid "Finish"
-msgstr "Dokončiť"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 159
-#: NEEDS WORK
-msgid "Preparing Docker environment"
-msgstr "Pripravujem prostredie Docker"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 160
-#: NEEDS WORK
-msgid "Downloading Tizen SDK"
-msgstr "Sťahovanie Tizen SDK"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 161
-#: NEEDS WORK
-msgid "Setting up certificates"
-msgstr "Nastavenie certifikátov"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 162
-#: NEEDS WORK
-msgid "Building Jellyfin app"
-msgstr "Súbor Jellyfin"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 163
-#: NEEDS WORK
-msgid "Connecting to device"
-msgstr "Pripojenie k zariadeniu"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 164
-#: NEEDS WORK
-msgid "Installing application"
-msgstr "Inštalácia aplikácie"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 196
-#: NEEDS WORK
-#, python-brace-format
-msgid "Step {current} of {total}"
-msgstr "Krok {current} z {total}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 204
-#: NEEDS WORK
-msgid "Checking Docker status..."
-msgstr "Kontrola stavu Dockeru..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 208
-#: NEEDS WORK
-msgid "Docker environment ready"
-msgstr "Docker prostredie pripravené"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 210
-#: NEEDS WORK
-#, python-brace-format
-msgid "Docker error: {message}"
-msgstr "Docker chyba: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 217
-#: NEEDS WORK
-msgid "Downloading Tizen SDK..."
-msgstr "Sťahovanie Tizen SDK..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 221
-#: NEEDS WORK
-msgid "Tizen SDK ready"
-msgstr "Tizen SDK pripravený"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 223
-#: NEEDS WORK
-#, python-brace-format
-msgid "SDK error: {message}"
-msgstr "Chyba SDK: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 230
-#: NEEDS WORK
-msgid "Setting up certificates..."
-msgstr "Nastavovanie certifikátov..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 238
-#: NEEDS WORK
-msgid "Certificates configured"
-msgstr "Nastavené certifikáty"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 240
-#: NEEDS WORK
-#, python-brace-format
-msgid "Certificate error: {message}"
-msgstr "Chyba certifikátu: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 249
-#: NEEDS WORK
-msgid "Building Jellyfin application..."
-msgstr "Súbor Jellyfin sa vytvára..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 253
-#: NEEDS WORK
-msgid "Application built successfully"
-msgstr "Aplikácia bola úspešne zostavená"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 255
-#: NEEDS WORK
-#, python-brace-format
-msgid "Build error: {message}"
-msgstr "Chyba pri zostavovaní: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 262
-#: NEEDS WORK
-msgid "Connecting to device..."
-msgstr "Pripojenie k zariadeniu..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 269
-#: NEEDS WORK
-msgid "Device connected successfully"
-msgstr "Zariadenie bolo úspešne pripojené"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 271
-#: NEEDS WORK
-#, python-brace-format
-msgid "Connection error: {message}"
-msgstr "Chyba pripojenia: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 278
-#: NEEDS WORK
-msgid "Installing Jellyfin on device..."
-msgstr "Inštalácia Jellyfin na zariadení..."
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 282
-#: NEEDS WORK
-msgid "Installation completed successfully!"
-msgstr "Inštalácia bola úspešne dokončená!"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 284
-#: NEEDS WORK
-#, python-brace-format
-msgid "Installation error: {message}"
-msgstr "Chyba inštalácie: {message}"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 298
-#: NEEDS WORK
-msgid "Complete"
-msgstr "Dokončiť"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 299
-#: NEEDS WORK
-msgid "Installation completed successfully"
-msgstr "Inštalácia bola úspešne dokončená"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 300
-#: NEEDS WORK
-msgid "All steps completed"
-msgstr "Všetky kroky boli dokončené"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 302
-#: NEEDS WORK
-msgid "Install Again"
-msgstr "Nainštalovať znova"
+msgid "Click to view detailed output"
+msgstr "Kliknite pre zobrazenie podrobného výstupu"
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 307
 #: NEEDS WORK
 msgid "Installation Complete!"
 msgstr "Inštalácia dokončená!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 308
+# File: usr/share/jellytizen/pages/install.py, line: 174
 #: NEEDS WORK
-msgid "Jellyfin has been successfully installed on your device."
-msgstr "Jellyfin bol úspešne nainštalovaný na vašom zariadení."
+msgid "Jellyfin is ready!"
+msgstr "Jellyfin je pripravený!"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 309
+# File: usr/share/jellytizen/pages/install.py, line: 175
 #: NEEDS WORK
-msgid "You can now launch Jellyfin from your TV's app menu."
-msgstr "Teraz môžete spustiť Jellyfin z ponuky aplikácií vášho televízora."
+msgid "Open the Jellyfin app on your TV"
+msgstr "Otvor aplikáciu Jellyfin na vašej televízii"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 315
+# File: usr/share/jellytizen/pages/install.py, line: 179
 #: NEEDS WORK
-msgid "Installation failed"
-msgstr "Inštalácia zlyhala"
+msgid "Done"
+msgstr "Hotovo"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 316
-# File: usr/share/jellytizen/pages/install.py, line: 323
+# File: usr/share/jellytizen/pages/install.py, line: 197
 #: NEEDS WORK
-#, python-brace-format
-msgid "Error: {message}"
-msgstr "Chyba: {message}"
+msgid "No device selected - please go back"
+msgstr "Žiadne zariadenie nie je vybrané - prosím, vráťte sa späť"
 # 
-# File: usr/share/jellytizen/pages/install.py, line: 318
+# File: usr/share/jellytizen/pages/install.py, line: 206
 #: NEEDS WORK
-msgid "Retry Installation"
-msgstr "Opakovať inštaláciu"
+msgid "No TV configured. Please go back and select a device."
+msgstr "Nie je nakonfigurovaná žiadna TV. Prosím, vráťte sa späť a vyberte zariadenie."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 231
+#: NEEDS WORK
+msgid "Starting Installation"
+msgstr "Začiatok inštalácie"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 236
+#: NEEDS WORK
+msgid "Downloading container..."
+msgstr "Sťahovanie kontajnera..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 237
+#: NEEDS WORK
+msgid "Pulling Docker image..."
+msgstr "Načítanie Docker obrazu..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 250
+#: NEEDS WORK
+msgid "Container ready!"
+msgstr "Kontajner je pripravený!"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 254
+#: NEEDS WORK
+msgid "Installing to TV..."
+msgstr "Inštalácia na TV..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 255
+#: NEEDS WORK
+msgid "Connecting and installing..."
+msgstr "Pripojenie a inštalácia..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 256
+#: NEEDS WORK
+msgid "This may take a few minutes..."
+msgstr "Toto môže trvať niekoľko minút..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 275
+#: NEEDS WORK
+msgid "Installing..."
+msgstr "Inštalácia..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 277
+#: NEEDS WORK
+msgid "Downloading app..."
+msgstr "Sťahovanie aplikácie..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 279
+#: NEEDS WORK
+msgid "Transferring..."
+msgstr "Prenosím..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 281
+#: NEEDS WORK
+msgid "Connecting to TV..."
+msgstr "Pripojenie k televízoru..."
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 283
+#: NEEDS WORK
+msgid "Finishing..."
+msgstr "Dokončovanie..."
+# 
+# File: usr/share/jellytizen/pages/welcome.py, line: 216
+#: NEEDS WORK
+msgid "Error"
+msgstr "Chyba"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 339
+#: NEEDS WORK
+msgid "Jellyfin is now on your TV"
+msgstr "Jellyfin je teraz na vašej TV"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 341
+#: NEEDS WORK
+msgid "Reinstall"
+msgstr "Preinštalovať"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 348
+#: NEEDS WORK
+msgid "Find Jellyfin in your TV's app list."
+msgstr "Nájdite Jellyfin v zozname aplikácií na vašej televízii."
 # 
 # File: usr/share/jellytizen/pages/install.py, line: 322
 #: NEEDS WORK
 msgid "Installation Failed"
 msgstr "Inštalácia zlyhala"
 # 
+# File: usr/share/jellytizen/pages/install.py, line: 362
+#: NEEDS WORK
+msgid "Retry"
+msgstr "Opakovať"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 379
+# File: usr/share/jellytizen/pages/install.py, line: 383
+#: NEEDS WORK
+msgid "Cancelled"
+msgstr "Zrušené"
+# 
+# File: usr/share/jellytizen/pages/install.py, line: 380
+#: NEEDS WORK
+msgid "Installation was cancelled"
+msgstr "Inštalácia bola zrušená"
+# 
 # File: usr/share/jellytizen/pages/install.py, line: 333
 #: NEEDS WORK
 msgid "Installation cancelled"
-msgstr "Inštalácia zrušená"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 334
-#: NEEDS WORK
-msgid "Cancelled by user"
-msgstr "Zrušené používateľom"
-# 
-# File: usr/share/jellytizen/pages/install.py, line: 340
-#: NEEDS WORK
-msgid "Installation Cancelled"
 msgstr "Inštalácia zrušená"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 60
@@ -1111,34 +855,25 @@ msgstr "Inštalácia zrušená"
 msgid "JellyTizen Installer"
 msgstr "JellyTizen Inštalátor"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 61
+# File: usr/share/jellytizen/pages/welcome.py, line: 63
 #: NEEDS WORK
-msgid ""
-"This application will help you install Jellyfin media server on your Samsung Smart TV or projector "
-"running Tizen OS."
-msgstr ""
-"Táto aplikácia vám pomôže nainštalovať server médií Jellyfin na vašom televízore Samsung Smart TV "
-"alebo projektore s operačným systémom Tizen."
+msgid "Install Jellyfin on your Samsung Smart TV or projector"
+msgstr "Nainštalujte Jellyfin na svoj Samsung Smart TV alebo projektor."
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 68
 #: NEEDS WORK
 msgid "System Requirements"
 msgstr "Systémové požiadavky"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 69
-#: NEEDS WORK
-msgid "Checking required dependencies..."
-msgstr "Kontrola požadovaných závislostí..."
-# 
 # File: usr/share/jellytizen/pages/welcome.py, line: 74
 #: NEEDS WORK
 msgid "Docker Engine"
 msgstr "Docker Engine"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 75
+# File: usr/share/jellytizen/pages/welcome.py, line: 79
 #: NEEDS WORK
-msgid "Required for building Tizen applications"
-msgstr "Povinné pre vytváranie aplikácií Tizen"
+msgid "Checking..."
+msgstr "Kontrola..."
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 85
 # File: usr/share/jellytizen/pages/welcome.py, line: 88
@@ -1152,45 +887,40 @@ msgstr "Nainštalovať Docker"
 msgid "Docker is required but not installed"
 msgstr "Docker je potrebný, ale nie je nainštalovaný."
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 97
+# File: usr/share/jellytizen/pages/welcome.py, line: 92
 #: NEEDS WORK
-msgid "Get Started"
-msgstr "Začať"
+msgid "Install"
+msgstr "Inštalovať"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 102
+# File: usr/share/jellytizen/pages/welcome.py, line: 106
 #: NEEDS WORK
-msgid "Continue to Device Setup"
-msgstr "Pokračovať na nastavenie zariadenia"
+msgid "Configure your Samsung TV"
+msgstr "Nakonfigurujte svoj Samsung TV"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 103
+# File: usr/share/jellytizen/pages/welcome.py, line: 135
 #: NEEDS WORK
-msgid "Connect to your Samsung TV"
-msgstr "Pripojiť sa k vášmu Samsung TV"
+msgid "Ready"
+msgstr "Pripravený"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 132
+# File: usr/share/jellytizen/pages/welcome.py, line: 142
 #: NEEDS WORK
-msgid "Docker is installed and running"
-msgstr "Docker je nainštalovaný a beží"
-# 
-# File: usr/share/jellytizen/pages/welcome.py, line: 141
-#: NEEDS WORK
-msgid "Docker is installed but not running"
-msgstr "Docker je nainštalovaný, ale nebeží."
+msgid "Not running"
+msgstr "Nespustené"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 144
 #: NEEDS WORK
-msgid "Start Docker"
-msgstr "Spustiť Docker"
+msgid "Start"
+msgstr "Štart"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 154
+# File: usr/share/jellytizen/pages/welcome.py, line: 153
 #: NEEDS WORK
-msgid "Docker is not installed"
-msgstr "Docker nie je nainštalovaný"
+msgid "Not installed"
+msgstr "Nainštalované"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 195
+# File: usr/share/jellytizen/pages/welcome.py, line: 193
 #: NEEDS WORK
-msgid "Docker is required for building Tizen applications. Please install Docker for your distribution:"
-msgstr "Docker je potrebný na vytváranie aplikácií Tizen. Prosím, nainštalujte Docker pre vašu distribúciu:"
+msgid "Select your distribution:"
+msgstr "Vyberte svoju distribúciu:"
 # 
 # File: usr/share/jellytizen/pages/welcome.py, line: 199
 #: NEEDS WORK
@@ -1207,16 +937,10 @@ msgstr "Debian/Ubuntu"
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
 # 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
+# File: usr/share/jellytizen/app.py, line: 84
 #: NEEDS WORK
-msgid "Error"
-msgstr "Chyba"
-# 
-# File: usr/share/jellytizen/pages/welcome.py, line: 216
-#: NEEDS WORK
-#, python-brace-format
-msgid "Failed to install Docker: {error}"
-msgstr "Nepodarilo sa nainštalovať Docker: {error}"
+msgid "Go Back"
+msgstr "Späť"
 # 
 # File: usr/share/jellytizen/app.py, line: 106
 #: NEEDS WORK
