@@ -92,10 +92,15 @@ jellytizen
 
 ### TV Developer Mode Setup
 
-1. Go to your TV's Settings > Support > Device Care
-2. Navigate to Self Diagnosis > Smart Hub Reset
-3. After reset, during setup, enter PIN: `12345` when prompted
-4. Enable Developer Mode in Settings > General > External Device Manager
+> **Note:** This is the updated method for Samsung TVs (2024+). The old Smart Hub method may still work on older models.
+
+1. Go to the **Apps** section on your TV
+2. Scroll to the end of the Apps list and select **App Settings**
+3. Inside App Settings, press the **123** button on your remote control
+4. Type **12345** - the Developer Mode menu will appear
+5. Toggle **Developer Mode** to **On**
+6. Enter your computer's IP address when prompted
+7. **Restart your TV** to apply Developer Mode settings
 
 ## Configuration
 

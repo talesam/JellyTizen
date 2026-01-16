@@ -70,6 +70,8 @@ class PreferencesPage(Adw.PreferencesDialog):
         port_range_entry = Gtk.Entry()
         port_range_entry.set_text(self.window.config_manager.get('network.port_range', '8000-8080'))
         port_range_entry.set_valign(Gtk.Align.CENTER)
+        port_range_entry.set_max_width_chars(12)
+        port_range_entry.set_width_chars(12)
         port_range_entry.connect("changed", lambda e: self.window.config_manager.set('network.port_range', e.get_text()))
         port_range_row.add_suffix(port_range_entry)
         

@@ -54,58 +54,85 @@ class DevicePage(Gtk.ScrolledWindow):
         # ============================================
         # DEVELOPER MODE INSTRUCTIONS (INLINE - MANDATORY STEP)
         # ============================================
+        
+        # Warning banner with icon
+        warning_box = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=8)
+        warning_box.set_margin_bottom(12)
+        warning_icon = Gtk.Image.new_from_icon_name("dialog-warning-symbolic")
+        warning_icon.add_css_class("warning")
+        warning_label = Gtk.Label(label=_("Required Step: Enable Developer Mode"))
+        warning_label.add_css_class("title-2")
+        warning_box.append(warning_icon)
+        warning_box.append(warning_label)
+        main_box.append(warning_box)
+        
         self.dev_instructions_group = Adw.PreferencesGroup()
-        self.dev_instructions_group.set_title(_("⚠️ Required Step: Enable Developer Mode"))
         self.dev_instructions_group.set_description(_("You must complete these steps on your Samsung TV before connecting"))
         main_box.append(self.dev_instructions_group)
 
         # Step 1
         step1 = Adw.ActionRow()
-        step1.set_title(_("1. Open Smart Hub"))
-        step1.set_subtitle(_("On the TV, open the 'Smart Hub'"))
-        step1_icon = Gtk.Image.new_from_icon_name("tv-symbolic")
+        step1.set_title(_("1. Open Apps"))
+        step1.set_subtitle(_("On the TV, go to the 'Apps' section"))
+        step1_icon = Gtk.Image.new_from_icon_name("view-app-grid-symbolic")
         step1.add_prefix(step1_icon)
         self.dev_instructions_group.add(step1)
 
         # Step 2
         step2 = Adw.ActionRow()
-        step2.set_title(_("2. Go to Apps Panel"))
-        step2.set_subtitle(_("Select the 'Apps' panel in Smart Hub"))
-        step2_icon = Gtk.Image.new_from_icon_name("view-app-grid-symbolic")
+        step2.set_title(_("2. Go to App Settings"))
+        step2.set_subtitle(_("Scroll to the end of the Apps list and select 'App Settings'"))
+        step2_icon = Gtk.Image.new_from_icon_name("emblem-system-symbolic")
         step2.add_prefix(step2_icon)
         self.dev_instructions_group.add(step2)
 
         # Step 3
         step3 = Adw.ActionRow()
-        step3.set_title(_("3. Enter Secret Code"))
-        step3.set_subtitle(_("Press '123' button (or long press Home) then type '12345' with on-screen keyboard"))
+        step3.set_title(_("3. Press '123' Button"))
+        step3.set_subtitle(_("Inside App Settings, press the '123' button on your remote control"))
         step3_icon = Gtk.Image.new_from_icon_name("input-keyboard-symbolic")
         step3.add_prefix(step3_icon)
         self.dev_instructions_group.add(step3)
 
         # Step 4
         step4 = Adw.ActionRow()
-        step4.set_title(_("4. Toggle Developer Mode"))
-        step4.set_subtitle(_("Toggle the 'Developer' button to 'On'"))
-        step4_icon = Gtk.Image.new_from_icon_name("preferences-other-symbolic")
+        step4.set_title(_("4. Enter Secret Code"))
+        step4.set_subtitle(_("Type '12345' using the remote - Developer Mode menu will appear"))
+        step4_icon = Gtk.Image.new_from_icon_name("dialog-password-symbolic")
         step4.add_prefix(step4_icon)
         self.dev_instructions_group.add(step4)
 
-        # Step 5 - With IP address
-        local_ip = self._get_local_ip()
+        # Step 5 - Toggle Developer Mode
         step5 = Adw.ActionRow()
-        step5.set_title(_("5. Enter Host PC IP"))
-        step5.set_subtitle(_("Enter your computer's IP address: {ip}").format(ip=local_ip))
-        step5_icon = Gtk.Image.new_from_icon_name("network-wired-symbolic")
+        step5.set_title(_("5. Enable Developer Mode"))
+        step5.set_subtitle(_("Toggle 'Developer Mode' to 'On' in the menu"))
+        step5_icon = Gtk.Image.new_from_icon_name("preferences-other-symbolic")
         step5.add_prefix(step5_icon)
+        self.dev_instructions_group.add(step5)
+
+        # Step 6 - With IP address
+        local_ip = self._get_local_ip()
+        step6 = Adw.ActionRow()
+        step6.set_title(_("6. Enter Host PC IP"))
+        step6.set_subtitle(_("Enter your computer's IP address: {ip}").format(ip=local_ip))
+        step6_icon = Gtk.Image.new_from_icon_name("network-wired-symbolic")
+        step6.add_prefix(step6_icon)
         
         # Copy IP button inline
         copy_button = Gtk.Button.new_with_label(_("Copy IP"))
         copy_button.set_valign(Gtk.Align.CENTER)
         copy_button.add_css_class("suggested-action")
         copy_button.connect("clicked", self._copy_ip_to_clipboard)
-        step5.add_suffix(copy_button)
-        self.dev_instructions_group.add(step5)
+        step6.add_suffix(copy_button)
+        self.dev_instructions_group.add(step6)
+
+        # Step 7 - Restart TV
+        step7 = Adw.ActionRow()
+        step7.set_title(_("7. Restart TV"))
+        step7.set_subtitle(_("Turn off and on your TV to apply Developer Mode settings"))
+        step7_icon = Gtk.Image.new_from_icon_name("system-reboot-symbolic")
+        step7.add_prefix(step7_icon)
+        self.dev_instructions_group.add(step7)
 
         # Important notes group
         notes_group = Adw.PreferencesGroup()

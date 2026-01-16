@@ -571,52 +571,60 @@ msgstr "Instruções Passo a Passo"
 msgid "These steps must be performed directly on your Samsung TV"
 msgstr "Esses passos devem ser realizados diretamente na sua TV Samsung."
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 328
+# File: usr/share/jellytizen/pages/device.py, line: 64
 #: NEEDS WORK
-msgid "1. Open Smart Hub"
-msgstr "1. Abrir Smart Hub"
+msgid "1. Open Apps"
+msgstr "1. Abrir Aplicativos"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 329
+# File: usr/share/jellytizen/pages/device.py, line: 65
 #: NEEDS WORK
-msgid "On the TV, open the 'Smart Hub'"
-msgstr "Na TV, abra o 'Smart Hub'"
+msgid "On the TV, go to the 'Apps' section"
+msgstr "Na TV, vá para a seção 'Aplicativos'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 336
+# File: usr/share/jellytizen/pages/device.py, line: 72
 #: NEEDS WORK
-msgid "2. Go to Apps Panel"
-msgstr "2. Vá para o Painel de Aplicativos"
+msgid "2. Go to App Settings"
+msgstr "2. Ir para Configurações de Apps"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 337
+# File: usr/share/jellytizen/pages/device.py, line: 73
 #: NEEDS WORK
-msgid "Select the 'Apps' panel in Smart Hub"
-msgstr "Selecione o painel 'Apps' no Smart Hub"
+msgid "Scroll to the end of the Apps list and select 'App Settings'"
+msgstr "Role até o final da lista de aplicativos e selecione 'Configurações de Apps'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 344
+# File: usr/share/jellytizen/pages/device.py, line: 80
 #: NEEDS WORK
-msgid "3. Enter Secret Code"
-msgstr "3. Digite o Código Secreto"
+msgid "3. Press '123' Button"
+msgstr "3. Pressione o Botão '123'"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 345
+# File: usr/share/jellytizen/pages/device.py, line: 81
 #: NEEDS WORK
-msgid "Press '123' button (or long press Home button) before typing '12345' with on-screen keyboard"
-msgstr ""
-"Pressione o botão '123' (ou pressione e segure o botão Início) antes de digitar '12345' com o "
-"teclado na tela."
+msgid "Inside App Settings, press the '123' button on your remote control"
+msgstr "Dentro de Configurações de Apps, pressione o botão '123' no controle remoto"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 352
+# File: usr/share/jellytizen/pages/device.py, line: 88
 #: NEEDS WORK
-msgid "4. Toggle Developer Mode"
-msgstr "4. Ativar Modo Desenvolvedor"
+msgid "4. Enter Secret Code"
+msgstr "4. Digite o Código Secreto"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 353
+# File: usr/share/jellytizen/pages/device.py, line: 89
 #: NEEDS WORK
-msgid "Toggle the 'Developer' button to 'On'"
-msgstr "Ativar o botão 'Desenvolvedor' para 'Ligado'"
+msgid "Type '12345' using the remote - Developer Mode menu will appear"
+msgstr "Digite '12345' usando o controle - O menu do Modo Desenvolvedor aparecerá"
 # 
-# File: usr/share/jellytizen/pages/device.py, line: 360
+# File: usr/share/jellytizen/pages/device.py, line: 96
 #: NEEDS WORK
-msgid "5. Enter Host PC IP"
-msgstr "5. Insira o IP do PC Host"
+msgid "5. Enable Developer Mode"
+msgstr "5. Ativar Modo Desenvolvedor"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 97
+#: NEEDS WORK
+msgid "Toggle 'Developer Mode' to 'On' in the menu"
+msgstr "Ative o 'Modo Desenvolvedor' para 'Ligado' no menu"
+# 
+# File: usr/share/jellytizen/pages/device.py, line: 105
+#: NEEDS WORK
+msgid "6. Enter Host PC IP"
+msgstr "6. Insira o IP do PC Host"
 # 
 # File: usr/share/jellytizen/pages/device.py, line: 361
 #: NEEDS WORK
