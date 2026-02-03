@@ -168,14 +168,14 @@ class WelcomePage(Gtk.Box):
         button.set_sensitive(False)
         spinner = Gtk.Spinner()
         spinner.start()
-        button.get_parent().add_suffix(spinner)
-        
+        self.docker_row.add_suffix(spinner)
+
         def on_docker_started(success):
             button.set_sensitive(True)
-            button.get_parent().remove(spinner)
+            self.docker_row.remove(spinner)
             if success:
                 self._check_docker_status()
-                
+
         self.docker_service.start_docker_async(on_docker_started)
         
     def _on_continue(self, button):

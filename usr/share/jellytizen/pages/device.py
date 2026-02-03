@@ -103,11 +103,11 @@ class DevicePage(Gtk.ScrolledWindow):
         step6.set_title(_("6. Enter This IP: {ip}").format(ip=local_ip))
         step6.set_subtitle(_("Your computer's IP address"))
         
-        copy_button = Gtk.Button.new_with_label(_("Copy IP"))
-        copy_button.set_valign(Gtk.Align.CENTER)
-        copy_button.add_css_class("suggested-action")
-        copy_button.connect("clicked", self._copy_ip_to_clipboard)
-        step6.add_suffix(copy_button)
+        self.copy_button = Gtk.Button.new_with_label(_("Copy IP"))
+        self.copy_button.set_valign(Gtk.Align.CENTER)
+        self.copy_button.add_css_class("suggested-action")
+        self.copy_button.connect("clicked", self._copy_ip_to_clipboard)
+        step6.add_suffix(self.copy_button)
         self.instructions_expander.add_row(step6)
 
         # Step 7
@@ -230,28 +230,28 @@ class DevicePage(Gtk.ScrolledWindow):
         ip = self._get_local_ip()
         clipboard = self.window.get_clipboard()
         clipboard.set(ip)
-        original_label = button.get_label()
-        button.set_label(_("Copied!"))
-        GLib.timeout_add(2000, lambda: button.set_label(original_label))
+        original_label = self.copy_button.get_label()
+        self.copy_button.set_label(_("Copied!"))
+        GLib.timeout_add(2000, lambda: self.copy_button.set_label(original_label))
         
     def _on_scan_network(self, button):
         """Scan network for Samsung devices."""
         # Disable button and show spinner
-        button.set_sensitive(False)
-        button.set_label(_("Scanning..."))
-        
+        self.scan_button.set_sensitive(False)
+        self.scan_button.set_label(_("Scanning..."))
+
         # Create and start spinner
         self.scan_spinner = Gtk.Spinner()
         self.scan_spinner.start()
         self.scan_row.add_suffix(self.scan_spinner)
-        
+
         def on_scan_complete(devices):
             # Re-enable button and remove spinner
-            button.set_sensitive(True)
-            button.set_label(_("Scan"))
+            self.scan_button.set_sensitive(True)
+            self.scan_button.set_label(_("Scan"))
             self.scan_row.remove(self.scan_spinner)
             self._update_devices_list(devices)
-            
+
         self.device_service.scan_network_async(on_scan_complete)
         
     def _update_devices_list(self, devices):
@@ -335,17 +335,17 @@ class DevicePage(Gtk.ScrolledWindow):
             return
 
         # Disable button and show spinner
-        button.set_sensitive(False)
-        button.set_label(_("Connecting..."))
-        
+        self.connect_button.set_sensitive(False)
+        self.connect_button.set_label(_("Connecting..."))
+
         self.connect_spinner = Gtk.Spinner()
         self.connect_spinner.start()
         self.connect_row.add_suffix(self.connect_spinner)
-        
+
         def on_connection_result(success, message):
             # Re-enable button and remove spinner
-            button.set_sensitive(True)
-            button.set_label(_("Connect"))
+            self.connect_button.set_sensitive(True)
+            self.connect_button.set_label(_("Connect"))
             self.connect_row.remove(self.connect_spinner)
 
             if success:
@@ -353,7 +353,7 @@ class DevicePage(Gtk.ScrolledWindow):
                 self._show_success(_("Connected successfully!"))
             else:
                 self._show_error(_("Connection failed: {message}").format(message=message))
-                
+
         dev_mode = self.dev_mode_switch.get_active()
         self.device_service.connect_device_async(ip, dev_mode, on_connection_result)
         
