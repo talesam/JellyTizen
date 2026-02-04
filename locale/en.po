@@ -36,7 +36,7 @@ msgstr "Confirm"
 # File: usr/share/jellytizen/utils/ui_helpers.py, line: 172
 # File: usr/share/jellytizen/pages/preferences.py, line: 165
 # File: usr/share/jellytizen/pages/install.py, line: 123
-# File: usr/share/jellytizen/pages/welcome.py, line: 195
+# File: usr/share/jellytizen/pages/welcome.py, line: 268
 msgid "Cancel"
 msgstr "Cancel"
 
@@ -152,8 +152,8 @@ msgstr "Proceed to install Jellyfin on your TV"
 #
 # File: usr/share/jellytizen/pages/certificates.py, line: 143
 # File: usr/share/jellytizen/pages/device.py, line: 207
-# File: usr/share/jellytizen/pages/welcome.py, line: 105
-# File: usr/share/jellytizen/pages/welcome.py, line: 108
+# File: usr/share/jellytizen/pages/welcome.py, line: 117
+# File: usr/share/jellytizen/pages/welcome.py, line: 120
 msgid "Continue"
 msgstr "Continue"
 
@@ -384,7 +384,7 @@ msgstr ""
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
 #
 # File: usr/share/jellytizen/pages/device.py, line: 50
-# File: usr/share/jellytizen/pages/welcome.py, line: 183
+# File: usr/share/jellytizen/pages/welcome.py, line: 255
 msgid "Device Setup"
 msgstr "Device Setup"
 
@@ -815,7 +815,7 @@ msgstr "Finishing..."
 # #-#-#-#-#  JellyTizen.pot (JellyTizen)  #-#-#-#-#
 #
 # File: usr/share/jellytizen/pages/install.py, line: 335
-# File: usr/share/jellytizen/pages/welcome.py, line: 212
+# File: usr/share/jellytizen/pages/welcome.py, line: 285
 msgid "Error"
 msgstr "Error"
 
@@ -883,12 +883,13 @@ msgstr "Docker Engine"
 
 #
 # File: usr/share/jellytizen/pages/welcome.py, line: 79
+# File: usr/share/jellytizen/pages/welcome.py, line: 251
 msgid "Checking..."
 msgstr "Checking..."
 
 #
 # File: usr/share/jellytizen/pages/welcome.py, line: 89
-# File: usr/share/jellytizen/pages/welcome.py, line: 192
+# File: usr/share/jellytizen/pages/welcome.py, line: 265
 msgid "Install Docker"
 msgstr "Install Docker"
 
@@ -903,47 +904,72 @@ msgid "Install"
 msgstr "Install"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 106
+# File: usr/share/jellytizen/pages/welcome.py, line: 100
+msgid "Docker Group"
+msgstr "Docker Group"
+
+#
+# File: usr/share/jellytizen/pages/welcome.py, line: 101
+msgid "User not in docker group"
+msgstr "User not in docker group"
+
+#
+# File: usr/share/jellytizen/pages/welcome.py, line: 103
+msgid "Add to group"
+msgstr "Add to group"
+
+#
+# File: usr/share/jellytizen/pages/welcome.py, line: 118
 msgid "Configure your Samsung TV"
 msgstr "Configure your Samsung TV"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 135
+# File: usr/share/jellytizen/pages/welcome.py, line: 148
 msgid "Ready"
 msgstr "Ready"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 142
+# File: usr/share/jellytizen/pages/welcome.py, line: 155
+msgid "Permission required"
+msgstr "Permission required"
+
+#
+# File: usr/share/jellytizen/pages/welcome.py, line: 162
 msgid "Not running"
 msgstr "Not running"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 144
+# File: usr/share/jellytizen/pages/welcome.py, line: 164
 msgid "Start"
 msgstr "Start"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 153
+# File: usr/share/jellytizen/pages/welcome.py, line: 173
 msgid "Not installed"
 msgstr "Not installed"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 193
+# File: usr/share/jellytizen/pages/welcome.py, line: 221
+msgid "Added to group"
+msgstr "Added to group"
+
+#
+# File: usr/share/jellytizen/pages/welcome.py, line: 266
 msgid "Select your distribution:"
 msgstr "Select your distribution:"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 196
+# File: usr/share/jellytizen/pages/welcome.py, line: 269
 msgid "Arch/Manjaro"
 msgstr "Arch/Manjaro"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 197
+# File: usr/share/jellytizen/pages/welcome.py, line: 270
 msgid "Debian/Ubuntu"
 msgstr "Debian/Ubuntu"
 
 #
-# File: usr/share/jellytizen/pages/welcome.py, line: 198
+# File: usr/share/jellytizen/pages/welcome.py, line: 271
 msgid "Fedora/RHEL"
 msgstr "Fedora/RHEL"
 
