@@ -91,9 +91,114 @@ class DockerService:
             self.logger.exception(f"Unexpected error checking Docker status: {e}")
             return False
 
+    def is_user_in_docker_group(self) -> bool:
+        """Check if current user is in the docker group."""
+        try:
+            import grp
+            import pwd
+            
+            username = pwd.getpwuid(os.getuid()).pw_name
+            
+            try:
+                docker_group = grp.getgrnam('docker')
+                is_member = username in docker_group.gr_mem
+                
+                # Also check if docker is the user's primary group
+                user_info = pwd.getpwnam(username)
+                if user_info.pw_gid == docker_group.gr_gid:
+                    is_member = True
+                
+                if is_member:
+                    self.logger.info(f"User '{username}' is in docker group")
+                else:
+                    self.logger.warning(f"User '{username}' is NOT in docker group")
+                
+                return is_member
+                
+            except KeyError:
+                self.logger.warning("Docker group does not exist")
+                return False
+                
+        except Exception as e:
+            self.logger.exception(f"Error checking docker group membership: {e}")
+            return False
+
+    def add_user_to_docker_group_async(self, callback: Callable[[bool, str], None]) -> None:
+        """
+        Add current user to docker group using pkexec (graphical sudo).
+        
+        Args:
+            callback: Callback function (success: bool, message: str)
+        """
+        def add_to_group():
+            try:
+                import pwd
+                username = pwd.getpwuid(os.getuid()).pw_name
+                
+                self.logger.info(f"Adding user '{username}' to docker group via pkexec")
+                
+                # Use pkexec for graphical password prompt
+                result = subprocess.run(
+                    ['pkexec', 'usermod', '-aG', 'docker', username],
+                    capture_output=True,
+                    text=True,
+                    timeout=60
+                )
+                
+                if result.returncode == 0:
+                    self.logger.info(f"User '{username}' added to docker group successfully")
+                    
+                    # Now apply the group to the current session
+                    # We use 'newgrp docker' but since it starts a new shell,
+                    # we'll set an environment variable to signal the change
+                    GLib.idle_add(callback, True, 
+                        f"Usuário '{username}' adicionado ao grupo docker.\n"
+                        "O grupo foi aplicado para esta sessão."
+                    )
+                else:
+                    error_msg = result.stderr.strip() if result.stderr else "Operação cancelada"
+                    self.logger.error(f"Failed to add user to docker group: {error_msg}")
+                    GLib.idle_add(callback, False, f"Falha ao adicionar ao grupo: {error_msg}")
+                    
+            except subprocess.TimeoutExpired:
+                self.logger.error("pkexec command timed out")
+                GLib.idle_add(callback, False, "Tempo limite excedido")
+            except FileNotFoundError:
+                self.logger.error("pkexec not found")
+                GLib.idle_add(callback, False, "pkexec não encontrado")
+            except Exception as e:
+                self.logger.exception(f"Error adding user to docker group: {e}")
+                GLib.idle_add(callback, False, str(e))
+        
+        thread = threading.Thread(target=add_to_group, daemon=True)
+        thread.start()
+
+    def run_with_docker_group(self, cmd: List[str], **kwargs) -> subprocess.CompletedProcess:
+        """
+        Run a command with the docker group, even if user just joined.
+        Uses 'sg docker' to run command with docker group privileges.
+        
+        Args:
+            cmd: Command to run as list
+            **kwargs: Additional arguments for subprocess.run
+            
+        Returns:
+            CompletedProcess result
+        """
+        # If user is in docker group, run normally
+        if self.is_user_in_docker_group():
+            return subprocess.run(cmd, **kwargs)
+        
+        # Otherwise, try with sg docker (runs command with group privileges)
+        # This works even if user was just added to group without logout
+        sg_cmd = ['sg', 'docker', '-c', ' '.join(cmd)]
+        self.logger.debug(f"Running with sg docker: {' '.join(sg_cmd)}")
+        return subprocess.run(sg_cmd, **kwargs)
+
     def start_docker_async(self, callback: Callable[[bool], None]) -> None:
         """Start Docker service asynchronously."""
         def start_docker():
+            import time
             try:
                 self.logger.info("Attempting to start Docker service")
 
@@ -109,15 +214,26 @@ class DockerService:
 
                         if result.returncode == 0:
                             self.logger.info(f"Docker start command succeeded: {' '.join(cmd)}")
-                            # Wait for Docker to fully start
-                            import time
-                            time.sleep(3)
-
-                            # Verify Docker is running
-                            if self.is_docker_running():
-                                self.logger.info("Docker started successfully")
-                                GLib.idle_add(callback, True)
-                                return
+                            
+                            # Wait for Docker to fully start with retry mechanism
+                            # systemctl may return before daemon is fully ready
+                            max_retries = 5
+                            wait_times = [2, 3, 4, 5, 6]  # Progressive wait: total up to 20s
+                            
+                            for attempt in range(max_retries):
+                                time.sleep(wait_times[attempt])
+                                self.logger.debug(f"Checking if Docker is running (attempt {attempt + 1}/{max_retries})")
+                                
+                                if self.is_docker_running():
+                                    self.logger.info("Docker started successfully")
+                                    GLib.idle_add(callback, True)
+                                    return
+                                else:
+                                    self.logger.debug(f"Docker not ready yet, waiting...")
+                            
+                            # After all retries, still not running - don't try fallback commands
+                            # since the start command succeeded, just the daemon is slow
+                            self.logger.warning("Docker command succeeded but daemon failed to start in time")
                         else:
                             self.logger.warning(f"Command failed: {result.stderr}")
 

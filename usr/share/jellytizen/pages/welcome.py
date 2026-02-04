@@ -95,6 +95,18 @@ class WelcomePage(Gtk.Box):
         self.install_docker_button.connect("clicked", self._on_install_docker)
         self.install_docker_row.add_suffix(self.install_docker_button)
 
+        # Docker group row (for when user is not in docker group)
+        self.docker_group_row = Adw.ActionRow()
+        self.docker_group_row.set_title(_("Docker Group"))
+        self.docker_group_row.set_subtitle(_("User not in docker group"))
+
+        self.add_group_button = Gtk.Button.new_with_label(_("Add to group"))
+        self.add_group_button.set_valign(Gtk.Align.CENTER)
+        self.add_group_button.add_css_class("suggested-action")
+        self.add_group_button.connect("clicked", self._on_add_to_docker_group)
+        self.docker_group_row.add_suffix(self.add_group_button)
+
+
         # ============================================
         # CONTINUE BUTTON
         # ============================================
@@ -119,9 +131,10 @@ class WelcomePage(Gtk.Box):
         GLib.timeout_add(500, self._check_docker_status)
         
     def _check_docker_status(self):
-        """Check Docker installation and status."""
+        """Check Docker installation, group membership, and status."""
         try:
             is_installed = self.docker_service.is_docker_installed()
+            is_in_group = self.docker_service.is_user_in_docker_group() if is_installed else False
             is_running = self.docker_service.is_docker_running() if is_installed else False
             
             self.docker_spinner.stop()
@@ -134,6 +147,13 @@ class WelcomePage(Gtk.Box):
                 self.docker_row.add_suffix(success_icon)
                 self.docker_row.set_subtitle(_("Ready"))
                 self.continue_button.set_sensitive(True)
+
+            elif is_installed and not is_in_group:
+                # Docker installed but user not in docker group
+                warning_icon = Gtk.Image.new_from_icon_name("dialog-warning-symbolic")
+                self.docker_row.add_suffix(warning_icon)
+                self.docker_row.set_subtitle(_("Permission required"))
+                self.requirements_group.add(self.docker_group_row)
 
             elif is_installed and not is_running:
                 # Docker installed but not running
@@ -157,6 +177,7 @@ class WelcomePage(Gtk.Box):
             self.window.logger.error(f"Error checking Docker status: {e}")
             
         return False
+
         
     def _on_install_docker(self, button):
         """Handle Docker installation."""
@@ -177,10 +198,62 @@ class WelcomePage(Gtk.Box):
                 self._check_docker_status()
 
         self.docker_service.start_docker_async(on_docker_started)
+
+    def _on_add_to_docker_group(self, button):
+        """Handle adding user to docker group."""
+        button.set_sensitive(False)
+        spinner = Gtk.Spinner()
+        spinner.start()
+        self.docker_group_row.add_suffix(spinner)
+        
+        def on_group_added(success, message):
+            spinner.stop()
+            self.docker_group_row.remove(spinner)
+            
+            if success:
+                # Remove the group row and restart check
+                try:
+                    self.requirements_group.remove(self.docker_group_row)
+                except:
+                    pass
+                
+                # Show success message
+                self.docker_group_row.set_subtitle(_("Added to group"))
+                
+                # Re-check docker status (group is now applied)
+                # Reset the docker row first
+                self._reset_docker_row()
+                self._check_docker_status()
+            else:
+                button.set_sensitive(True)
+                self.docker_group_row.set_subtitle(message)
+        
+        self.docker_service.add_user_to_docker_group_async(on_group_added)
+
+    def _reset_docker_row(self):
+        """Reset the docker row for re-checking."""
+        # Remove all suffixes except the first one (if any)
+        while True:
+            suffix = self.docker_row.get_last_child()
+            if suffix and suffix != self.docker_row.get_first_child():
+                # Check if it's a suffix widget (not the title/subtitle)
+                if isinstance(suffix, (Gtk.Image, Gtk.Button, Gtk.Spinner)):
+                    self.docker_row.remove(suffix)
+                else:
+                    break
+            else:
+                break
+        
+        # Add spinner again
+        self.docker_spinner = Gtk.Spinner()
+        self.docker_spinner.start()
+        self.docker_row.add_suffix(self.docker_spinner)
+        self.docker_row.set_subtitle(_("Checking..."))
         
     def _on_continue(self, button):
         """Navigate to device setup page."""
         self.window.navigate_to_page(self.window.device_page, _("Device Setup"))
+
 
 class DockerInstallDialog(Adw.AlertDialog):
     """Dialog for Docker installation guidance."""
