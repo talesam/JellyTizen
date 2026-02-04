@@ -75,12 +75,24 @@ class DockerService:
                 text=True,
                 timeout=TIMEOUT_DOCKER_INFO
             )
-            is_running = result.returncode == 0
-            if is_running:
+            if result.returncode == 0:
                 self.logger.info("Docker daemon is running")
-            else:
-                self.logger.warning("Docker daemon is not running")
-            return is_running
+                return True
+            
+            # If failed, try with sg docker (for freshly added group membership)
+            # This works even without logout/login after usermod -aG docker
+            result = subprocess.run(
+                ['sg', 'docker', '-c', 'docker info'],
+                capture_output=True,
+                text=True,
+                timeout=TIMEOUT_DOCKER_INFO
+            )
+            if result.returncode == 0:
+                self.logger.info("Docker daemon is running (via sg docker)")
+                return True
+            
+            self.logger.warning("Docker daemon is not running")
+            return False
         except subprocess.TimeoutExpired:
             self.logger.error("Docker info check timed out")
             return False
@@ -215,10 +227,10 @@ class DockerService:
                         if result.returncode == 0:
                             self.logger.info(f"Docker start command succeeded: {' '.join(cmd)}")
                             
-                            # Wait for Docker to fully start with retry mechanism
+                            # Wait for Docker to fully start
                             # systemctl may return before daemon is fully ready
-                            max_retries = 5
-                            wait_times = [2, 3, 4, 5, 6]  # Progressive wait: total up to 20s
+                            max_retries = 3
+                            wait_times = [2, 3, 5]  # Total ~10s
                             
                             for attempt in range(max_retries):
                                 time.sleep(wait_times[attempt])
@@ -228,12 +240,11 @@ class DockerService:
                                     self.logger.info("Docker started successfully")
                                     GLib.idle_add(callback, True)
                                     return
-                                else:
-                                    self.logger.debug(f"Docker not ready yet, waiting...")
                             
-                            # After all retries, still not running - don't try fallback commands
-                            # since the start command succeeded, just the daemon is slow
-                            self.logger.warning("Docker command succeeded but daemon failed to start in time")
+                            # After retries, report failure and exit
+                            self.logger.error("Docker daemon did not start within expected time")
+                            GLib.idle_add(callback, False)
+                            return  # Exit here, don't try fallback commands
                         else:
                             self.logger.warning(f"Command failed: {result.stderr}")
 
