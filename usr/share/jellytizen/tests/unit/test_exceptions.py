@@ -3,15 +3,23 @@
 Unit tests for custom exceptions.
 """
 
-import pytest
 from utils.exceptions import (
     JellyTizenError,
-    DockerError, DockerNotInstalledError, DockerNotRunningError,
-    DockerImageError, DockerContainerError,
-    DeviceError, DeviceNotFoundError, DeviceConnectionError,
-    CertificateError, CertificateValidationError, CertificatePasswordError,
-    NetworkError, NetworkScanError,
-    ValidationError, IPAddressValidationError
+    DockerError,
+    DockerNotInstalledError,
+    DockerNotRunningError,
+    DockerImageError,
+    DockerContainerError,
+    DeviceError,
+    DeviceNotFoundError,
+    DeviceConnectionError,
+    CertificateError,
+    CertificateValidationError,
+    CertificatePasswordError,
+    NetworkError,
+    NetworkScanError,
+    ValidationError,
+    IPAddressValidationError,
 )
 
 
@@ -27,7 +35,7 @@ class TestBaseException:
 
     def test_message_with_details(self):
         """Test exception with message and details."""
-        exc = JellyTizenError("Test error", details={'key': 'value', 'code': 123})
+        exc = JellyTizenError("Test error", details={"key": "value", "code": 123})
         assert "Test error" in str(exc)
         assert "key=value" in str(exc)
         assert "code=123" in str(exc)

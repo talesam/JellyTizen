@@ -5,14 +5,16 @@ UI helper functions for error notifications and user feedback.
 This module provides utilities for displaying error messages, success notifications,
 and other user feedback in the GTK4/Libadwaita interface.
 """
+
 from __future__ import annotations
 
 import logging
 from typing import Any, Optional
 
 import gi
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
+
+gi.require_version("Gtk", "4.0")
+gi.require_version("Adw", "1")
 
 from gi.repository import Adw, Gtk
 from utils.i18n import _
@@ -39,19 +41,21 @@ class ErrorNotification:
             toast.set_timeout(timeout)
 
             # Try to find toast overlay
-            if hasattr(window, 'toast_overlay'):
+            if hasattr(window, "toast_overlay"):
                 window.toast_overlay.add_toast(toast)
-            elif hasattr(window, 'window') and hasattr(window.window, 'toast_overlay'):
+            elif hasattr(window, "window") and hasattr(window.window, "toast_overlay"):
                 # For pages that have a window reference
                 window.window.toast_overlay.add_toast(toast)
             else:
                 # Fallback: try to find parent window
                 parent = window
                 while parent is not None:
-                    if hasattr(parent, 'toast_overlay'):
+                    if hasattr(parent, "toast_overlay"):
                         parent.toast_overlay.add_toast(toast)
                         return
-                    parent = parent.get_parent() if hasattr(parent, 'get_parent') else None
+                    parent = (
+                        parent.get_parent() if hasattr(parent, "get_parent") else None
+                    )
 
                 # If no toast overlay found, log the message
                 _logger.warning(f"Toast (no overlay found): {message}")
@@ -62,11 +66,8 @@ class ErrorNotification:
 
     @staticmethod
     def show_error_dialog(
-        parent: Any,
-        title: str,
-        message: str,
-        details: Optional[str] = None
-    ) -> Optional[Adw.MessageDialog]:
+        parent: Any, title: str, message: str, details: Optional[str] = None
+    ) -> Optional[Adw.AlertDialog]:
         """
         Show an error dialog.
 
@@ -80,11 +81,10 @@ class ErrorNotification:
             The created dialog
         """
         try:
-            dialog = Adw.MessageDialog.new(parent)
+            dialog = Adw.AlertDialog()
             dialog.set_heading(title)
 
             if details:
-                # Format message with details
                 dialog.set_body_use_markup(True)
                 full_message = f"{message}\n\n<small>{details}</small>"
                 dialog.set_body(full_message)
@@ -95,29 +95,17 @@ class ErrorNotification:
             dialog.set_default_response("ok")
             dialog.set_close_response("ok")
 
-            dialog.present()
+            dialog.present(parent)
             return dialog
 
         except Exception as e:
-            # Fallback to simple GTK dialog
             _logger.error(f"Error dialog error: {e}")
-            fallback_dialog = Gtk.MessageDialog(
-                transient_for=parent,
-                modal=True,
-                message_type=Gtk.MessageType.ERROR,
-                buttons=Gtk.ButtonsType.OK,
-                text=title
-            )
-            fallback_dialog.format_secondary_text(message)
-            fallback_dialog.present()
-            return fallback_dialog
+            return None
 
     @staticmethod
     def show_success_dialog(
-        parent: Any,
-        title: str,
-        message: str
-    ) -> Optional[Adw.MessageDialog]:
+        parent: Any, title: str, message: str
+    ) -> Optional[Adw.AlertDialog]:
         """
         Show a success dialog.
 
@@ -130,7 +118,7 @@ class ErrorNotification:
             The created dialog
         """
         try:
-            dialog = Adw.MessageDialog.new(parent)
+            dialog = Adw.AlertDialog()
             dialog.set_heading(title)
             dialog.set_body(message)
 
@@ -138,7 +126,7 @@ class ErrorNotification:
             dialog.set_default_response("ok")
             dialog.set_close_response("ok")
 
-            dialog.present()
+            dialog.present(parent)
             return dialog
 
         except Exception as e:
@@ -151,8 +139,8 @@ class ErrorNotification:
         title: str,
         message: str,
         confirm_text: Optional[str] = None,
-        cancel_text: Optional[str] = None
-    ) -> Optional[Adw.MessageDialog]:
+        cancel_text: Optional[str] = None,
+    ) -> Optional[Adw.AlertDialog]:
         """
         Show a confirmation dialog.
 
@@ -172,7 +160,7 @@ class ErrorNotification:
             cancel_text = _("Cancel")
 
         try:
-            dialog = Adw.MessageDialog.new(parent)
+            dialog = Adw.AlertDialog()
             dialog.set_heading(title)
             dialog.set_body(message)
 
@@ -183,7 +171,7 @@ class ErrorNotification:
             dialog.set_default_response("cancel")
             dialog.set_close_response("cancel")
 
-            dialog.present()
+            dialog.present(parent)
             return dialog
 
         except Exception as e:
@@ -215,9 +203,7 @@ class StatusHelper:
 
     @staticmethod
     def create_status_row(
-        title: str,
-        subtitle: Optional[str] = None,
-        icon_name: Optional[str] = None
+        title: str, subtitle: Optional[str] = None, icon_name: Optional[str] = None
     ) -> Optional[Adw.ActionRow]:
         """
         Create a status row for lists.
@@ -252,7 +238,7 @@ class StatusHelper:
         row: Adw.ActionRow,
         title: Optional[str] = None,
         subtitle: Optional[str] = None,
-        icon_name: Optional[str] = None
+        icon_name: Optional[str] = None,
     ) -> None:
         """
         Update an existing status row.

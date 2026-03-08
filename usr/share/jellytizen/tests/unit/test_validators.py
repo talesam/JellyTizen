@@ -3,14 +3,11 @@
 Unit tests for validator utilities.
 """
 
-import pytest
-import tempfile
-import os
 from utils.validators import (
     NetworkValidator,
     FileValidator,
     CertificateValidator,
-    DockerValidator
+    DockerValidator,
 )
 
 
@@ -25,7 +22,7 @@ class TestNetworkValidator:
             "10.0.0.1",
             "255.255.255.255",
             "0.0.0.0",
-            "127.0.0.1"
+            "127.0.0.1",
         ]
         for ip in valid_ips:
             assert NetworkValidator.is_valid_ip(ip), f"{ip} should be valid"
@@ -39,7 +36,7 @@ class TestNetworkValidator:
             "invalid",  # Not numeric
             "",  # Empty string
             "192.168.-1.1",  # Negative number
-            "192.168.1.a"  # Non-numeric
+            "192.168.1.a",  # Non-numeric
         ]
         for ip in invalid_ips:
             assert not NetworkValidator.is_valid_ip(ip), f"{ip} should be invalid"
@@ -54,7 +51,9 @@ class TestNetworkValidator:
         """Test validation of invalid port numbers."""
         invalid_ports = [0, -1, 65536, 70000, "invalid", None, ""]
         for port in invalid_ports:
-            assert not NetworkValidator.is_valid_port(port), f"Port {port} should be invalid"
+            assert not NetworkValidator.is_valid_port(port), (
+                f"Port {port} should be invalid"
+            )
 
     def test_valid_port_ranges(self):
         """Test validation of valid port ranges."""
@@ -62,11 +61,12 @@ class TestNetworkValidator:
             "8000-8080",
             "1-65535",
             "443-443",
-            "8001"  # Single port
+            "8001",  # Single port
         ]
         for port_range in valid_ranges:
-            assert NetworkValidator.is_valid_port_range(port_range), \
+            assert NetworkValidator.is_valid_port_range(port_range), (
                 f"Range {port_range} should be valid"
+            )
 
     def test_invalid_port_ranges(self):
         """Test validation of invalid port ranges."""
@@ -77,11 +77,12 @@ class TestNetworkValidator:
             "invalid-range",
             "100-",
             "-100",
-            ""
+            "",
         ]
         for port_range in invalid_ranges:
-            assert not NetworkValidator.is_valid_port_range(port_range), \
+            assert not NetworkValidator.is_valid_port_range(port_range), (
                 f"Range {port_range} should be invalid"
+            )
 
 
 class TestFileValidator:
@@ -142,11 +143,12 @@ class TestCertificateValidator:
             "Test_Profile",
             "Profile-Name",
             "Profile 123",
-            "ProfileName123"
+            "ProfileName123",
         ]
         for name in valid_names:
-            assert CertificateValidator.is_valid_profile_name(name), \
+            assert CertificateValidator.is_valid_profile_name(name), (
                 f"'{name}' should be valid"
+            )
 
     def test_invalid_profile_names(self):
         """Test validation of invalid profile names."""
@@ -156,11 +158,12 @@ class TestCertificateValidator:
             "Profile@Name",  # Special characters
             "Profile!",
             "Profile#123",
-            None  # Will cause len() to fail, caught by empty check
+            None,  # Will cause len() to fail, caught by empty check
         ]
         for name in invalid_names:
-            assert not CertificateValidator.is_valid_profile_name(name), \
+            assert not CertificateValidator.is_valid_profile_name(name), (
                 f"'{name}' should be invalid"
+            )
 
     def test_strong_passwords(self):
         """Test validation of strong passwords."""
@@ -169,11 +172,12 @@ class TestCertificateValidator:
             "Test123",
             "abc123def",
             "P@ssw0rd",
-            "SecurePass1"
+            "SecurePass1",
         ]
         for password in strong_passwords:
-            assert CertificateValidator.is_strong_password(password), \
+            assert CertificateValidator.is_strong_password(password), (
                 f"'{password}' should be strong"
+            )
 
     def test_weak_passwords(self):
         """Test validation rejects weak passwords."""
@@ -183,11 +187,12 @@ class TestCertificateValidator:
             "password",  # No numbers
             "12345678",  # No letters
             "",  # Empty
-            "abc"  # Too short, no numbers
+            "abc",  # Too short, no numbers
         ]
         for password in weak_passwords:
-            assert not CertificateValidator.is_strong_password(password), \
+            assert not CertificateValidator.is_strong_password(password), (
                 f"'{password}' should be weak"
+            )
 
 
 class TestDockerValidator:
@@ -201,11 +206,12 @@ class TestDockerValidator:
             "myregistry/myimage",
             "myregistry/namespace/image:tag",
             "jellytizen/tizen-builder:latest",
-            "localhost:5000/myimage:v1.0"
+            "localhost:5000/myimage:v1.0",
         ]
         for image in valid_images:
-            assert DockerValidator.is_valid_image_name(image), \
+            assert DockerValidator.is_valid_image_name(image), (
                 f"'{image}' should be valid"
+            )
 
     def test_invalid_image_names(self):
         """Test validation of invalid Docker image names."""
@@ -217,8 +223,9 @@ class TestDockerValidator:
             ":tag",  # Missing image name
         ]
         for image in invalid_images:
-            assert not DockerValidator.is_valid_image_name(image), \
+            assert not DockerValidator.is_valid_image_name(image), (
                 f"'{image}' should be invalid"
+            )
 
     def test_valid_container_names(self):
         """Test validation of valid Docker container names."""
@@ -228,11 +235,12 @@ class TestDockerValidator:
             "container_name",
             "container.name",
             "container123",
-            "my-container_123.test"
+            "my-container_123.test",
         ]
         for name in valid_names:
-            assert DockerValidator.is_valid_container_name(name), \
+            assert DockerValidator.is_valid_container_name(name), (
                 f"'{name}' should be valid"
+            )
 
     def test_invalid_container_names(self):
         """Test validation of invalid Docker container names."""
@@ -245,5 +253,6 @@ class TestDockerValidator:
             "My_Container!",  # Invalid character
         ]
         for name in invalid_names:
-            assert not DockerValidator.is_valid_container_name(name), \
+            assert not DockerValidator.is_valid_container_name(name), (
                 f"'{name}' should be invalid"
+            )

@@ -29,14 +29,14 @@ def mock_config_manager():
     # Simulate dot notation access
     def get_side_effect(key, default=None):
         config_values = {
-            'docker.container_name': 'jellytizen-builder',
-            'docker.image': 'jellytizen/tizen-builder:latest',
-            'docker.workspace_path': '/tmp/jellytizen',
-            'network.scan_timeout': 30,
-            'network.max_workers': 30,
-            'timeouts.docker_operations': 300,
-            'timeouts.network_scan': 30,
-            'logging.level': 'INFO',
+            "docker.container_name": "jellytizen-builder",
+            "docker.image": "jellytizen/tizen-builder:latest",
+            "docker.workspace_path": "/tmp/jellytizen",
+            "network.scan_timeout": 30,
+            "network.max_workers": 30,
+            "timeouts.docker_operations": 300,
+            "timeouts.network_scan": 30,
+            "logging.level": "INFO",
         }
         return config_values.get(key, default)
 
@@ -60,6 +60,7 @@ def mock_logger():
 @pytest.fixture
 def mock_glib():
     """Mock GLib.idle_add for testing async callbacks."""
+
     def idle_add(callback, *args, **kwargs):
         """Immediately call the callback instead of scheduling it."""
         callback(*args, **kwargs)
@@ -73,11 +74,11 @@ def mock_glib():
 @pytest.fixture
 def temp_config_file():
     """Create a temporary configuration file for testing."""
-    with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
         config_data = {
-            'device': {'ip': '192.168.1.100', 'developer_mode': True},
-            'docker': {'image': 'test-image:latest'},
-            'network': {'scan_timeout': 30}
+            "device": {"ip": "192.168.1.100", "developer_mode": True},
+            "docker": {"image": "test-image:latest"},
+            "network": {"scan_timeout": 30},
         }
         json.dump(config_data, f)
         temp_path = f.name
@@ -98,23 +99,19 @@ def temp_directory():
 @pytest.fixture
 def mock_subprocess():
     """Mock subprocess.run for testing shell commands."""
-    with patch('subprocess.run') as mock_run:
+    with patch("subprocess.run") as mock_run:
         # Default successful return
-        mock_run.return_value = Mock(
-            returncode=0,
-            stdout='success',
-            stderr=''
-        )
+        mock_run.return_value = Mock(returncode=0, stdout="success", stderr="")
         yield mock_run
 
 
 @pytest.fixture
 def mock_socket():
     """Mock socket for network testing."""
-    with patch('socket.socket') as mock_sock_class:
+    with patch("socket.socket") as mock_sock_class:
         mock_sock = MagicMock()
         mock_sock.connect_ex.return_value = 0  # Success
-        mock_sock.getsockname.return_value = ('192.168.1.100', 12345)
+        mock_sock.getsockname.return_value = ("192.168.1.100", 12345)
         mock_sock_class.return_value = mock_sock
         yield mock_sock
 
@@ -123,11 +120,11 @@ def mock_socket():
 def sample_device_data():
     """Sample device data for testing."""
     return {
-        'ip': '192.168.1.50',
-        'port': 8001,
-        'name': 'Samsung TV',
-        'model': 'UE50NU7400',
-        'os': 'Tizen'
+        "ip": "192.168.1.50",
+        "port": 8001,
+        "name": "Samsung TV",
+        "model": "UE50NU7400",
+        "os": "Tizen",
     }
 
 
@@ -135,10 +132,10 @@ def sample_device_data():
 def mock_certificate_data():
     """Mock certificate data for testing."""
     return {
-        'author_cert_path': '/path/to/author.p12',
-        'distributor_cert_path': '/path/to/distributor.p12',
-        'password': 'test_password',
-        'profile_name': 'TestProfile'
+        "author_cert_path": "/path/to/author.p12",
+        "distributor_cert_path": "/path/to/distributor.p12",
+        "password": "test_password",
+        "profile_name": "TestProfile",
     }
 
 
