@@ -1,9 +1,10 @@
 # setup.py
 from setuptools import setup, find_packages
+from utils.constants import APP_VERSION
 
 setup(
     name="jellytizen",
-    version="1.0.0",
+    version=APP_VERSION,
     description="Install Jellyfin on Samsung Tizen TVs and projectors",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
@@ -31,8 +32,17 @@ setup(
     },
     data_files=[
         ("share/applications", ["data/com.github.jellytizen.desktop"]),
-        ("share/icons/hicolor/48x48/apps", ["data/icons/48x48/com.github.jellytizen.png"]),
-        ("share/icons/hicolor/64x64/apps", ["data/icons/64x64/com.github.jellytizen.png"]),
-        ("share/icons/hicolor/128x128/apps", ["data/icons/128x128/com.github.jellytizen.png"]),
+        (
+            "share/icons/hicolor/48x48/apps",
+            ["data/icons/48x48/com.github.jellytizen.png"],
+        ),
+        (
+            "share/icons/hicolor/64x64/apps",
+            ["data/icons/64x64/com.github.jellytizen.png"],
+        ),
+        (
+            "share/icons/hicolor/128x128/apps",
+            ["data/icons/128x128/com.github.jellytizen.png"],
+        ),
     ],
 )

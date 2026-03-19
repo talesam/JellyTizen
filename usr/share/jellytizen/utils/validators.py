@@ -1,5 +1,6 @@
 # utils/validators.py
 """Input validation utilities for JellyTizen."""
+
 from __future__ import annotations
 
 import re
@@ -33,16 +34,18 @@ class NetworkValidator:
     def is_valid_port_range(port_range: str) -> bool:
         """Validate port range format (e.g., '8000-8080')."""
         try:
-            if '-' not in port_range:
+            if "-" not in port_range:
                 return NetworkValidator.is_valid_port(port_range)
 
-            start, end = port_range.split('-', 1)
+            start, end = port_range.split("-", 1)
             start_port = int(start.strip())
             end_port = int(end.strip())
 
-            return (NetworkValidator.is_valid_port(start_port) and
-                   NetworkValidator.is_valid_port(end_port) and
-                   start_port <= end_port)
+            return (
+                NetworkValidator.is_valid_port(start_port)
+                and NetworkValidator.is_valid_port(end_port)
+                and start_port <= end_port
+            )
         except (ValueError, AttributeError):
             return False
 
@@ -56,7 +59,7 @@ class FileValidator:
         if not os.path.exists(file_path):
             return False
 
-        return file_path.lower().endswith('.p12')
+        return file_path.lower().endswith(".p12")
 
     @staticmethod
     def is_readable_file(file_path: str) -> bool:
@@ -82,7 +85,7 @@ class CertificateValidator:
             return False
 
         # Profile names should be alphanumeric with optional spaces, dashes, underscores
-        pattern = r'^[a-zA-Z0-9\s\-_]+$'
+        pattern = r"^[a-zA-Z0-9\s\-_]+$"
         return bool(re.match(pattern, name.strip()))
 
     @staticmethod
@@ -92,10 +95,11 @@ class CertificateValidator:
             return False
 
         # At least one letter and one number
-        has_letter = bool(re.search(r'[a-zA-Z]', password))
-        has_number = bool(re.search(r'\d', password))
+        has_letter = bool(re.search(r"[a-zA-Z]", password))
+        has_number = bool(re.search(r"\d", password))
 
         return has_letter and has_number
+
 
 class DockerValidator:
     """Validates Docker-related inputs."""
@@ -117,9 +121,9 @@ class DockerValidator:
         # - Optional registry with port (localhost:5000, registry.io:443)
         # - Optional namespace/repository path
         # - Optional tag or digest
-        pattern = r'^([a-zA-Z0-9]([a-zA-Z0-9._-]*[a-zA-Z0-9])?(:[0-9]+)?/)?([a-zA-Z0-9]([a-zA-Z0-9._-]*[a-zA-Z0-9])?(/[a-zA-Z0-9]([a-zA-Z0-9._-]*[a-zA-Z0-9])?)*)(:[\w][\w.-]*|@sha256:[a-fA-F0-9]{64})?$'
+        pattern = r"^([a-zA-Z0-9]([a-zA-Z0-9._-]*[a-zA-Z0-9])?(:[0-9]+)?/)?([a-zA-Z0-9]([a-zA-Z0-9._-]*[a-zA-Z0-9])?(/[a-zA-Z0-9]([a-zA-Z0-9._-]*[a-zA-Z0-9])?)*)(:[\w][\w.-]*|@sha256:[a-fA-F0-9]{64})?$"
         return bool(re.match(pattern, image_name))
-        
+
     @staticmethod
     def is_valid_container_name(name: str) -> bool:
         """Validate Docker container name format."""
@@ -127,5 +131,5 @@ class DockerValidator:
             return False
 
         # Container names must be alphanumeric with optional dashes and underscores
-        pattern = r'^[a-zA-Z0-9][a-zA-Z0-9_.-]*$'
+        pattern = r"^[a-zA-Z0-9][a-zA-Z0-9_.-]*$"
         return bool(re.match(pattern, name))

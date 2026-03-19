@@ -1,0 +1,26 @@
+Would reformat: app.py
+Would reformat: conftest.py
+Would reformat: main.py
+Would reformat: pages/certificates.py
+Would reformat: pages/device.py
+Would reformat: pages/install.py
+Would reformat: pages/preferences.py
+Would reformat: pages/welcome.py
+Would reformat: services/certificates.py
+Would reformat: services/device.py
+Would reformat: services/docker.py
+Would reformat: setup.py
+Would reformat: tests/services/test_certificates.py
+Would reformat: tests/services/test_device.py
+Would reformat: tests/services/test_docker.py
+Would reformat: tests/unit/test_config.py
+Would reformat: tests/unit/test_exceptions.py
+Would reformat: tests/unit/test_validators.py
+Would reformat: utils/config.py
+Would reformat: utils/constants.py
+Would reformat: utils/exceptions.py
+Would reformat: utils/i18n.py
+Would reformat: utils/logger.py
+Would reformat: utils/ui_helpers.py
+Would reformat: utils/validators.py
+25 files would be reformatted, 7 files already formatted

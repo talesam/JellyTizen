@@ -4,15 +4,17 @@
 import sys
 import gi
 
-gi.require_version('Gtk', '4.0')
-gi.require_version('Adw', '1')
+gi.require_version("Gtk", "4.0")
+gi.require_version("Adw", "1")
 
 from app import JellyTizenApplication
+
 
 def main():
     """Entry point of the application."""
     app = JellyTizenApplication()
     return app.run(sys.argv)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

@@ -14,7 +14,7 @@ SAMSUNG_API_PORT = 8001
 SAMSUNG_API_ENDPOINT = "/api/v2/"
 SDB_PORT = 26101
 NETWORK_IP_RANGE_START = 1
-NETWORK_IP_RANGE_END = 255
+NETWORK_IP_RANGE_END = 254  # Skip .0 (network) and .255 (broadcast)
 
 # Timeout Constants (in seconds)
 TIMEOUT_DOCKER_VERSION = 5
@@ -89,7 +89,7 @@ TERMINAL_SCROLLBACK_LINES = 1000
 
 # Application Metadata
 APP_ID = "org.talesam.jellytizen"
-APP_VERSION = "1.0.10"
+APP_VERSION = "1.1.0"
 APP_NAME = "JellyTizen"
 APP_GITHUB_URL = "https://github.com/talesam/jellytizen"
 APP_ISSUE_URL = "https://github.com/talesam/jellytizen/issues"
@@ -100,33 +100,33 @@ SCAN_MAX_WORKERS = 30
 SCAN_PORTS_DEFAULT = [8001, 8002, 8080, 9197, 55000, 7001, 26101]
 
 # Samsung Device Indicators
-SAMSUNG_DEVICE_INDICATORS = ['samsung', 'tizen', 'smarttv']
+SAMSUNG_DEVICE_INDICATORS = ["samsung", "tizen", "smarttv"]
 
 # Docker Installation Commands by Distribution
 DOCKER_INSTALL_COMMANDS = {
-    'arch': [
-        ['sudo', 'pacman', '-S', '--noconfirm', 'docker', 'docker-compose'],
-        ['sudo', 'systemctl', 'enable', 'docker'],
-        ['sudo', 'usermod', '-aG', 'docker', '$USER']
+    "arch": [
+        ["sudo", "pacman", "-S", "--noconfirm", "docker", "docker-compose"],
+        ["sudo", "systemctl", "enable", "docker"],
+        ["sudo", "usermod", "-aG", "docker", "$USER"],
     ],
-    'debian': [
-        ['sudo', 'apt', 'update'],
-        ['sudo', 'apt', 'install', '-y', 'docker.io', 'docker-compose'],
-        ['sudo', 'systemctl', 'enable', 'docker'],
-        ['sudo', 'usermod', '-aG', 'docker', '$USER']
+    "debian": [
+        ["sudo", "apt", "update"],
+        ["sudo", "apt", "install", "-y", "docker.io", "docker-compose"],
+        ["sudo", "systemctl", "enable", "docker"],
+        ["sudo", "usermod", "-aG", "docker", "$USER"],
     ],
-    'fedora': [
-        ['sudo', 'dnf', 'install', '-y', 'docker', 'docker-compose'],
-        ['sudo', 'systemctl', 'enable', 'docker'],
-        ['sudo', 'usermod', '-aG', 'docker', '$USER']
-    ]
+    "fedora": [
+        ["sudo", "dnf", "install", "-y", "docker", "docker-compose"],
+        ["sudo", "systemctl", "enable", "docker"],
+        ["sudo", "usermod", "-aG", "docker", "$USER"],
+    ],
 }
 
 # Docker Start Commands (fallback options)
 DOCKER_START_COMMANDS = [
-    ['sudo', 'systemctl', 'start', 'docker'],
-    ['sudo', 'service', 'docker', 'start'],
-    ['sudo', '/etc/init.d/docker', 'start']
+    ["sudo", "systemctl", "start", "docker"],
+    ["sudo", "service", "docker", "start"],
+    ["sudo", "/etc/init.d/docker", "start"],
 ]
 
 # Configuration Paths
@@ -137,4 +137,4 @@ CONFIG_FILE_NAME = "config.json"
 
 # Logging Constants
 LOG_MAX_AGE_DAYS = 30
-LOG_FORMAT = '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"

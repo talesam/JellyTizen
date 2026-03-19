@@ -3,17 +3,15 @@ import os
 import threading
 import subprocess
 from gi.repository import GLib
-from cryptography.hazmat.primitives import serialization
 from cryptography.hazmat.primitives.serialization import pkcs12
 from utils.logger import Logger
-from utils.constants import *
+from utils.constants import CERT_FILE_EXTENSION, TIMEOUT_CERTIFICATE_VALIDATION
 from utils.exceptions import (
-    CertificateError,
     CertificateValidationError,
     CertificatePasswordError,
     CertificateCompatibilityError,
     CertificateNotFoundError,
-    CertificateFormatError
+    CertificateFormatError,
 )
 
 
@@ -29,8 +27,11 @@ class CertificateService:
         """
         self.logger = logger or Logger()
 
-    def validate_certificates_async(self, author_cert_path, dist_cert_path, password, callback):
+    def validate_certificates_async(
+        self, author_cert_path, dist_cert_path, password, callback
+    ):
         """Validate certificates asynchronously."""
+
         def validate():
             try:
                 self.logger.info("Starting certificate validation")
@@ -54,7 +55,9 @@ class CertificateService:
                 self.logger.info("Distributor certificate validated successfully")
 
                 # Check certificate compatibility
-                if not self._check_certificate_compatibility(author_cert_path, dist_cert_path, password):
+                if not self._check_certificate_compatibility(
+                    author_cert_path, dist_cert_path, password
+                ):
                     error_msg = "Certificates are not compatible"
                     self.logger.error(error_msg)
                     GLib.idle_add(callback, False, error_msg)
@@ -91,14 +94,14 @@ class CertificateService:
 
             self.logger.debug(f"Validating certificate: {cert_path}")
 
-            with open(cert_path, 'rb') as f:
+            with open(cert_path, "rb") as f:
                 cert_data = f.read()
 
             # Try to load the certificate
-            password_bytes = password.encode('utf-8') if password else None
+            password_bytes = password.encode("utf-8") if password else None
 
-            private_key, certificate, additional_certificates = pkcs12.load_key_and_certificates(
-                cert_data, password_bytes
+            private_key, certificate, additional_certificates = (
+                pkcs12.load_key_and_certificates(cert_data, password_bytes)
             )
 
             is_valid = private_key is not None and certificate is not None
@@ -126,13 +129,13 @@ class CertificateService:
             self.logger.debug("Checking certificate compatibility")
 
             # Load both certificates
-            with open(author_cert, 'rb') as f:
+            with open(author_cert, "rb") as f:
                 author_data = f.read()
 
-            with open(dist_cert, 'rb') as f:
+            with open(dist_cert, "rb") as f:
                 dist_data = f.read()
 
-            password_bytes = password.encode('utf-8') if password else None
+            password_bytes = password.encode("utf-8") if password else None
 
             # Load author certificate
             try:
@@ -192,22 +195,22 @@ class CertificateService:
                 self.logger.error(f"Certificate not found: {cert_path}")
                 raise CertificateNotFoundError(cert_path)
 
-            with open(cert_path, 'rb') as f:
+            with open(cert_path, "rb") as f:
                 cert_data = f.read()
 
-            password_bytes = password.encode('utf-8') if password else None
+            password_bytes = password.encode("utf-8") if password else None
 
-            private_key, certificate, additional_certificates = pkcs12.load_key_and_certificates(
-                cert_data, password_bytes
+            private_key, certificate, additional_certificates = (
+                pkcs12.load_key_and_certificates(cert_data, password_bytes)
             )
 
             if certificate:
                 info = {
-                    'subject': certificate.subject.rfc4514_string(),
-                    'issuer': certificate.issuer.rfc4514_string(),
-                    'not_valid_before': certificate.not_valid_before_utc,
-                    'not_valid_after': certificate.not_valid_after_utc,
-                    'serial_number': str(certificate.serial_number)
+                    "subject": certificate.subject.rfc4514_string(),
+                    "issuer": certificate.issuer.rfc4514_string(),
+                    "not_valid_before": certificate.not_valid_before_utc,
+                    "not_valid_after": certificate.not_valid_after_utc,
+                    "serial_number": str(certificate.serial_number),
                 }
 
                 self.logger.info(f"Certificate info extracted for {cert_path}")
@@ -217,7 +220,9 @@ class CertificateService:
             return None
 
         except ValueError as e:
-            self.logger.error(f"Failed to extract certificate info (wrong password?): {e}")
+            self.logger.error(
+                f"Failed to extract certificate info (wrong password?): {e}"
+            )
             raise CertificatePasswordError()
         except FileNotFoundError:
             self.logger.error(f"Certificate file not found: {cert_path}")
@@ -232,10 +237,15 @@ class CertificateService:
             self.logger.info(f"Creating Tizen profile: {profile_name}")
 
             profile_cmd = [
-                'tizen', 'security-profiles', 'add',
-                '-n', profile_name,
-                '-a', author_cert,
-                '-p', password
+                "tizen",
+                "security-profiles",
+                "add",
+                "-n",
+                profile_name,
+                "-a",
+                author_cert,
+                "-p",
+                password,
             ]
 
             result = subprocess.run(
@@ -243,7 +253,7 @@ class CertificateService:
                 capture_output=True,
                 text=True,
                 cwd=workspace_path,
-                timeout=TIMEOUT_CERTIFICATE_VALIDATION
+                timeout=TIMEOUT_CERTIFICATE_VALIDATION,
             )
 
             if result.returncode == 0:

@@ -5,6 +5,7 @@ Custom exception hierarchy for JellyTizen application.
 This module defines all custom exceptions used throughout the application,
 providing better error context and enabling more specific exception handling.
 """
+
 from __future__ import annotations
 
 from typing import Any, Dict, Optional
@@ -34,8 +35,10 @@ class JellyTizenError(Exception):
 
 # Docker-related errors
 
+
 class DockerError(JellyTizenError):
     """Base exception for Docker-related errors."""
+
     pass
 
 
@@ -60,7 +63,7 @@ class DockerImageError(DockerError):
         self,
         image_name: str,
         operation: str = "pull",
-        details: Optional[Dict[str, Any]] = None
+        details: Optional[Dict[str, Any]] = None,
     ) -> None:
         message = f"Failed to {operation} Docker image: {image_name}"
         super().__init__(message, details)
@@ -73,7 +76,7 @@ class DockerContainerError(DockerError):
         self,
         container_name: str,
         operation: str = "create",
-        details: Optional[Dict[str, Any]] = None
+        details: Optional[Dict[str, Any]] = None,
     ) -> None:
         message = f"Failed to {operation} Docker container: {container_name}"
         super().__init__(message, details)
@@ -86,21 +89,23 @@ class DockerCommandError(DockerError):
         self,
         command: str,
         exit_code: Optional[int] = None,
-        stderr: Optional[str] = None
+        stderr: Optional[str] = None,
     ) -> None:
         message = f"Docker command failed: {command}"
         details: Dict[str, Any] = {}
         if exit_code is not None:
-            details['exit_code'] = exit_code
+            details["exit_code"] = exit_code
         if stderr:
-            details['stderr'] = stderr
+            details["stderr"] = stderr
         super().__init__(message, details)
 
 
 # Device-related errors
 
+
 class DeviceError(JellyTizenError):
     """Base exception for device-related errors."""
+
     pass
 
 
@@ -120,14 +125,16 @@ class DeviceConnectionError(DeviceError):
 
     def __init__(self, ip_address: str, reason: Optional[str] = None) -> None:
         message = f"Failed to connect to device at {ip_address}"
-        details = {'reason': reason} if reason else None
+        details = {"reason": reason} if reason else None
         super().__init__(message, details)
 
 
 class SDBError(DeviceError):
     """Samsung Debug Bridge (SDB) errors."""
 
-    def __init__(self, operation: str, details: Optional[Dict[str, Any]] = None) -> None:
+    def __init__(
+        self, operation: str, details: Optional[Dict[str, Any]] = None
+    ) -> None:
         message = f"SDB operation failed: {operation}"
         super().__init__(message, details)
 
@@ -144,17 +151,21 @@ class DeviceNotReachableError(DeviceError):
 
 # Certificate-related errors
 
+
 class CertificateError(JellyTizenError):
     """Base exception for certificate-related errors."""
+
     pass
 
 
 class CertificateValidationError(CertificateError):
     """Certificate validation failed."""
 
-    def __init__(self, cert_type: str = "certificate", reason: Optional[str] = None) -> None:
+    def __init__(
+        self, cert_type: str = "certificate", reason: Optional[str] = None
+    ) -> None:
         message = f"{cert_type.capitalize()} validation failed"
-        details = {'reason': reason} if reason else None
+        details = {"reason": reason} if reason else None
         super().__init__(message, details)
 
 
@@ -170,7 +181,7 @@ class CertificateCompatibilityError(CertificateError):
 
     def __init__(self, reason: Optional[str] = None) -> None:
         message = "Certificates are not compatible for Tizen development"
-        details = {'reason': reason} if reason else None
+        details = {"reason": reason} if reason else None
         super().__init__(message, details)
 
 
@@ -186,13 +197,15 @@ class CertificateFormatError(CertificateError):
 
     def __init__(self, cert_path: str, expected_format: str = "P12") -> None:
         message = f"Invalid certificate format: {cert_path}"
-        super().__init__(message, {'expected': expected_format})
+        super().__init__(message, {"expected": expected_format})
 
 
 # Network-related errors
 
+
 class NetworkError(JellyTizenError):
     """Base exception for network-related errors."""
+
     pass
 
 
@@ -201,7 +214,7 @@ class NetworkScanError(NetworkError):
 
     def __init__(self, reason: Optional[str] = None) -> None:
         message = "Network scan failed"
-        details = {'reason': reason} if reason else None
+        details = {"reason": reason} if reason else None
         super().__init__(message, details)
 
 
@@ -210,17 +223,18 @@ class NetworkTimeoutError(NetworkError):
 
     def __init__(self, operation: str, timeout: int) -> None:
         message = f"Network timeout during {operation}"
-        super().__init__(message, {'timeout_seconds': timeout})
+        super().__init__(message, {"timeout_seconds": timeout})
 
 
 # Validation errors
+
 
 class ValidationError(JellyTizenError):
     """Input validation errors."""
 
     def __init__(self, field: str, value: Any, reason: Optional[str] = None) -> None:
         message = f"Validation failed for {field}: {value}"
-        details = {'reason': reason} if reason else None
+        details = {"reason": reason} if reason else None
         super().__init__(message, details)
 
 
@@ -247,8 +261,10 @@ class PathValidationError(ValidationError):
 
 # Configuration errors
 
+
 class ConfigurationError(JellyTizenError):
     """Base exception for configuration-related errors."""
+
     pass
 
 
@@ -257,7 +273,7 @@ class ConfigLoadError(ConfigurationError):
 
     def __init__(self, config_path: str, reason: Optional[str] = None) -> None:
         message = f"Failed to load configuration: {config_path}"
-        details = {'reason': reason} if reason else None
+        details = {"reason": reason} if reason else None
         super().__init__(message, details)
 
 
@@ -266,14 +282,16 @@ class ConfigSaveError(ConfigurationError):
 
     def __init__(self, config_path: str, reason: Optional[str] = None) -> None:
         message = f"Failed to save configuration: {config_path}"
-        details = {'reason': reason} if reason else None
+        details = {"reason": reason} if reason else None
         super().__init__(message, details)
 
 
 # Installation errors
 
+
 class InstallationError(JellyTizenError):
     """Base exception for installation-related errors."""
+
     pass
 
 
@@ -282,7 +300,7 @@ class SDKInstallationError(InstallationError):
 
     def __init__(self, reason: Optional[str] = None) -> None:
         message = "Tizen SDK installation failed"
-        details = {'reason': reason} if reason else None
+        details = {"reason": reason} if reason else None
         super().__init__(message, details)
 
 
@@ -291,7 +309,7 @@ class AppBuildError(InstallationError):
 
     def __init__(self, reason: Optional[str] = None) -> None:
         message = "Application build failed"
-        details = {'reason': reason} if reason else None
+        details = {"reason": reason} if reason else None
         super().__init__(message, details)
 
 
@@ -300,5 +318,5 @@ class AppInstallError(InstallationError):
 
     def __init__(self, device_ip: str, reason: Optional[str] = None) -> None:
         message = f"Failed to install application to device {device_ip}"
-        details = {'reason': reason} if reason else None
+        details = {"reason": reason} if reason else None
         super().__init__(message, details)

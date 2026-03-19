@@ -12,17 +12,25 @@ from typing import Callable, Optional, List, Dict, Any
 
 from gi.repository import GLib
 from utils.logger import Logger
-from utils.constants import *
-from utils.exceptions import (
-    DeviceError,
-    DeviceNotFoundError,
-    DeviceConnectionError,
-    DeviceNotReachableError,
-    SDBError,
-    NetworkError,
-    NetworkScanError,
-    NetworkTimeoutError
+from utils.constants import (
+    NETWORK_DNS_SERVER,
+    NETWORK_DNS_PORT,
+    NETWORK_IP_RANGE_START,
+    NETWORK_IP_RANGE_END,
+    SAMSUNG_API_PORT,
+    SAMSUNG_API_ENDPOINT,
+    SAMSUNG_DEVICE_INDICATORS,
+    SDB_PORT,
+    SCAN_MAX_WORKERS,
+    TIMEOUT_NETWORK_SCAN,
+    TIMEOUT_SOCKET,
+    TIMEOUT_PING,
+    TIMEOUT_HTTP_REQUEST,
+    TIMEOUT_SDB_DISCONNECT,
+    APP_NAME,
+    APP_VERSION,
 )
+from utils.exceptions import DeviceConnectionError, NetworkScanError
 from utils.validators import NetworkValidator
 
 
@@ -40,8 +48,11 @@ class DeviceService:
         self.connected_device: Optional[str] = None
         self.scan_timeout: int = TIMEOUT_NETWORK_SCAN
 
-    def scan_network_async(self, callback: Callable[[List[Dict[str, Any]]], None]) -> None:
+    def scan_network_async(
+        self, callback: Callable[[List[Dict[str, Any]]], None]
+    ) -> None:
         """Scan network for Samsung devices asynchronously."""
+
         def scan_network():
             try:
                 self.logger.info("Starting Samsung TV scan")
@@ -55,13 +66,17 @@ class DeviceService:
                     return
 
                 self.logger.info(f"Local IP: {local_ip}")
-                network_base = '.'.join(local_ip.split('.')[:-1])
-                self.logger.info(f"Scanning network: {network_base}.{NETWORK_IP_RANGE_START}-{NETWORK_IP_RANGE_END}")
+                network_base = ".".join(local_ip.split(".")[:-1])
+                self.logger.info(
+                    f"Scanning network: {network_base}.{NETWORK_IP_RANGE_START}-{NETWORK_IP_RANGE_END}"
+                )
 
                 # Use threading like in the successful test
                 devices = self._scan_ip_range_threaded(network_base)
 
-                self.logger.info(f"Scan completed. Found {len(devices)} Samsung devices")
+                self.logger.info(
+                    f"Scan completed. Found {len(devices)} Samsung devices"
+                )
                 GLib.idle_add(callback, devices)
 
             except NetworkScanError as e:
@@ -141,10 +156,10 @@ class DeviceService:
             samsung_info = self._identify_samsung_device(ip, SAMSUNG_API_PORT)
             if samsung_info:
                 return {
-                    'ip': ip,
-                    'port': SAMSUNG_API_PORT,
-                    'name': samsung_info.get('name', f'Samsung TV ({ip})'),
-                    'model': samsung_info.get('model', 'Unknown Model')
+                    "ip": ip,
+                    "port": SAMSUNG_API_PORT,
+                    "name": samsung_info.get("name", f"Samsung TV ({ip})"),
+                    "model": samsung_info.get("model", "Unknown Model"),
                 }
 
         return None
@@ -153,9 +168,9 @@ class DeviceService:
         """Quick ping test - system ping worked in tests."""
         try:
             result = subprocess.run(
-                ['ping', '-c', '1', '-W', '1', ip],
+                ["ping", "-c", "1", "-W", "1", ip],
                 capture_output=True,
-                timeout=TIMEOUT_PING
+                timeout=TIMEOUT_PING,
             )
             return result.returncode == 0
         except subprocess.TimeoutExpired:
@@ -191,15 +206,16 @@ class DeviceService:
 
         try:
             req = urllib.request.Request(endpoint)
-            req.add_header('User-Agent', f'{APP_NAME}/{APP_VERSION}')
+            req.add_header("User-Agent", f"{APP_NAME}/{APP_VERSION}")
 
             with urllib.request.urlopen(req, timeout=TIMEOUT_HTTP_REQUEST) as response:
                 if response.status == 200:
-                    content = response.read().decode('utf-8', errors='ignore')
+                    content = response.read().decode("utf-8", errors="ignore")
 
                     # Check for Samsung indicators (these were found in tests)
                     found_indicators = [
-                        ind for ind in SAMSUNG_DEVICE_INDICATORS
+                        ind
+                        for ind in SAMSUNG_DEVICE_INDICATORS
                         if ind.lower() in content.lower()
                     ]
 
@@ -207,20 +223,17 @@ class DeviceService:
                         # Try to parse device info from JSON
                         try:
                             data = json.loads(content)
-                            device_info = data.get('device', {})
+                            device_info = data.get("device", {})
                             return {
-                                'name': device_info.get('name', 'Samsung TV'),
-                                'model': device_info.get('modelName', 'Unknown Model'),
-                                'os': device_info.get('OS', 'Tizen'),
-                                'language': device_info.get('Language', 'Unknown')
+                                "name": device_info.get("name", "Samsung TV"),
+                                "model": device_info.get("modelName", "Unknown Model"),
+                                "os": device_info.get("OS", "Tizen"),
+                                "language": device_info.get("Language", "Unknown"),
                             }
                         except json.JSONDecodeError:
                             # Still Samsung, just couldn't parse JSON
                             self.logger.debug(f"Could not parse JSON from {ip}")
-                            return {
-                                'name': 'Samsung TV',
-                                'model': 'Unknown Model'
-                            }
+                            return {"name": "Samsung TV", "model": "Unknown Model"}
 
         except urllib.error.URLError as e:
             self.logger.debug(f"URL error identifying Samsung device at {ip}: {e}")
@@ -232,12 +245,10 @@ class DeviceService:
         return None
 
     def connect_device_async(
-        self,
-        ip: str,
-        developer_mode: bool,
-        callback: Callable[[bool, str], None]
+        self, ip: str, developer_mode: bool, callback: Callable[[bool, str], None]
     ) -> None:
         """Connect to device asynchronously."""
+
         def connect():
             try:
                 # Validate IP address first
@@ -281,7 +292,7 @@ class DeviceService:
     def _connect_developer_mode(self, ip: str) -> bool:
         """
         Verify device connectivity for developer mode.
-        
+
         Note: The actual SDB connection happens during installation via Docker,
         since the Tizen SDK (including SDB) runs inside the Docker container.
         This method just verifies the device is reachable and prepared for installation.
@@ -289,18 +300,24 @@ class DeviceService:
         try:
             # Verify the device is a Samsung TV and reachable
             samsung_info = self._identify_samsung_device(ip, SAMSUNG_API_PORT)
-            
+
             if samsung_info:
-                self.logger.info(f"Developer mode - device verified: {samsung_info.get('name', 'Samsung TV')}")
-                
+                self.logger.info(
+                    f"Developer mode - device verified: {samsung_info.get('name', 'Samsung TV')}"
+                )
+
                 # Also check if the SDB port is accessible (indicates developer mode is enabled on TV)
                 if self._check_port_quick(ip, SDB_PORT):
-                    self.logger.info(f"SDB port {SDB_PORT} is accessible - developer mode confirmed on TV")
+                    self.logger.info(
+                        f"SDB port {SDB_PORT} is accessible - developer mode confirmed on TV"
+                    )
                     return True
                 else:
                     # SDB port not accessible, but device is reachable
                     # This might mean developer mode is not fully enabled on the TV
-                    self.logger.warning(f"SDB port {SDB_PORT} not accessible - ensure Developer Mode is enabled on TV and TV was restarted")
+                    self.logger.warning(
+                        f"SDB port {SDB_PORT} not accessible - ensure Developer Mode is enabled on TV and TV was restarted"
+                    )
                     # Still return True since the device is valid Samsung TV
                     # The actual SDB connection will be attempted during installation
                     return True
@@ -319,10 +336,14 @@ class DeviceService:
             samsung_info = self._identify_samsung_device(ip, SAMSUNG_API_PORT)
 
             if samsung_info:
-                self.logger.info(f"Normal mode connection successful - detected {samsung_info['name']}")
+                self.logger.info(
+                    f"Normal mode connection successful - detected {samsung_info['name']}"
+                )
                 return True
             else:
-                self.logger.warning("Normal mode connection failed - could not verify Samsung device")
+                self.logger.warning(
+                    "Normal mode connection failed - could not verify Samsung device"
+                )
                 return False
 
         except Exception as e:
@@ -339,9 +360,9 @@ class DeviceService:
             try:
                 self.logger.info(f"Disconnecting from {self.connected_device}")
                 subprocess.run(
-                    ['sdb', 'disconnect', self.connected_device],
+                    ["sdb", "disconnect", self.connected_device],
                     capture_output=True,
-                    timeout=TIMEOUT_SDB_DISCONNECT
+                    timeout=TIMEOUT_SDB_DISCONNECT,
                 )
                 self.logger.info(f"Disconnected from {self.connected_device}")
             except subprocess.TimeoutExpired:

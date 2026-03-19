@@ -1,7 +1,10 @@
 # tests/services/test_docker.py
 """Tests for Docker service."""
+
+import threading
+
 import pytest
-from unittest.mock import Mock, patch, MagicMock
+from unittest.mock import Mock, patch
 import subprocess
 
 from services.docker import DockerService
@@ -28,60 +31,60 @@ class TestDockerService:
         """Test initialization with custom logger."""
         assert docker_service.logger is not None
 
-    @patch('subprocess.run')
+    @patch("subprocess.run")
     def test_is_docker_installed_true(self, mock_run, docker_service):
         """Test Docker installation check when installed."""
         mock_run.return_value = Mock(returncode=0)
         assert docker_service.is_docker_installed() is True
         mock_run.assert_called_once()
 
-    @patch('subprocess.run')
+    @patch("subprocess.run")
     def test_is_docker_installed_false(self, mock_run, docker_service):
         """Test Docker installation check when not installed."""
         mock_run.return_value = Mock(returncode=1)
         assert docker_service.is_docker_installed() is False
 
-    @patch('subprocess.run')
+    @patch("subprocess.run")
     def test_is_docker_installed_timeout(self, mock_run, docker_service):
         """Test Docker installation check on timeout."""
-        mock_run.side_effect = subprocess.TimeoutExpired(cmd='docker', timeout=5)
+        mock_run.side_effect = subprocess.TimeoutExpired(cmd="docker", timeout=5)
         assert docker_service.is_docker_installed() is False
 
-    @patch('subprocess.run')
+    @patch("subprocess.run")
     def test_is_docker_installed_not_found(self, mock_run, docker_service):
         """Test Docker installation check when docker not found."""
         mock_run.side_effect = FileNotFoundError()
         assert docker_service.is_docker_installed() is False
 
-    @patch('subprocess.run')
+    @patch("subprocess.run")
     def test_is_docker_running_true(self, mock_run, docker_service):
         """Test Docker running check when running."""
         mock_run.return_value = Mock(returncode=0)
         assert docker_service.is_docker_running() is True
 
-    @patch('subprocess.run')
+    @patch("subprocess.run")
     def test_is_docker_running_false(self, mock_run, docker_service):
         """Test Docker running check when not running."""
         mock_run.return_value = Mock(returncode=1)
         assert docker_service.is_docker_running() is False
 
-    @patch('subprocess.run')
+    @patch("subprocess.run")
     def test_is_docker_running_timeout(self, mock_run, docker_service):
         """Test Docker running check on timeout."""
-        mock_run.side_effect = subprocess.TimeoutExpired(cmd='docker', timeout=5)
+        mock_run.side_effect = subprocess.TimeoutExpired(cmd="docker", timeout=5)
         assert docker_service.is_docker_running() is False
 
-    @patch('subprocess.run')
+    @patch("subprocess.run")
     def test_stop_all_processes(self, mock_run, docker_service):
         """Test stopping all Docker processes."""
         mock_run.return_value = Mock(returncode=0)
         docker_service.stop_all_processes()
         mock_run.assert_called_once()
 
-    @patch('subprocess.run')
+    @patch("subprocess.run")
     def test_stop_all_processes_timeout(self, mock_run, docker_service):
         """Test stopping processes on timeout."""
-        mock_run.side_effect = subprocess.TimeoutExpired(cmd='docker', timeout=5)
+        mock_run.side_effect = subprocess.TimeoutExpired(cmd="docker", timeout=5)
         # Should not raise, just log warning
         docker_service.stop_all_processes()
 
@@ -100,31 +103,27 @@ class TestDockerServiceAsync:
         mock_logger = Mock()
         return DockerService(logger=mock_logger)
 
-    @patch('subprocess.run')
-    @patch('services.docker.GLib')
+    @patch("subprocess.run")
+    @patch("services.docker.GLib")
     def test_start_docker_async_success(self, mock_glib, mock_run, docker_service):
         """Test starting Docker asynchronously."""
         mock_run.return_value = Mock(returncode=0)
         mock_callback = Mock()
 
         # Call the async method
+        done = threading.Event()
+        mock_glib.idle_add.side_effect = lambda fn, *a, **kw: done.set()
         docker_service.start_docker_async(mock_callback)
+        done.wait(timeout=2)
 
-        # Let the thread execute (simplified for testing)
-        import time
-        time.sleep(0.5)
-
-        # Verify GLib.idle_add was called (callback mechanism)
-        # Note: This is a basic test, actual async behavior requires more setup
-
-    @patch('subprocess.run')
-    @patch('services.docker.GLib')
+    @patch("subprocess.run")
+    @patch("services.docker.GLib")
     def test_prepare_environment_async(self, mock_glib, mock_run, docker_service):
         """Test preparing Docker environment."""
         mock_run.return_value = Mock(returncode=0)
         mock_callback = Mock()
 
+        done = threading.Event()
+        mock_glib.idle_add.side_effect = lambda fn, *a, **kw: done.set()
         docker_service.prepare_environment_async(mock_callback)
-
-        import time
-        time.sleep(0.5)
+        done.wait(timeout=2)
